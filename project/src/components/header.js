@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '/home/ubuntu/ict/project/src/header.css'
+import '/home/ubuntu/ict/project/src/header.css';
 import { Route, Link } from 'react-router-dom';
-
+import egg from '/home/ubuntu/ict/project/public/egg.png'
 class Header extends Component {
 
     render() {
@@ -11,7 +11,7 @@ class Header extends Component {
 
 
                 <div className="header_logo">
-                    오늘 뭐 먹지?
+                    <img src={egg} alt="logo" className="eggLogo" /> 오늘 뭐 먹지?
                 </div>
 
 
