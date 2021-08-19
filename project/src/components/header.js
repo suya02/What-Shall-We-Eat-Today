@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class Home extends Component {
+class Header extends Component {
 
     render() {
         return (
             <div>
-                <h3> 홈화면입니당~~~~~~~~~~~ </h3>
+                <h3> 헤더!!!!!~~~~~~~~~~~ </h3>
             </div>
         );
     }
 }
 
-export default Home;
+export default Header;

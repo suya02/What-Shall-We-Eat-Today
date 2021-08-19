@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class Home extends Component {
+class Delivery extends Component {
 
     render() {
         return (
             <div>
-                <h3> 홈화면입니당~~~~~~~~~~~ </h3>
+                <h3> 배달음식메뉴추천페이지~~~~~~ </h3>
             </div>
         );
     }
 }
 
-export default Home;
+export default Delivery;
