@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
+import Header from '/home/ubuntu/ict/project/src/components/header.js'
 class Home extends Component {
 
     render() {
         return (
             <div>
-                <h3> 홈화면입니당~~~~~~~~~~~ </h3>
+                <h3> <Header /> </h3>
             </div>
         );
     }
