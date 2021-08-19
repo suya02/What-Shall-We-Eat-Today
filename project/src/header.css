@@ -71,7 +71,7 @@ body {
   a:link {
   
     text-decoration: none;
-    color:black;
+    color:black 
   }
 
 
@@ -80,14 +80,14 @@ body {
 .header
 {
     width: 100vw;
-    height: 7vh;
+    height: 6.2vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0.5vw;
     color:balck;
-    background-color:#d6342a;
+    background-color:#85c5f6;
     font-size: 1.25vw;
     color:black;
     font-family: "Lato", sans-serif;
@@ -103,10 +103,17 @@ flex-direction: row;
   padding: 0.2vw 0.4vw;
   margin-left: 3vw;
   margin-right: 8vw;
-  color: white;
+  color: black;
   font-size: 1.1vw;
   font-family: sans-serif;
 }
+
+.header_menu_ul li:hover {
+  transition: 0.1s;
+  font-size: 1.4vw;
+  color:gray;
+}
+
 
 .header_logo
 {
