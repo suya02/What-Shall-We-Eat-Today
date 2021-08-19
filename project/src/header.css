@@ -112,11 +112,21 @@ flex-direction: row;
 {
   margin: 0.1vw 15vw 0.1vw 6.5vw;
   padding: 0.1vw;
- 
+ position: relative;
+ bottom:1vh;
   font-size: 1.25vw;
   color: black;
   position: relative;
   left: 2.5vw;
   font-family: Arial, Helvetica, sans-serif;
   transform: rotate(-12.5deg);
+}
+
+.eggLogo
+{
+  position: relative;
+  top:0.5vw;
+
+  width:3vw;
+
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
 import '/home/ubuntu/ict/project/src/header.css';
 import { Route, Link } from 'react-router-dom';
-import egg from '/home/ubuntu/ict/project/public/egg.png'
+
 class Header extends Component {
 
     render() {
