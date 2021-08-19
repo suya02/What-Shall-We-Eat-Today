@@ -68,7 +68,11 @@ body {
     list-style: none;
   }
 
-
+  a:link {
+  
+    text-decoration: none;
+    color:black;
+  }
 
 
 
@@ -84,4 +88,35 @@ body {
     padding: 0.5vw;
     color:balck;
     background-color:#cf3a2a;
+    font-size: 1.25vw;
+    color:black;
+    font-family: "Lato", sans-serif;
+}
+
+.header_menu_ul  {
+display:flex;
+flex-direction: row;
+}
+
+.header_menu_ul li
+{
+  padding: 0.2vw 0.4vw;
+  margin-left: 3vw;
+  margin-right: 8vw;
+  color: white;
+  font-size: 1.1vw;
+  font-family: sans-serif;
+}
+
+.header_logo
+{
+  margin: 0.1vw 15vw 0.1vw 6.5vw;
+  padding: 0.1vw;
+ 
+  font-size: 1.25vw;
+  color: black;
+  position: relative;
+  left: 2.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: rotate(-12.5deg);
 }
