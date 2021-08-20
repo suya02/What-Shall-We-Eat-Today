@@ -1,0 +1,112 @@
+body {
+    -webkit-text-size-adjust: none;
+  }
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    height: 100%;
+    background-color: #f5f5f5;
+  }
+  body,
+  p,
+  ul,
+  ol,
+  li,
+  dl,
+  dt,
+  dd,
+  form,
+  table,
+  th,
+  td,
+  fieldset,
+  input,
+  textarea,
+  select,
+  button,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+  }
+  body,
+  input,
+  textarea,
+  select,
+  button {
+    color: black;
+    font-size: 12px;
+  }
+  header,
+  footer,
+  nav,
+  aside,
+  section,
+  article {
+    display: block;
+  }
+  fieldset,
+  img {
+    border: 0;
+  }
+  table {
+    padding: 0;
+    border-spacing: 0px;
+    border: 0;
+    border-collapse: collapse;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  a:link {
+  color:whitesmoke;
+    text-decoration: none;
+   
+  }
+  
+  .section
+  {
+    width: 100vw;
+   background-color:#3a3a3a; 
+    height:65vh;
+    border:1px solid blue;
+   text-align: center;
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+  justify-content: center;
+  align-items: center;
+   
+  }
+
+  .question_1, .question_2
+  {
+    position: relative;
+    bottom:6vh;
+    left: 0.5vw;
+    z-index: 1;
+    font-size: 1.45vw;
+    border: 1px solid red;
+    margin: 1.5vw;
+    color:whitesmoke;
+    
+  }
+
+  .pan
+  {
+    width: 35vw;
+    position: absolute;
+    left: 40vw;
+    top:1vh;
+    transform: rotate(-26.5deg);
+  }
