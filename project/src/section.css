@@ -73,12 +73,18 @@ body {
     text-decoration: none;
    
   }
-  
+  a:visited {
+    color : black;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+
   .section
   {
     width: 100vw;
    background-color:#3a3a3a; 
-    height:65vh;
+    height:60vh;
    text-align: center;
    display: flex;
    flex-direction: row;
@@ -91,21 +97,81 @@ body {
   .question_1, .question_2
   {
     position: relative;
-    bottom:8vh;
-    left: 0.2vw;
+   bottom:3.4vh;
+   right:19vw;
     z-index: 1;
     font-size: 1.45vw;
     border: 1px solid red;
     margin: 1.5vw;
-    color:whitesmoke;
-    
+    color:#d32f2f;
+    font-family: 'Gamja Flower', cursive;
+    cursor: pointer;
   }
 
   .pan
   {
     width: 35vw;
-    position: absolute;
-    left: 40vw;
-    top:4vh;
+    position: relative;
+    left:13vw;
     transform: rotate(-26.5deg);
+  }
+
+.startButton
+{
+  height: 10vh;
+  background-color: #3a3a3a;
+}
+
+
+  .startButton ul
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  
+  .startButton ul li:first-child
+  {
+    
+    width: 16vw;
+    height: 6vh;
+    text-align: center;
+    align-items: center;
+    line-height: 6vh;
+    font-weight: bold;
+    background-color:#d32f2f;
+    font-size:1.35vw;
+    border-radius: 3.5px;
+    color:black;
+  }
+
+  .startButton ul li:nth-child(2)
+  {
+    border:1px solid #eb4f4e;
+    width: 16vw;
+    height: 6vh;
+    text-align: center;
+    align-items: center;
+    line-height: 6vh;
+    font-weight: bold;
+    color:#d32f2f;
+    font-size:1.35vw;
+    border-radius: 3.5px;
+  }
+
+  .startButton ul li:first-child:hover
+  {
+    transition: 0.25s;
+    background-color:#c62828;
+    width: 16.5vw;
+   cursor: pointer;
+  }
+
+  .startButton ul li:nth-child(2):hover
+  {
+   transition: 0.25s;
+    background-color: #424242;
+    width: 16.5vw;
+    cursor: pointer;
   }
