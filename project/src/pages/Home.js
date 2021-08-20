@@ -12,6 +12,7 @@ class Home extends Component {
                 <Header />
                 <Section />
                 <Nav />
+
             </div>
         );
     }
