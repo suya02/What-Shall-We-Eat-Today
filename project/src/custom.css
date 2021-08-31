@@ -1,0 +1,207 @@
+/*  header.js >> line 86 */
+.header
+{
+  width: 100vw;
+  height: 6.2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5vw;
+  background-color:#ffd400;
+  font-size: 1.25vw;
+  font-family: "Lato", sans-serif;
+}
+
+.eggLogo
+{
+position: relative;
+width:3vw;
+top:2.8vh;
+}
+
+.header_logo
+{
+    bottom: 1.6vh;
+    margin: 0.1vw 15vw 0.1vw 6.5vw;
+    padding: 0.1vw;
+    position: relative;
+    font-size: 1.5vw;
+    color: black;
+    position: relative;
+    left: 2.5vw;
+    font-family: initial;
+    font-weight: bolder;
+    font-family: 'Hi Melody', cursive;
+    align-items: center;
+    }
+
+.header_logo:hover
+{
+  transition: 0.25s;
+  font-size:1.7vw;
+}
+
+img {
+    border: 0;
+  }
+
+ul,
+ol {
+    list-style: none;
+}
+
+a:link {
+    color:black;
+    text-decoration: none;
+}
+  
+  @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+  
+.header_menu_ul  {
+  display:flex;
+  flex-direction: row;
+  height: 5vh;
+  width: 60vw;
+  position: relative;
+  right: 1vw;
+  align-items: center;
+  justify-content: space-around;
+  }
+  
+.header_menu_ul li
+{
+  padding: 0.2vw 0.4vw;
+  font-size: 1.3vw;
+  font-family: 'Gamja Flower', cursive;
+  border-radius: 0.2vw;
+  font-weight: bolder;
+}
+
+.header_menu_ul li:hover {
+    transition: 0.25s;
+    /* background-color: whitesmoke; */
+    font-size:1.5vw;
+}
+  
+/* nav2.js >> line 99 */
+.nav2 {
+    background-color: #fffcbb;
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1vw;
+    text-align: center;
+    font-size: 0.9vw;
+}
+
+/* section2.js >> line 152 */
+.section2
+    {
+        width: 100vw;
+        /* border:1px solid purple; */
+        background-color:whitesmoke ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 2vw;
+    }
+
+  .section2 .card1, .section2 .card2, .section2 .card3
+  {
+    border:1px solid white;
+    width: 20vw;
+    height: 20vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 5vw;
+    background-color: #ffd400;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2vw;
+  }
+
+  .section2 .card1-1, .section2 .card2-1, .section2 .card3-1
+  {
+    width: 20vw;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+  }
+
+  .section2 .card1-2, .section2 .card2-2, .section2 .card3-2
+  {
+    width: 20vw;
+    height: 5vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1vw;
+  }
+
+/* slider.js >> line 207 */
+.slider {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 50vw;
+    height: 30vh;
+    border-radius: 10px;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    font-size: 3rem;
+    color: orange;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    font-size: 3rem;
+    color: orange;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.right-arrow:hover{
+    transform: scale(0.90);
+}
+.left-arrow:hover{
+    transform: scale(0.90); 
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}

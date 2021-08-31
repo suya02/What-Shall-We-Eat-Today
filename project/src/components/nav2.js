@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import '/home/ubuntu/ict/project/src/nav2.css';
+import '/home/ubuntu/ict/project/src/custom.css';
 import { Link } from 'react-router-dom';
 
 class Nav2 extends Component {

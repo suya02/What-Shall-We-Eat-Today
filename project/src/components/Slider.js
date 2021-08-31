@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SliderData } from '/home/ubuntu/ict/project/src/components/SliderData'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
-import '/home/ubuntu/ict/project/src/Slider.css';
+import '/home/ubuntu/ict/project/src/custom.css';
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
