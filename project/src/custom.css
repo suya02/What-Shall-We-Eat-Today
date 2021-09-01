@@ -1,7 +1,6 @@
-/*  header.js >> line 86 */
+/*  header.js */
 .header
 {
-  width: 100vw;
   height: 6.2vh;
   display: flex;
   flex-direction: row;
@@ -11,6 +10,21 @@
   background-color:#ffd400;
   font-size: 1.25vw;
   font-family: "Lato", sans-serif;
+  color:black;
+}
+
+.header2
+{
+  height: 6.2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5vw;
+  background-color:#ffd400;
+  font-size: 1.25vw;
+  font-family: "Lato", sans-serif;
+  color:red;
 }
 
 .eggLogo
@@ -26,7 +40,7 @@ top:2.8vh;
     margin: 0.1vw 15vw 0.1vw 6.5vw;
     padding: 0.1vw;
     position: relative;
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     color: black;
     position: relative;
     left: 2.5vw;
@@ -49,13 +63,14 @@ img {
 ul,
 ol {
     list-style: none;
+    color:black;
 }
 
 a:link {
     color:black;
     text-decoration: none;
 }
-  
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); 
   @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
   
@@ -68,40 +83,61 @@ a:link {
   right: 1vw;
   align-items: center;
   justify-content: space-around;
+  text-decoration: none;
+  color: black;
   }
   
 .header_menu_ul li
 {
   padding: 0.2vw 0.4vw;
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   font-family: 'Gamja Flower', cursive;
   border-radius: 0.2vw;
   font-weight: bolder;
+  text-decoration: none;
+  color: black;
 }
 
 .header_menu_ul li:hover {
     transition: 0.25s;
-    /* background-color: whitesmoke; */
-    font-size:1.5vw;
+    font-size:1.6vw;
+    text-decoration: none;
+    color: black;
 }
   
-/* nav2.js >> line 99 */
-.nav2 {
+/* nav.js */
+.nav {
     background-color: #fffcbb;
-    width: 100%;
-    height: 10vw;
-    display: flex;
+    height: 13vw;
+    /* display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; */
     padding-top: 1vw;
+    padding-bottom: 1vw;
     text-align: center;
     font-size: 0.9vw;
+    font-family: 'Open Sans', sans-serif;
 }
 
-/* section2.js >> line 152 */
-.section2
-    {
-        width: 100vw;
+.navicon {
+  width: 1vw;
+  height: 1vw;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.contect {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+/* Main_section.js */
+.section {
+  background-color: whitesmoke;
+}
+
+.Main_section {
+       
         /* border:1px solid purple; */
         background-color:whitesmoke ;
         display: flex;
@@ -110,7 +146,7 @@ a:link {
         font-size: 2vw;
     }
 
-  .section2 .card1, .section2 .card2, .section2 .card3
+  .Main_section .card1, .Main_section .card2, .Main_section .card3
   {
     border:1px solid white;
     width: 20vw;
@@ -125,7 +161,13 @@ a:link {
     font-size: 2vw;
   }
 
-  .section2 .card1-1, .section2 .card2-1, .section2 .card3-1
+  .Main_section .card1:hover, .Main_section .card2:hover, .Main_section .card3:hover
+  {
+    transition: 0.25s;
+    height :22vw;
+  }
+
+  .Main_section .card1-1, .Main_section .card2-1, .Main_section .card3-1
   {
     width: 20vw;
     margin-top: 1vw;
@@ -138,7 +180,7 @@ a:link {
     font-weight: bold;
   }
 
-  .section2 .card1-2, .section2 .card2-2, .section2 .card3-2
+  .Main_section .card1-2, .Main_section .card2-2, .Main_section .card3-2
   {
     width: 20vw;
     height: 5vw;
@@ -151,13 +193,14 @@ a:link {
     font-size: 1vw;
   }
 
-/* slider.js >> line 207 */
+/* slider.js  */
 .slider {
     position: relative;
     height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: whitesmoke; */
 }
 
 .image {
@@ -205,3 +248,156 @@ a:link {
     transition-duration: 1s;
     transform: scale(1.08);
 }
+
+/* Main_section.js */
+.delivery_section
+{
+  background-color: whitesmoke; 
+  height:60vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3vw;
+}
+
+.question_1, .question_2, .vs
+  {
+    position: relative;
+    bottom:3.4vh;
+    right:19vw;
+    z-index: 1;
+    font-size: 1.45vw;
+    /* border: 1px solid ; */
+    margin: 1.5vw;
+    color: orange;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .pan
+  {
+    text-align: center;
+    width: 35vw;
+    position: relative;
+
+    /* transform: rotate(-26.5deg); */
+  }
+
+  .bar_out {
+    width: 100%;
+    padding-top: 7vw;
+    background-color: whitesmoke;
+    text-align: center;
+  }
+
+  .bar_in {
+    background-color: whitesmoke;
+    text-align: center;
+    width: 40vw;
+    height: 1vw;
+    padding-bottom: 2vw;
+  }
+
+  /* .again_test {
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 3vw;
+    color: orange;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2vw;
+    font-weight: bold;
+  } */
+.background {
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.again_test {
+  font-weight: bold;
+  width: 15vw;
+	text-decoration:none;
+	font-family:Comic Sans MS;
+	box-shadow:#d6d6d6 1px 3px 2px;
+	o-box-shadow:#d6d6d6 1px 3px 2px;
+	-moz-box-shadow:#d6d6d6 1px 3px 2px;
+	-webkit-box-shadow:#d6d6d6 1px 3px 2px;
+	text-indent:0px;
+	line-height:30px;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	border-radius:25px;
+	text-align:center;
+	vertical-align:middle;
+	display:inline-block;
+	font-size:20px;
+	color:orange;
+	padding:13px;
+	border-color:orange;
+	border-width:2px;
+	border-style:solid;
+  text-align: center;
+  font-size: 2vw;
+
+  font-family: Comic Sans MS;
+  font-family: 'Gamja Flower', cursive;
+}
+
+.again_test:active {
+	box-shadow:orange 1px 0 2px;
+	o-box-shadow:#d6d6d6 1px 0 2px;
+	-moz-box-shadow:#d6d6d6 1px 0 2px;
+	-webkit-box-shadow:#d6d6d6 1px 0 2px;
+	position:relative;
+	top:3px
+}
+
+  /* Section2.js */
+  .section2 {
+    padding: 5vw;
+    padding-left: 7vw;
+    vertical-align:middle;
+    width: 100%;
+    height:60vh;
+  }
+
+  .section2 img {
+    width: 35%;
+    float: left;
+    padding-right: 2vw;
+  }
+
+  .section2_text {
+    position: relative;
+    margin-top: 3vw;
+    color: orange;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 4vw;
+  }
+
+  .section2_text2 {
+    position: relative;
+    color: orange;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2vw;
+  }
+
+  /* share.js */
+  .share {
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 3vw;
+    color: orange;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2vw;
+    font-weight: bold;
+  }
+
+  .share_icon {
+    width: 3.5vw;
+    height: 3.5vw;
+    padding: 0.5vw;
+  }

@@ -10,7 +10,8 @@ class Header extends Component {
             <header className="header">
 
                 <div className="header_logo">
-                    <img src={egg} alt="logo" className="eggLogo" /> 오늘 뭐 먹지?
+                    <img src={egg} alt="logo" className="eggLogo" /> 
+                    <Link to="/"> 오늘 뭐 먹지? </Link>
                 </div>
 
                 <ul className="header_menu_ul">
