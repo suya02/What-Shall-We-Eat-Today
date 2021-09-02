@@ -5,7 +5,6 @@ import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
 import Slider from '/home/ubuntu/ict/project/src/components/Slider.js'
 import { SliderData } from '/home/ubuntu/ict/project/src/components/SliderData'
 
-
 class Home extends Component {
 
     render() {
