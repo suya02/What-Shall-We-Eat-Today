@@ -1,29 +1,35 @@
 import React, { Component } from 'react';
-import '/home/ubuntu/ict/project/src/custom.css';
 import { Route, Link } from 'react-router-dom';
-import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
+import '/home/ubuntu/ict/project/src/custom.css';
 import bar from '/home/ubuntu/ict/project/src/images/baricon.png'
-class Section2 extends Component {
+import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
+import redo from '/home/ubuntu/ict/project/src/images/redo.png'
+class Section extends Component {
 
     render() {
         return (
 
             <div>
-    
-                <div className="section2">
-                    <img src={ pan } alt="pan" className="pan" />
-                    
-                    <div className="section2_text"> 
-                        집에서 뭐 해먹지? <br />
+                <div className="bar_out">
+                    (바 좌측에 "뒤로" /// 우측엔 질문 진행율) ex) 1 / 10
+                    <div>   
+                        <img src={ bar } alt="pan" className="bar_in" />
                     </div>
-                    <div className="section2_text2"> 
-                        테스트 유도 문구 (ex) 집밥 먹고싶은데 뭐 먹을지 고민 될 때!)<br />
-                    </div>
-                    <br />
-                    <button href="/">Test Start</button>
-
-                    
                 </div>
+
+                <div className="delivery_section">
+                    <img src={ pan } alt="pan" className="pan" />
+                    <div className="question_1"> <h2>질문1 </h2></div>
+                    <div className="vs"> VS </div>
+                    <div className="question_2"> <h2>질문2</h2></div>
+                </div>
+
+                <div className="background">
+                    <button href="" className="again_test" >테스트 다시하기 
+                    <img src={ redo } className="again_icon"/>
+                    </button>
+                </div>
+                
 
                 {/* <div className="startButton">
 
@@ -43,4 +49,7 @@ class Section2 extends Component {
     }
 }
 
-export default Section2;
+export default Section;
+
+// 프라이팬 이미지 출처
+// https://www.pngwing.com/ko/free-png-sxezy/download

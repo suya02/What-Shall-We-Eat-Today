@@ -26,7 +26,7 @@ import Main_section from '/home/ubuntu/ict/project/src/components/Main_section.j
 import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
 import Slider from '/home/ubuntu/ict/project/src/components/Slider.js'
 import { SliderData } from '/home/ubuntu/ict/project/src/components/SliderData'
-import cc from '/home/ubuntu/ict/project/src/images/cc.png'
+import cook from '/home/ubuntu/ict/project/src/videos/cook.mp4'
 import 'custom.css';
 import $ from "jquery";
 
@@ -48,6 +48,10 @@ class ramdom extends Component {
             $header.toggleClass('down', scrolled); //클래스 토글
           });
         });
+
+        //  비디오 자동 재생
+        document.getElementById('vid').play();
+
       }
 
     render() {
@@ -56,14 +60,19 @@ class ramdom extends Component {
                 <div className="index2">
                 <Header2 />
                 </div>
+
                 <div className="index1">
-                <section class="img_wrap">
-                    <Slider slides={SliderData}/>
-                        {/* <img src={cc} alt="photo" className="cc_image" /> */}
-                </section>
+                  <div class="jb-box">
+                    <video id="vid" muted autoplay loop>
+                      {/* <source src={cook} type="video/mp4" ></source> */}
+                      <source src="https://bit.ly/3kYMF9A" type="video/mp4"></source>
+                    </video>
+                    <div class="jb-text">
+                      <p>오늘 뭐 먹지?</p>
+                    </div>
+                  </div>
                 </div>
                 
-
                 <section class="page-start">
                     <div class="inner">
                     <article></article> 
@@ -71,13 +80,11 @@ class ramdom extends Component {
                 </section>
                 {/* <Header /> */}
                 
-
                 <Main_section />
                 <div className="slidersizesmall">
                 <Slider slides={SliderData}/>
                 </div>
                 <Nav />
-           
 
             </div>
         );

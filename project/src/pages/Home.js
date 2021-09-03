@@ -11,12 +11,9 @@ class Home extends Component {
         return (
             <div>
                 <Header />
-                <Slider slides={SliderData}/>
-
                 <Main_section />
+                <Slider slides={SliderData}/>
                 <Nav />
-           
-
             </div>
         );
     }
