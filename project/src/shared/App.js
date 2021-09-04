@@ -7,6 +7,9 @@ import Random from '/home/ubuntu/ict/project/src/pages/Random.js';
 import ScrollIntoView from "../components/f_routertotop";
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import Home2 from '/home/ubuntu/ict/project/src/pages/Home2.js';
+import Home3 from '/home/ubuntu/ict/project/src/pages/Home3.js';
+
 class App extends Component {
     render() {
         return (
@@ -18,6 +21,9 @@ class App extends Component {
                         <Route path="/delivery/test" component={Delivery_test} exact />
                         <Route path="/homemeal" component={Homemeal} exact />
                         <Route path="/random" component={Random} exact />
+
+                        <Route path="/Home2" component={Home2} exact />
+                        <Route path="/Home3" component={Home3} exact />
                     </ScrollIntoView>
                 </BrowserRouter>
             </div>

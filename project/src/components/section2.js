@@ -4,7 +4,7 @@ import '/home/ubuntu/ict/project/src/custom.css';
 import bar from '/home/ubuntu/ict/project/src/images/baricon.png'
 import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
 import redo from '/home/ubuntu/ict/project/src/images/redo.png'
-class Section extends Component {
+class Section2 extends Component {
 
     render() {
         return (
@@ -17,7 +17,7 @@ class Section extends Component {
                     </div>
                 </div>
 
-                <div className="delivery_section">
+                <div className="question">
                     <img src={ pan } alt="pan" className="pan" />
                     <div className="question_1"> <h2>질문1 </h2></div>
                     <div className="vs"> VS </div>
@@ -49,7 +49,7 @@ class Section extends Component {
     }
 }
 
-export default Section;
+export default Section2;
 
 // 프라이팬 이미지 출처
 // https://www.pngwing.com/ko/free-png-sxezy/download

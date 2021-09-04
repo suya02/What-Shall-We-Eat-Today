@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
-import '/home/ubuntu/ict/project/src/custom.css';
+import 'custom.css';
 import { Link } from 'react-router-dom';
 
-class Header2 extends Component {
+class Header3 extends Component {
 
     render() {
         return (
             <>
-            <header className="header2">
-                
+            <header className="header3">
+
                 <div className="header_logo">
                     <img src={egg} alt="logo" className="eggLogo" /> 
                     <Link to="/"> 오늘 뭐 먹지? </Link>
@@ -27,4 +27,4 @@ class Header2 extends Component {
     }
 }
 
-export default Header2;
+export default Header3;
