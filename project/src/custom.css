@@ -622,11 +622,36 @@ figure.snip1368.hover figcaption {
 }
 
 /* 패럴랙스 */
-.palldiv3{
+.palldiv1{
   text-align : center;
-  line-height : 100vh;
+  padding-top: 38vh;
+  color : white;
+  font-size : 30px;
+  padding-left: 8vw;
+}
+
+.palldiv2{
+  text-align : center;
+  font-weight: bold;
+  padding-left: 8vw;
+  /* line-height : 100vh; */
+  padding-bottom: 30vh;
   color : white;
   font-size : 70px;
+}
+
+.palldiv3{
+  text-align : center;
+  font-weight: bold;
+  padding-left: 8vw;
+  /* line-height : 100vh; */
+  padding-bottom: 2vh;
+  color : white;
+  font-size : 70px;
+}
+
+.scrollicon{
+  width: 5vw;
 }
 
 .pall3{
@@ -690,21 +715,40 @@ figure.snip1368.hover figcaption {
   color:black;
 }
 
-p.typing-txt{
-  display: none;
-  font-size: 10vw;
-}
-  
-.typing {  
-/*       position: absolute;*/ 
-  display: inline-block; 
-  animation-name: cursor; 
-  animation-duration: 0.3s; 
-  animation-iteration-count: infinite; 
-} 
 
-@keyframes cursor{ 
-  0%{border-right: 1px solid #fff} 
-  50%{border-right: 1px solid #000} 
-  100%{border-right: 1px solid #fff} 
+
+.bg {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin: 0px auto;
+  position: relative;
+}
+.header_vedio_box { 
+  width: 100%; 
+  height: 300px; 
+  overflow: hidden;
+  margin: 0px auto; 
+  position: relative; 
+}
+video { 
+  width: 100%; 
+  background-size : cover;
+  background-attachment : fixed;
+}
+.header_vedio_box_text { 
+  position: absolute; 
+  top: 50%; 
+  width: 100%; 
+}
+.header_vedio_box_text p { 
+  margin-top: -24px; 
+  text-align: center; 
+  font-size: 48px;
+  color: #ffffff; 
+}
+
+.padding5 {
+  padding-bottom: 7vw;
+  background-color: whitesmoke;
 }

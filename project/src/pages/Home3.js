@@ -4,9 +4,9 @@ import Main_section from '/home/ubuntu/ict/project/src/components/Main_section.j
 import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
 import Slider from '/home/ubuntu/ict/project/src/components/Slider.js'
 import { SliderData } from '/home/ubuntu/ict/project/src/components/SliderData'
+import scroll from '/home/ubuntu/ict/project/src/images/scroll.png'
 import 'custom.css';
 import $ from "jquery";
-
 
 
 class Home3 extends Component {
@@ -32,45 +32,34 @@ class Home3 extends Component {
     render() {
         return (
             <div>
-                <div className="index2">
-                <Header3 />
-                </div>
-
-                
-
-                <div className="index1">
-
-                    <div className="pall3">
-                        <div className="palldiv3">오늘 뭐 먹지?
-         
-                        </div>
-                        <div className="typing">오늘 뭐 먹지?
-         
-                        </div>
-                    </div>
-
-                  <div class="jb-box">
-               
-                    <div class="jb-text">
-          
-                    </div>
+              <div className="pall3">
+                  <div className="palldiv1">
+                    뭐 먹을 지 고민 될 땐!
                   </div>
-                </div>
-                
-                <section class="page-start">
-                    <div class="inner">
-                 
-                    </div>
-                </section>
-                {/* <Header /> */}
-                
-                <Main_section />
-                <div className="slidersizesmall">
-                <Slider slides={SliderData}/>
-                </div>
-                <Nav />
 
-               
+                  <div className="palldiv2">
+                    오늘 뭐 먹지? (typing )
+                  </div>
+
+                  <div className="palldiv3">
+                  
+                    <img src={ scroll } className="scrollicon" />
+                  </div>
+              </div>
+ 
+              <section class="page-start">
+                  <div class="inner">
+                
+                  </div>
+              </section>
+              {/* <Header /> */}
+              
+              <Main_section />
+              <div className="padding5"></div>
+
+              <Slider slides={SliderData}/>
+             
+              <Nav />
 
             </div>
         );
