@@ -6,62 +6,97 @@ import homefood from '/home/ubuntu/ict/project/src/images/homefood.png'
 import onesecond from '/home/ubuntu/ict/project/src/images/onesecond.png'
 import { Link } from 'react-router-dom';
 import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
+import $ from "jquery";
 
 class Main_section extends Component {
 
+    componentDidMount() {
+        function isElementUnderBottom(elem, triggerDiff) {
+            const { top } = elem.getBoundingClientRect();
+            const { innerHeight } = window;
+            return top > innerHeight + (triggerDiff || 0);
+          }
+          
+          function handleScroll() {
+            const elems = document.querySelectorAll('.up-on-scroll');
+            elems.forEach(elem => {
+              if (isElementUnderBottom(elem, -20)) {
+                elem.style.opacity = "0";
+                elem.style.transform = 'translateY(100px)';
+              } else {
+                elem.style.opacity = "1";
+                elem.style.transform = 'translateY(0px)';
+              }
+            })
+          }
+          
+          
+          
+
+
+  
+               window.addEventListener('scroll', handleScroll); 
+         
+
+
+        
+      }
+
     render() {
         return (
+            
             <div className="section">
-                <div className="Main_section">
+                <div id="list" className="list">
+                    <article className="up-on-scroll">
+                    <div className="Main_section">
+                        <div className="card1">
+                            <Link to="/delivery">
+                                <figure class="snip1368">
+                                    <img src={delivery} alt="sample30" />
+                                    <h3>배달음식 뭐 먹지?</h3>
+                                    <figcaption>
+                                        <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
+                                        <a href="#"> <i class="ion-social-twitter-outline"></i></a>
+                                        <a href="#"> <i class="ion-social-vimeo-outline"></i></a>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </Link>
+                        </div>
 
-                    <div className="card1">
-                    <Link to="/delivery">
-                        <figure class="snip1368">
-                            <img src={delivery} alt="sample30" />
-                            <h3>배달음식 뭐 먹지?</h3>
-                            <figcaption>
-                                <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
-                                <a href="#"> <i class="ion-social-twitter-outline"></i></a>
-                                <a href="#"> <i class="ion-social-vimeo-outline"></i></a>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </Link>
+                        <div className="card2">
+                        <Link to="/homemeal">
+                            <figure class="snip1368">
+                                <img src={homefood} alt="sample30" />
+                                <h3>집에서 뭐 해먹지?</h3>
+                                <figcaption>
+                                    <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
+                                    <a href="#"> <i class="ion-social-twitter-outline"></i></a>
+                                    <a href="#"> <i class="ion-social-vimeo-outline"></i></a>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </Link>
+                        </div>
+
+                        <div className="card3">
+                        <Link to="/random">
+                            <figure class="snip1368">
+                                <img src={onesecond} alt="sample30" />
+                                <h3>1초안에 알려줘!</h3>
+                                <figcaption>
+                                    <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
+                                    <a href="#"> <i class="ion-social-twitter-outline"></i></a>
+                                    <a href="#"> <i class="ion-social-vimeo-outline"></i></a>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </Link>
+                        </div>
                     </div>
-
-                    
-                    
-                    <div className="card2">
-                    <Link to="/homemeal">
-                        <figure class="snip1368">
-                            <img src={homefood} alt="sample30" />
-                            <h3>집에서 뭐 해먹지?</h3>
-                            <figcaption>
-                                <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
-                                <a href="#"> <i class="ion-social-twitter-outline"></i></a>
-                                <a href="#"> <i class="ion-social-vimeo-outline"></i></a>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </Link>
-                    </div>
-
-                    <div className="card3">
-                    <Link to="/random">
-                        <figure class="snip1368">
-                            <img src={onesecond} alt="sample30" />
-                            <h3>1초안에 알려줘!</h3>
-                            <figcaption>
-                                <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
-                                <a href="#"> <i class="ion-social-twitter-outline"></i></a>
-                                <a href="#"> <i class="ion-social-vimeo-outline"></i></a>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </Link>
-                    </div>
-
+                    </article>
                 </div>
+                
                 <br />
                 
                 <div className="Main_section">

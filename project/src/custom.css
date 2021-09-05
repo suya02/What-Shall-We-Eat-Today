@@ -121,6 +121,8 @@ a:link {
 .section {
   background-color: whitesmoke;
   padding-top: 5vw;
+
+  
 }
 
 .Main_section {
@@ -303,7 +305,7 @@ a:link {
 	text-decoration:none;
 	font-family:Comic Sans MS;
 	box-shadow:#d6d6d6 1px 3px 2px;
-	o-box-shadow:#d6d6d6 1px 3px 2px;
+
 	-moz-box-shadow:#d6d6d6 1px 3px 2px;
 	-webkit-box-shadow:#d6d6d6 1px 3px 2px;
 	text-indent:0px;
@@ -328,7 +330,7 @@ a:link {
 
 .again_test:active {
 	box-shadow:orange 1px 0 2px;
-	o-box-shadow:#d6d6d6 1px 0 2px;
+
 	-moz-box-shadow:#d6d6d6 1px 0 2px;
 	-webkit-box-shadow:#d6d6d6 1px 0 2px;
 	position:relative;
@@ -379,7 +381,6 @@ a:link {
     text-decoration:none;
     font-family:Comic Sans MS;
     box-shadow:#d6d6d6 1px 3px 2px;
-    o-box-shadow:#d6d6d6 1px 3px 2px;
     -moz-box-shadow:#d6d6d6 1px 3px 2px;
     -webkit-box-shadow:#d6d6d6 1px 3px 2px;
     text-indent:0px;
@@ -404,7 +405,6 @@ a:link {
   
   .start_test:active {
     box-shadow:orange 1px 0 2px;
-    o-box-shadow:#d6d6d6 1px 0 2px;
     -moz-box-shadow:#d6d6d6 1px 0 2px;
     -webkit-box-shadow:#d6d6d6 1px 0 2px;
     position:relative;
@@ -751,4 +751,45 @@ video {
 .padding5 {
   padding-bottom: 7vw;
   background-color: whitesmoke;
+}
+.container {
+  margin: 20px;
+  
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.list .up-on-scroll {
+  margin-top: 20px;
+  transition: transform 1s, opacity 1s;
+}
+
+.Main_section .cardt-1, .Main_section .cardt-1, .Main_section .cardt-1
+{
+  width: 20vw;
+  margin-top: 1vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+.Main_section .cardtt-2, .Main_section .cardtt-2, .Main_section .cardtt-2
+{
+  width: 20vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1vw;
 }
