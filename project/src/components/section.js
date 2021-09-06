@@ -18,9 +18,13 @@ class Section extends Component {
 
                     <br />
 
-                    <button className="start_test">
-                        <Link to="/delivery/test" >Start Test</Link>
-                    </button>                    
+                    
+                    <Link to="/delivery/test" >
+                        <button className="start_test">
+                            Start Test
+                        </button>  
+                    </Link>
+                                      
                 </div>
             </div>
         );

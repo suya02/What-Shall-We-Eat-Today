@@ -25,9 +25,17 @@ class Section2 extends Component {
                 </div>
 
                 <div className="background">
-                    <button href="" className="again_test" >테스트 다시하기 
-                    <img src={ redo } className="again_icon"/>
-                    </button>
+                    <Link to="/delivery/test">
+                        <button href="" className="again_test" >테스트 다시하기 
+                            <img src={ redo } className="again_icon"/>
+                        </button>
+                    </Link>
+
+                    <Link to="/result">
+                        <button href="" className="again_test" > 결과보기
+                            <img src={ redo } className="again_icon"/>
+                        </button>
+                    </Link>
                 </div>
                 
 
