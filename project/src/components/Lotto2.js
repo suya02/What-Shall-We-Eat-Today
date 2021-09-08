@@ -81,7 +81,7 @@ class Lotto extends Component {
         <div id="결과창">
           {winBalls.map((v) => <Ball key={v} number={v} />)}
         </div>
-        {redo && <button onClick={this.onClickRedo}>한 번 더!</button>}
+        {redo && <button className="start_test" onClick={this.onClickRedo}>한 번 더!</button>}
       </>
     );
   }

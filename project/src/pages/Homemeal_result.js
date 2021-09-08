@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '/home/ubuntu/ict/project/src/custom.css';
-import { Route, Link } from 'react-router-dom';
 import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
 import Header from '/home/ubuntu/ict/project/src/components/header.js'
 import Share from '/home/ubuntu/ict/project/src/components/share.js'

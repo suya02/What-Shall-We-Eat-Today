@@ -4,7 +4,8 @@ import '/home/ubuntu/ict/project/src/custom.css';
 import bar from '/home/ubuntu/ict/project/src/images/baricon.png'
 import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
 import redo from '/home/ubuntu/ict/project/src/images/redo.png'
-class Section2 extends Component {
+
+class Homemeal_Section2 extends Component {
 
     render() {
         return (
@@ -31,7 +32,7 @@ class Section2 extends Component {
                         </button>
                     </Link>
 
-                    <Link to="/Delivery_result">
+                    <Link to="/Homemeal_result">
                         <button href="" className="again_test" > 결과보기
                             <img src={ redo } className="again_icon"/>
                         </button>
@@ -57,7 +58,7 @@ class Section2 extends Component {
     }
 }
 
-export default Section2;
+export default Homemeal_Section2;
 
 // 프라이팬 이미지 출처
 // https://www.pngwing.com/ko/free-png-sxezy/download

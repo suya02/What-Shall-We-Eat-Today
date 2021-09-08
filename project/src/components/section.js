@@ -7,7 +7,7 @@ class Section extends Component {
         return (
             <div>
                 <div className="section1">
-                    <img src={ pan } alt="pan" className="pan" />
+                    <img src={ pan } alt="pan" className="pan1" />
                     
                     <div className="section1_text"> 
                         배달음식 뭐 먹지? <br />
@@ -19,7 +19,7 @@ class Section extends Component {
                     <br />
 
                     
-                    <Link to="/delivery/test" >
+                    <Link to="/delivery_question" >
                         <button className="start_test">
                             Start Test
                         </button>  

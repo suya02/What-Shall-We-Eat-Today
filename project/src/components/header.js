@@ -7,10 +7,10 @@ class Header extends Component {
 
     render() {
         return (
+            <>
             <header className="header">
-
-                <div className="header_logo">
-                    
+                
+            <div className="header_logo">
                     <Link to="/"> 
                         <img src={egg} alt="logo" className="eggLogo" /> 
                         <div className="link_font">
@@ -37,9 +37,7 @@ class Header extends Component {
                 </ul>
 
             </header>
-
-
-
+            </>
         );
     }
 }
