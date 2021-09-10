@@ -1,6 +1,13 @@
 {
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^6.2.1",
     "express": "^4.17.1"
+  },
+  "scripts": {
+    "node": "nodemon Server.js",
+    "react": "cd project && yarn start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run node\" \"npm run react\""
   }
 }
