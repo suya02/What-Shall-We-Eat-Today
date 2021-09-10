@@ -3,7 +3,6 @@ import Home from '/home/ubuntu/ict/project/src/pages/Home.js';
 import Delivery from '/home/ubuntu/ict/project/src/pages/Delivery.js';
 import Delivery_question from '/home/ubuntu/ict/project/src/pages/Delivery_question.js';
 import Delivery_result from '/home/ubuntu/ict/project/src/pages/Delivery_result.js';
-
 import Homemeal from '/home/ubuntu/ict/project/src/pages/Homemeal.js';
 import Homemeal_question from '/home/ubuntu/ict/project/src/pages/Homemeal_question.js';
 import Homemeal_result from '/home/ubuntu/ict/project/src/pages/Homemeal_result.js';
@@ -31,7 +30,7 @@ class App extends Component {
 
                         <Route path="/random" component={Random} exact />
                         <Route path="/random/result" component={Random_result} exact />
-                                    
+
                     </ScrollIntoView>
                 </BrowserRouter>
             </div>
