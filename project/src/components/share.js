@@ -12,19 +12,19 @@ class Share extends Component {
         return (
 
             <div className="share">
-                <img src={egg} alt="logo" className="eggLogo" /> 
+                <img src={egg} alt="logo" className="eggLogo" />
                 친구에게 공유하기
-                <img src={egg} alt="logo" className="eggLogo" /> 
+                <img src={egg} alt="logo" className="eggLogo" />
                 <br /><br />
-                
-                <img src={ kakao } className="share_icon"/>
-                
+
+                <img src={kakao} className="share_icon" />
+
                 <a href="https://www.baemin.com/shopDetail?shopDetail_shopNo=13566252&shopDetail_categoryTypeCode=1&bm_rfr=SHARE&shopDetail_campaignId=-1">
-                <img src={ baemin } className="share_icon"/>
+                    <img src={baemin} className="share_icon" />
                 </a>
 
-                <a href="#" onclick="clip(); return false;">
-                    <img src={ link } className="share_icon"/>
+                <a href="#" onClick="clip(); return false;">
+                    <img src={link} className="share_icon" />
                 </a>
             </div>
         );
