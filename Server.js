@@ -2,28 +2,24 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path')
 const app = express();
-
+const cors = require('cors');
+const { tmpdir } = require('os');
 const port = 5000;
+const router = express.Router();
+
+//cors이슈 해결하기 위해 서버 접근 권한 허용 
+app.use(cors({
+    origin: 'http://3.36.96.79:3000'
+}));
+
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-/*
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-
-    next();
-});
-*/
 
 
 
 //빌드한 index.html 파일 /로 접속했을때 랜더링 (프로젝트 다 끝나면 마지막에 빌드하고 렌더링하기)
-app.get('/', function (요청, 응답) {
-    응답.sendFile(path.join(__dirname, '/project/build/index.html'));
-});
-
 
 
 //API 호출, 
@@ -32,19 +28,30 @@ app.get('/api', (req, res) => {
     res.send({ menu: "pizza" });
 })
 
-//프론트에서 데이터 받는걸 해야하는데 안됨
+//프론트에서 백엔드의 apipost 로 post했을때 데이터 처리 
 app.post('/apipost', (req, res) => {
-    console.log("result :", req.body.data);
-    res.send("<h1>WELCOME<h1>");
+
+    global.tmp = req.body.firstName;//전역적으로 사용하기 위해 tmp변수를 global하게 설정
+    console.log(tmp);
+
+});
+
+app.get('/apipost', (req, res) => {
+
+
+    res.send(tmp);
 });
 
 
+app.get('/api2', (req, res) => {
+    res.send({ menu: "jam" });
+})
 
 
 
-app.get('*', function (요청, 응답) {
+/*app.get('*', function (요청, 응답) {
     응답.sendFile(path.join(__dirname, '/project/build/index.html'));
 });
-
+*/
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

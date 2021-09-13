@@ -5,7 +5,7 @@ import Header from '/home/ubuntu/ict/project/src/components/header.js'
 import Share from '/home/ubuntu/ict/project/src/components/share.js'
 import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
 import axios from 'axios';
-
+const tmp = "damn"
 
 class Delivery_Result extends Component {
     //state 설정
@@ -17,7 +17,8 @@ class Delivery_Result extends Component {
     //꼭 마운트 끝났을 때 데이터 불러오기 
     //axios를 이용한 Aip 호출
     componentDidMount() {
-        axios.get('/api')
+
+        axios.get('http://3.36.96.79:5000/api')
             .then(res => {
                 console.log(res.data.menu);
                 this.setState({ menu: res.data.menu });
@@ -27,10 +28,9 @@ class Delivery_Result extends Component {
             })
 
 
-
-        //백엔드로 데이터 보내기 안됨
-        axios.post('apipost', {
-            firstName: 'Fred',
+        //ip를 입력하면 http통신 가능
+        axios.post(('http://3.36.96.79:5000/apipost'), {
+            firstName: (tmp),
             lastName: 'Flintstone'
         })
             .then(function (response) {
@@ -42,6 +42,9 @@ class Delivery_Result extends Component {
 
 
     }
+
+
+
 
 
     //fetch를 이용한 API호출
@@ -69,6 +72,7 @@ class Delivery_Result extends Component {
                     <div>
                         {this.state.menu ? this.state.menu : "로딩중"} {/*마운트가 되서 menu에 데이터가 들어오면 menu를 출력 그렇지 아니면 로딩중이라는 문구를 출력*/}
                         <img src={pan} className="result_pan" />
+
                     </div>
                 </div>
 
