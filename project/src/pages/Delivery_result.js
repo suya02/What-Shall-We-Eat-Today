@@ -5,12 +5,12 @@ import Header from '/home/ubuntu/ict/project/src/components/header.js'
 import Share from '/home/ubuntu/ict/project/src/components/share.js'
 import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
 import axios from 'axios';
-const tmp = "damn"
+
 
 class Delivery_Result extends Component {
     //state 설정
     state = {
-        menu: "",
+        menu: "디폴트",
         image: ""
     }
 
@@ -20,8 +20,13 @@ class Delivery_Result extends Component {
 
         axios.get('http://3.36.96.79:5000/api')
             .then(res => {
-                console.log(res.data.menu);
-                this.setState({ menu: res.data.menu });
+
+                console.log(res);
+                console.log(this.state.menu);
+
+                console.log(res);
+                this.setState({ menu: res.result1 });
+                console.log(this.state.menu);
             })
             .catch(err => {
                 console.log(err);
@@ -29,6 +34,7 @@ class Delivery_Result extends Component {
 
 
         //ip를 입력하면 http통신 가능
+        /*
         axios.post(('http://3.36.96.79:5000/apipost'), {
             firstName: (tmp),
             lastName: 'Flintstone'
@@ -39,7 +45,7 @@ class Delivery_Result extends Component {
             .catch(function (error) {
                 console.log(error);
             });
-
+*/
 
     }
 

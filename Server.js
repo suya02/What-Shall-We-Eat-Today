@@ -24,22 +24,33 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //API 호출, 
 //여기서 Mysql 접속한다음 http 라우팅 하나 파서 프론트엔드에서 받은 데이터들로 결과 데이터 보여주는 알고리즘 짜면 됨 
-app.get('/api', (req, res) => {
-    res.send({ menu: "pizza" });
-})
+
 
 //프론트에서 백엔드의 apipost 로 post했을때 데이터 처리 
-app.post('/apipost', (req, res) => {
+app.post('/api', (req, res) => {
 
-    global.tmp = req.body.firstName;//전역적으로 사용하기 위해 tmp변수를 global하게 설정
-    console.log(tmp);
+    //global.tmp = req.body.result1;//전역적으로 사용하기 위해 tmp변수를 global하게 설정
+    global.result1 = (req.body.result1);
+    global.result2 = (req.body.result2);
+    global.result3 = (req.body.result3);
+    global.result4 = (req.body.result4);
+    global.result5 = (req.body.result5);
+    global.result6 = (req.body.result6);
+    global.result7 = (req.body.result7);
+    console.log(req.body.result1);
+    console.log(req.body.result2);
+    console.log(req.body.result3);
+    console.log(req.body.result4);
+    console.log(req.body.result5);
+    console.log(req.body.result6);
+    console.log(req.body.result7);
 
 });
 
-app.get('/apipost', (req, res) => {
+app.get('/api', (req, res) => {
 
 
-    res.send(tmp);
+    res.send(`{result1:"${result1}"}`);
 });
 
 
