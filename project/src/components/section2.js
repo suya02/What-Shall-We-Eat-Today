@@ -20,6 +20,14 @@ let check2 = true;  //처음 두 질문의 결과는 q3 배열에 넣기 위해 
 
 //결과보기 클릭 시 result 배열을 node서버로 post하는  함수 생성
 
+
+
+
+
+
+
+
+/*
 function postResults() {
 
     axios.post(('http://3.36.96.79:5000/api'), {
@@ -38,24 +46,12 @@ function postResults() {
             console.log(error);
         });
 
-    /*
-        axios({
-            method: 'post',
-            url: 'http://3.36.96.79:5000/apipost',
-            data: {
-                result1: (results[0]),
-                result2: (results[1]),
-                result3: (results[2]),
-                result4: (results[3]),
-                result5: (results[4]),
-                result6: (results[5]),
-                result7: (results[6])
-            }
-        });
-    */
+
+
 
 }
 
+*/
 
 
 class Section2 extends Component {
@@ -65,6 +61,19 @@ class Section2 extends Component {
         this.state = {
             count: 0
         }
+    }
+
+    createCourse = async () => {
+        let res = await axios.post('http://3.35.17.24:5000/api', {
+            result1: (results[0]),
+            result2: (results[1]),
+            result3: (results[2]),
+            result4: (results[3]),
+            result5: (results[4]),
+            result6: (results[5]),
+            result7: (results[6]),
+        })
+        console.log(res)
     }
 
     render() {
@@ -104,7 +113,7 @@ class Section2 extends Component {
                                 let tmp = results.pop();
                                 results.unshift(tmp);
                                 console.log(results);
-                                postResults();
+                                this.createCourse();
                                 //result배열에 있는 국가별 음식 중 하나가 배열의 맨 앞부분과 뒷부분에 겹치므로 앞부분의 음식 종류(한식,일식,양식,아시안)는 제거해야 함
                                 //제거 한 뒤에는 pop으로 맨 뒤에있는 원소(한식,양식,아시안,중식)중 하나를 뽑아낸다음 배열의 맨 앞에 다시 삽입
                                 //데이터베이스 스키마 순서대로 post하기 위함 
@@ -142,7 +151,7 @@ class Section2 extends Component {
                                 let tmp = results.pop();
                                 results.unshift(tmp);
                                 console.log(results);
-                                postResults();
+                                this.createCourse();
                             }
                         }
 

@@ -7,6 +7,9 @@ import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
 import axios from 'axios';
 
 
+
+
+
 class Delivery_Result extends Component {
     //state 설정
     state = {
@@ -14,60 +17,22 @@ class Delivery_Result extends Component {
         image: ""
     }
 
-    //꼭 마운트 끝났을 때 데이터 불러오기 
-    //axios를 이용한 Aip 호출
-    componentDidMount() {
 
-        axios.get('http://3.36.96.79:5000/api')
-            .then(res => {
-
-                console.log(res);
-                console.log(this.state.menu);
-
-                console.log(res);
-                this.setState({ menu: res.result1 });
-                console.log(this.state.menu);
-            })
-            .catch(err => {
-                console.log(err);
-            })
-
-
-        //ip를 입력하면 http통신 가능
-        /*
-        axios.post(('http://3.36.96.79:5000/apipost'), {
-            firstName: (tmp),
-            lastName: 'Flintstone'
-        })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-*/
-
+    getCourses = async () => {  //api에서 get요청을 하는 함수
+        //이부분에서 결과로 나온 메뉴를 설정해준다.
+        let data = await axios.get('http://3.35.17.24:5000/api').then(({ data }) => data);
+        console.log(data);
+        console.log(typeof (data));
+        this.setState({ menu: data.result1 })
     }
 
 
+    //마운트가 끝났을 때 get요청을 하는 것이 좋다.
+    componentDidMount() {
+        this.getCourses();
+    }
 
 
-
-    //fetch를 이용한 API호출
-    /*
-        componentDidMount() {
-            this.callApi()
-                .then(res => this.setState({ menu: res.menu }))
-                .catch(err => console.log(err));
-    
-        }
-    
-        callApi = async () => {
-            const response = await fetch('/api');
-            const body = await response.json();
-            return body;
-        }
-    */
     render() {
         return (
             <div>

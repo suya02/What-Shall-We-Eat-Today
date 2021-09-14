@@ -6,10 +6,11 @@ const cors = require('cors');
 const { tmpdir } = require('os');
 const port = 5000;
 const router = express.Router();
+const mysql = require('mysql');
 
 //cors이슈 해결하기 위해 서버 접근 권한 허용 
 app.use(cors({
-    origin: 'http://3.36.96.79:3000'
+    origin: 'http://3.35.17.24:3000'
 }));
 
 
@@ -48,9 +49,42 @@ app.post('/api', (req, res) => {
 });
 
 app.get('/api', (req, res) => {
+    //db 연결한 후 쿼리문 돌려서 메뉴 하나 출력한 다음 json 형태로 res.send
+    //질문에 대한 답변들은 DB 스키마 순서대로 result1 ~ result7까지임
+
+    let connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'ict',
+        password: 'ictproject',
+        database: 'ICT_project'
+    });
+
+    connection.connect();
+
+    //변수에 쿼리를 저장한다음 그 변수를 쿼리안에 넣기
+    let query = "SELECT * FROM delivery";
+
+    connection.query(query, function (error, results, fields) {
+        if (error) {
+            console.log(error);
+        }
+        console.log(results);
+        res.send(results);
+    });
+
+    connection.end();
 
 
-    res.send(`{result1:"${result1}"}`);
+
+
+
+
+
+
+
+
+
+
 });
 
 
