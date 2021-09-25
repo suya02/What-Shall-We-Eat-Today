@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import machine from '/home/ubuntu/ict/project/src/images/random.jpg'
+import '/home/ubuntu/ict/project/src/custom.css';
 
-class Section extends Component {
+class Random_section extends Component {
     render() {
         return (
             <div>
-                <div className="section1">
+                <div className="sections">
                     <img src={ machine } alt="machine" className="pan" />
                     
-                    <div className="section1_text"> 
+                    <div className="section_text_big"> 
                         1초안에 알려줘 <br />
                     </div>
-                    <div className="section1_text2"> 
+                    <div className="section_text_small"> 
                         랜덤으로 추천받기<br />
                     </div>
 
@@ -31,4 +32,4 @@ class Section extends Component {
     }
 }
 
-export default Section;
+export default Random_section;

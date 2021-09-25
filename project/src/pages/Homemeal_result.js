@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '/home/ubuntu/ict/project/src/custom.css';
-import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
 import Header from '/home/ubuntu/ict/project/src/components/header.js'
+import Homemeal_result_section from '/home/ubuntu/ict/project/src/components/Homemeal_result_section'
 import Share from '/home/ubuntu/ict/project/src/components/share.js'
 import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
 
@@ -11,14 +11,7 @@ class Result extends Component {
         return (
             <div>
                 <Header />
-
-                <div className="background">
-                    <div className="result_text"> 내가 오늘 먹을 음식은 ?</div>
-                    <div>
-                        <img src={ pan } className="result_pan" />
-                    </div> 
-                </div> 
-
+                <Homemeal_result_section />
                 <Share />
                 <Nav />
             </div>

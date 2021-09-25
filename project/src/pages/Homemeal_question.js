@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import Header from '/home/ubuntu/ict/project/src/components/header.js'
-import Homemeal_Section2 from '/home/ubuntu/ict/project/src/components/homemeal_section2.js'
+import Homemeal_question_section from '/home/ubuntu/ict/project/src/components/Homemeal_question_section'
 import Share from '/home/ubuntu/ict/project/src/components/share.js'
 import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
+
+import '/home/ubuntu/ict/project/src/custom.css';
+
+
 
 class Homemeal_question extends Component {
 
@@ -10,7 +14,7 @@ class Homemeal_question extends Component {
         return (
             <div>
                 <Header />
-                <Homemeal_Section2 />
+                <Homemeal_question_section />
                 <Share />
                 <Nav />
             </div>

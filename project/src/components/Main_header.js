@@ -3,12 +3,12 @@ import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
 import '/home/ubuntu/ict/project/src/custom.css';
 import { Link } from 'react-router-dom';
 
-class Header2 extends Component {
+class Main_header extends Component {
 
     render() {
         return (
             <>
-            <header className="header2">
+            <header className="Main_header">
                 
             <div className="header_logo">
                     <Link to="/"> 
@@ -42,4 +42,4 @@ class Header2 extends Component {
     }
 }
 
-export default Header2;
+export default Main_header;

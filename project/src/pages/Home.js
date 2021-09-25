@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header2 from '/home/ubuntu/ict/project/src/components/header2.js'
+import Main_header from '/home/ubuntu/ict/project/src/components/Main_header.js'
 import Main_section from '/home/ubuntu/ict/project/src/components/Main_section.js'
 import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
 import HeaderVideo from '/home/ubuntu/ict/project/src/videos/header.mp4'
@@ -31,7 +31,7 @@ class Home extends Component {
       return (
         <div>
             <div className="index2">
-            <Header2 />
+            <Main_header />
             </div>
 
             <div className="index1">

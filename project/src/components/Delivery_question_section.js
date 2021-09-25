@@ -64,7 +64,7 @@ function postResults() {
 
 */
 
-class Section2 extends Component {
+class Delivery_question_section extends Component {
   constructor(probs) {
     //state 클래스버전으로 사용
     super(probs);
@@ -223,7 +223,7 @@ class Section2 extends Component {
   }
 }
 
-export default Section2;
+export default Delivery_question_section;
 
 // 프라이팬 이미지 출처
 // https://www.pngwing.com/ko/free-png-sxezy/download

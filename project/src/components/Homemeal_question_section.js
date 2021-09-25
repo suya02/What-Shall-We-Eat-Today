@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '/home/ubuntu/ict/project/src/custom.css';
 import bar from '/home/ubuntu/ict/project/src/images/baricon.png'
 import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
 import redo from '/home/ubuntu/ict/project/src/images/redo.png'
 
-class Homemeal_Section2 extends Component {
+class Homemeal_question_section extends Component {
 
     render() {
         return (
@@ -39,26 +39,24 @@ class Homemeal_Section2 extends Component {
                     </Link>
                 </div>
 
-
                 {/* <div className="startButton">
 
                     <ul>
                         <li className="button1">
                             배달음식 추천 시작
-    </li>
+                        </li>
 
                         <li className="button2">
                             집밥 추천 시작
-    </li>
+                        </li>
                     </ul>
                 </div> */}
-
             </div>
         );
     }
 }
 
-export default Homemeal_Section2;
+export default Homemeal_question_section;
 
 // 프라이팬 이미지 출처
 // https://www.pngwing.com/ko/free-png-sxezy/download
