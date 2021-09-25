@@ -13,13 +13,13 @@ class Homemeal_Section2 extends Component {
             <div>
                 <div className="bar_out">
                     (바 좌측에 "뒤로" /// 우측엔 질문 진행율) ex) 1 / 10
-                    <div>   
-                        <img src={ bar } alt="pan" className="bar_in" />
+                    <div>
+                        <img src={bar} alt="pan" className="bar_in" />
                     </div>
                 </div>
 
                 <div className="question">
-                    <img src={ pan } alt="pan" className="pan" />
+                    <img src={pan} alt="pan" className="pan" />
                     <div className="question_1"> <h2>질문1 </h2></div>
                     <div className="vs"> VS </div>
                     <div className="question_2"> <h2>질문2</h2></div>
@@ -27,18 +27,18 @@ class Homemeal_Section2 extends Component {
 
                 <div className="background">
                     <Link to="/delivery_question">
-                        <button href="" className="again_test" >테스트 다시하기 
-                            <img src={ redo } className="again_icon"/>
+                        <button href="" className="again_test" >테스트 다시하기
+                            <img src={redo} className="again_icon" />
                         </button>
                     </Link>
 
                     <Link to="/Homemeal_result">
                         <button href="" className="again_test" > 결과보기
-                            <img src={ redo } className="again_icon"/>
+                            <img src={redo} className="again_icon" />
                         </button>
                     </Link>
                 </div>
-                
+
 
                 {/* <div className="startButton">
 
