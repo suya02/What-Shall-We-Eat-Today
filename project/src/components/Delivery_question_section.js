@@ -95,9 +95,10 @@ class Delivery_question_section extends Component {
             <img src={bar} alt="pan" className="bar_in" />
           </div>
         </div>
-
-        <div className="question">
+        
+        <div className="question_section">
           <img src={pan} alt="pan" className="pan" />
+          <div className="question">
           <div
             className="question_1"
             onClick={() => {
@@ -146,7 +147,9 @@ class Delivery_question_section extends Component {
             {" "}
             <h2>{q1[this.state.count]} </h2>
           </div>
-          <div className="vs"> {vs} </div>
+
+          <div className="vs"> <h2> {vs} </h2></div>
+
           <div
             className="question_2"
             onClick={() => {
@@ -187,12 +190,14 @@ class Delivery_question_section extends Component {
             {" "}
             <h2>{q2[this.state.count]}</h2>
           </div>
+          </div>
         </div>
+       
 
         <div className="background">
           <Link to="/delivery_question">
             <button href="" className="again_test">
-              테스트 다시하기
+              <p>테스트 다시하기</p>
               <img src={redo} className="again_icon" />
             </button>
           </Link>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import machine from '/home/ubuntu/ict/project/src/images/random.jpg'
+import machine from '/home/ubuntu/ict/project/src/images/random.png'
 import '/home/ubuntu/ict/project/src/custom.css';
 
 class Random_section extends Component {

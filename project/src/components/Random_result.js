@@ -33,12 +33,12 @@ class Random_result extends Component {
         });
       }, (i + 1) * 1000);
     }
-    this.timeouts[6] = setTimeout(() => {
+    this.timeouts[1] = setTimeout(() => {
       this.setState({
         bonus: winNumbers[6],
         redo: true,
       });
-    }, 7000);
+    }, 3500);
   };
 
   componentDidMount() {
@@ -76,13 +76,13 @@ class Random_result extends Component {
   render() {
     const { winBalls, redo } = this.state;
     return (
-      <>
-        <div>오늘은 뭐 먹지?</div>
+      <div className="background">
+        <div className="result_text">오늘은 뭐 먹지?</div>
         <div id="결과창">
           {winBalls.map((v) => <Ball key={v} number={v} />)}
         </div>
         {redo && <button className="start_test" onClick={this.onClickRedo}>한 번 더!</button>}
-      </>
+      </div>
     );
   }
 }
