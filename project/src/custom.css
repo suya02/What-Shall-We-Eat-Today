@@ -718,6 +718,7 @@ video {
   font-family: 'Gamja Flower', cursive;
   font-size: 4vw;
   text-align: center;
+  background-color: whitesmoke;
 }
 
 /* header router font color */
@@ -746,4 +747,13 @@ video {
 
 .left{
   float: left;
+}
+
+.checkbox {
+  width: 3vw;
+}
+
+input[type="checkbox"] {
+  width: 40px; 
+  height: 40px; 
 }

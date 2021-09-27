@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '/home/ubuntu/ict/project/src/custom.css';
-import bar from '/home/ubuntu/ict/project/src/images/baricon.png'
-import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
+import checkbox from '/home/ubuntu/ict/project/src/images/checkbox1.png'
 import redo from '/home/ubuntu/ict/project/src/images/redo.png'
 
 class Homemeal_question_section extends Component {
@@ -11,18 +10,19 @@ class Homemeal_question_section extends Component {
         return (
 
             <div>
-                <div className="bar_out">
-                    (바 좌측에 "뒤로" /// 우측엔 질문 진행율) ex) 1 / 10
-                    <div>
-                        <img src={bar} alt="pan" className="bar_in" />
-                    </div>
+                <div className="result_text">
+                    조리 시간으로 뭐 해먹을지 추천받기!
                 </div>
-
-                <div className="question">
-                    <img src={pan} alt="pan" className="pan" />
-                    <div className="question_1"> <h2>질문1 </h2></div>
-                    <div className="vs"> VS </div>
-                    <div className="question_2"> <h2>질문2</h2></div>
+                
+                
+                <div className="question_section">
+                    <input type="checkbox" name="30min" />     
+                    
+                    <div className="question_1"> <h2>30분 이내 </h2></div>
+                    <div className="question_2"> <h2>1시간 이내</h2></div>
+                    <div className="question_2"> <h2>1시간 30분 이내</h2></div>
+                    <div className="question_2"> <h2>2시간 이상</h2></div>
+       
                 </div>
 
                 <div className="background">
