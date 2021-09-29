@@ -21,7 +21,7 @@ class Delibery_section extends Component {
                         
                         <Link to="/delivery_question" >
                             <button className="start_test">
-                                Start Test
+                                Start
                             </button>  
                         </Link>
                     </div>           

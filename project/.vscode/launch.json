@@ -4,13 +4,23 @@
     // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        },
+
+
         
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
+            "name": "Launch Projram",
             // "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}/slider.js"
+            "program": "${workspaceFolder}\\backend\\bin\\www"
+
         }
     ]
 }

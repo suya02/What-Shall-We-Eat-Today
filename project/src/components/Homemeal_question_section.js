@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '/home/ubuntu/ict/project/src/custom.css';
-import checkbox from '/home/ubuntu/ict/project/src/images/checkbox1.png'
+import clock from '/home/ubuntu/ict/project/src/images/clock.png'
 import redo from '/home/ubuntu/ict/project/src/images/redo.png'
 
 class Homemeal_question_section extends Component {
@@ -13,16 +13,50 @@ class Homemeal_question_section extends Component {
                 <div className="result_text">
                     조리 시간으로 뭐 해먹을지 추천받기!
                 </div>
-                
-                
-                <div className="question_section">
-                    <input type="checkbox" name="30min" />     
-                    
-                    <div className="question_1"> <h2>30분 이내 </h2></div>
-                    <div className="question_2"> <h2>1시간 이내</h2></div>
-                    <div className="question_2"> <h2>1시간 30분 이내</h2></div>
-                    <div className="question_2"> <h2>2시간 이상</h2></div>
+
+                {/* <div className="question_section2">   
+                    <img src={clock} className="clock" />
+                    <div className="h_question"> 30분 이내 </div>
+                </div>
+
+                <div className="question_section2">   
+                    <img src={clock} className="clock" />
+                    <div className="h_question"> 1시간 이내 </div>
+                </div>
        
+                <div className="question_section2">   
+                    <img src={clock} className="clock" />
+                    <div className="h_question"> 1시간 30분 이내 </div>
+                </div>
+                
+                <div className="question_section2">   
+                    <img src={clock} className="clock" />
+                    <div className="h_question"> 2시간 </div>
+                </div> */}
+
+                <div className="background">
+                    <table className="h_table">
+                        <tr>
+                            <td><img src={clock} className="clock" /></td>
+                            <td><div className="h_question"> 30분 이내 </div></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><img src={clock} className="clock" /></td>
+                            <td><div className="h_question"> 1시간 30분 이내 </div></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><img src={clock} className="clock" /></td>
+                            <td><div className="h_question"> 30분 이내 </div></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><img src={clock} className="clock" /></td>
+                            <td><div className="h_question"> 30분 이내 </div></td>
+                            
+                        </tr>
+                    </table>
                 </div>
 
                 <div className="background">

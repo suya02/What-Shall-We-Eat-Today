@@ -18,7 +18,7 @@ class Homemeal_section extends Component {
                     
                     <Link to="/Homemeal_question" >
                         <button className="start_test">
-                            Start Test
+                            Start
                         </button>  
                     </Link>
                 </div>

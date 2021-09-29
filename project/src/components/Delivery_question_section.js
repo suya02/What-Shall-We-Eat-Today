@@ -7,6 +7,15 @@ import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import axios from "axios";
 import { ProgressBar } from 'react-bootstrap';
 
+// export var ProgressBar = ({ width, percent }) => {
+
+//    state = {
+//     percent: 0
+//   };
+//   updateProgress = (field, val) => {
+//     this.setState({ [field]: val });
+//   };
+
 let vs = "vs"; //질문이 모두 끝나면 vs가 요리중 이라는 문자열로 바뀌게 구현
 let q1 = [
   "한식",
@@ -66,6 +75,8 @@ function postResults() {
 */
 
 class Delivery_question_section extends Component {
+
+
   constructor(probs) {
     //state 클래스버전으로 사용
     super(probs);
@@ -86,6 +97,13 @@ class Delivery_question_section extends Component {
     });
     console.log(res);
   };
+  
+  state = {
+    percent: 0
+  };
+  updateProgress = (field, val) => {
+    this.setState({ [field]: val });
+  };
 
   render() {
     return (
@@ -93,7 +111,16 @@ class Delivery_question_section extends Component {
         <div className="bar_out">
           (바 좌측에 "뒤로" /// 우측엔 질문 진행율) ex) 1 / 10
           <div>
-          <ProgressBar striped variant="success" now={40} />
+          {/* <ProgressBar striped variant="success" now={40} /> */}
+          <ProgressBar width={400} percent={this.state.percent} />
+          <button
+            // onClick={() =>
+            //   this.updateProgress("percent", this.state.percent + 0.1)
+            // }
+          >
+            Add 10%
+          </button>
+
           </div>
         </div>
         

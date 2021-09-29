@@ -206,7 +206,7 @@ a:link {
     user-select: none;
 }
 
-.left-arrow {
+/* .left-arrow {
     position: absolute;
     top: 50%;
     left: 32px;
@@ -222,7 +222,7 @@ a:link {
 }
 .left-arrow:hover{
     transform: scale(0.90); 
-}
+} */
 
 .slide {
     opacity: 0;
@@ -361,6 +361,63 @@ a:link {
   width: 35vw;
   position: relative;
   display : block;
+  float: left;
+}
+
+.box {
+  text-align: center;
+  float: left;
+  width: 10vw;
+  height: 35vw;
+
+}
+
+.box:hover {
+  float: left;
+  transform: scale(1.01, 1.01);
+  cursor: pointer;
+}
+
+.box1 {
+  display: block;
+  justify-content: center;
+  text-align: center;
+
+
+  float: left;
+  width: 8vw;
+  animation: over 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes over {
+  to {
+    transform: translate(45vw, 12vw) rotate( 360deg ) scale(3);
+  }
+}
+
+.bounce { 
+  font-size: x-large;
+  padding-top: 3vw;
+  text-align: center;
+  font-weight: bold;
+  animation-fill-mode: forwards;
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 .bar_out {
@@ -431,7 +488,6 @@ a:link {
   width: 2.5vw;
   float: right;
   vertical-align: center;
-  align: center;
 }
 
 .share {
@@ -733,8 +789,8 @@ video {
   align-items: center;
   border: 1px solid black;
   border-radius: 100px;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   line-height: 20px;
   font-size: 20px;
   text-align: center;
@@ -757,9 +813,79 @@ input[type="checkbox"] {
   width: 40px; 
   height: 40px; 
 }
+
 .random_result {
-  height: 50vh;
+  height: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.random_section {
+  height: 35vw;
+  background-color: whitesmoke;
+}
+
+.clock {
+  width: 3vw;
+}
+
+.question_section2
+{
+  background-color: whitesmoke; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2vw;
+}
+
+.h_question{
+  background-color: whitesmoke;
+  flex-direction: row;
+  position: relative;
+  float: left;
+  color: orange;
+  font-family: 'Gamja Flower', cursive;
+  font-size: 3vw;
+  padding-left: 2vw;
+  text-align: center;
+  width: 100%;
+}
+
+.h_table{
+  background-color: whitesmoke;
+  border: 0;
+  border-collapse : collapse;
+  text-align: center;
+  margin-left: auto; margin-right: auto;
+  height: 30vw;
+  width: 28vw;
+  padding-top: 10vw;
+}
+
+.h_tr {
+  margin-left: auto; margin-right: auto;
+  text-align: center;
+  padding-top: 5vw;
+  margin-top: 3vw;
+}
+
+.h_table > td {
+  padding-right: 4vw;
+}
+
+
+.progress-div {
+  background-color: gray;
+  border-radius: .5rem;
+}
+
+.progress {
+  background-color: orange;
+  height: 10px;
+  border-radius: 1rem;
+  transition: 1s ease;
+  transition-delay: 0.5s;
 }

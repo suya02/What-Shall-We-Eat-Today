@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Ball from './Ball';
+import machine from '/home/ubuntu/ict/project/src/images/random.png'
+import box1 from '/home/ubuntu/ict/project/src/images/box1.png'
+import box2 from '/home/ubuntu/ict/project/src/images/box2.png'
 
 function getWinNumbers() {
   console.log('getWinNumbers');
@@ -11,6 +14,12 @@ function getWinNumbers() {
   const winNumbers = shuffle.slice(0, 2).sort((p, c) => p - c);
   return [...winNumbers];
 }
+
+// 박스  onclick 시 박스 이미지변경하면서 메뉴 나타내기
+// function ChangeImg(){
+//   document.getElementById("imgId").src = "images/box2.png";
+//   console.log(src);
+// }
 
 class Random_result extends Component {
   state = {
@@ -73,16 +82,34 @@ class Random_result extends Component {
     this.timeouts = [];
   };
 
-  render() {
-    const { winBalls, redo } = this.state;
+   render() {
+    const { winBalls, redo, i_src } = this.state;
     return (
-      <div className="background">
-        <div className="result_text">오늘은 뭐 먹지?</div>
-        <div className="random_result">
-          {winBalls.map((v) => <Ball key={v} number={v} />)}
+      <div>
+        <div className="background">
+          <div className="result_text">오늘은 뭐 먹지?</div>
+
+          <div className="random_section">
+            {/* <img src={ machine } alt="machine" className="pan" /> */}
+            <div className="bounce">open </div>
+            <div className="box" onClick="ChangeImg()" >
+              <img id="imgId" src={ box1 } alt="box1" className="box1" />
+            </div>
+
+            
+          </div>
+            <div className="random_result">
+              {winBalls.map((v) => <Ball key={v} number={v} />)}
+            </div>
+          {redo && <button className="start_test" onClick={this.onClickRedo}>한 번 더!</button>}
         </div>
-        {redo && <button className="start_test" onClick={this.onClickRedo}>한 번 더!</button>}
+
+        
+
       </div>
+
+
+
     );
   }
 }
