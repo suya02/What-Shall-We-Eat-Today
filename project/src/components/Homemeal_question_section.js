@@ -26,11 +26,10 @@ class Homemeal_question_section extends Component {
                 </div>
 
                 <div className="background">
-                    <Link to="/delivery_question">
-                        <button href="" className="again_test" >테스트 다시하기
+                    
+                        <button onClick={() =>{window.location.reload()}} className="again_test" >테스트 다시하기
                             <img src={redo} className="again_icon" />
                         </button>
-                    </Link>
 
                     <Link to="/Homemeal_result">
                         <button href="" className="again_test" > 결과보기

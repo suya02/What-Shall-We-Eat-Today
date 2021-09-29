@@ -35,10 +35,10 @@ class Random_result extends Component {
     }
     this.timeouts[1] = setTimeout(() => {
       this.setState({
-        bonus: winNumbers[6],
+        bonus: winNumbers[1],
         redo: true,
       });
-    }, 3500);
+    }, 3000);
   };
 
   componentDidMount() {
@@ -78,7 +78,7 @@ class Random_result extends Component {
     return (
       <div className="background">
         <div className="result_text">오늘은 뭐 먹지?</div>
-        <div id="결과창">
+        <div className="random_result">
           {winBalls.map((v) => <Ball key={v} number={v} />)}
         </div>
         {redo && <button className="start_test" onClick={this.onClickRedo}>한 번 더!</button>}

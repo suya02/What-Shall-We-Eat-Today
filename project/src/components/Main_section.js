@@ -6,7 +6,7 @@ import homefood from '/home/ubuntu/ict/project/src/images/homefood.png'
 import onesecond from '/home/ubuntu/ict/project/src/images/onesecond.png'
 import { Link } from 'react-router-dom';
 import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
-import $ from "jquery";
+// import $ from "jquery";
 
 class Main_section extends Component {
 

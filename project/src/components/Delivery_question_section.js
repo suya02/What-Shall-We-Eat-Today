@@ -5,6 +5,7 @@ import bar from "/home/ubuntu/ict/project/src/images/baricon.png";
 import pan from "/home/ubuntu/ict/project/src/images/pan2.png";
 import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import axios from "axios";
+import { ProgressBar } from 'react-bootstrap';
 
 let vs = "vs"; //질문이 모두 끝나면 vs가 요리중 이라는 문자열로 바뀌게 구현
 let q1 = [
@@ -92,7 +93,7 @@ class Delivery_question_section extends Component {
         <div className="bar_out">
           (바 좌측에 "뒤로" /// 우측엔 질문 진행율) ex) 1 / 10
           <div>
-            <img src={bar} alt="pan" className="bar_in" />
+          <ProgressBar striped variant="success" now={40} />
           </div>
         </div>
         
@@ -195,17 +196,16 @@ class Delivery_question_section extends Component {
        
 
         <div className="background">
-          <Link to="/delivery_question">
-            <button href="" className="again_test">
+          
+            <button onClick={() =>{window.location.reload()}} className="again_test">
               <p>테스트 다시하기</p>
               <img src={redo} className="again_icon" />
             </button>
-          </Link>
 
           <Link to="/Delivery_result">
             <button href="" className="again_test">
               {" "}
-              결과보기
+              결과보기!
               <img src={redo} className="again_icon" />
             </button>
           </Link>

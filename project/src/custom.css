@@ -732,10 +732,10 @@ video {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  border-radius: 20px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  line-height: 20px;
   font-size: 20px;
   text-align: center;
   margin-right: 20px;
@@ -756,4 +756,10 @@ video {
 input[type="checkbox"] {
   width: 40px; 
   height: 40px; 
+}
+.random_result {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
