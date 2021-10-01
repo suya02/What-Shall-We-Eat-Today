@@ -3,6 +3,8 @@ import Ball from './Ball';
 import machine from '/home/ubuntu/ict/project/src/images/random.png'
 import box1 from '/home/ubuntu/ict/project/src/images/box1.png'
 import box2 from '/home/ubuntu/ict/project/src/images/box2.png'
+import axios from "axios";
+
 
 function getWinNumbers() {
   console.log('getWinNumbers');
@@ -22,13 +24,27 @@ function getWinNumbers() {
 // }
 
 class Random_result extends Component {
+
   state = {
     winNumbers: getWinNumbers(), // 당첨 숫자들
     winBalls: [],
     redo: false,
+    menu: "",
+    image: "",
   };
 
   timeouts = [];
+
+  getRandomMenu = async () => {
+    //api에서 get요청을 하는 함수
+    //이부분에서 결과로 나온 메뉴를 설정해준다.
+    let data = await axios
+      .get("http://3.35.17.24:5000/randomapi")
+      .then(({ data }) => data);
+    console.log(data);
+    console.log(typeof data);
+    if (data[0]) { this.setState({ menu: data[0].foodname }) };
+  };
 
   runTimeouts = () => {
     console.log('runTimeouts');
@@ -51,6 +67,7 @@ class Random_result extends Component {
   };
 
   componentDidMount() {
+
     console.log('didMount');
     this.runTimeouts();
     console.log('로또 숫자를 생성합니다.');
@@ -73,16 +90,26 @@ class Random_result extends Component {
   }
 
   onClickRedo = () => {
+
     console.log('onClickRedo');
     this.setState({
       winNumbers: getWinNumbers(), // 당첨 숫자들
       winBalls: [],
       redo: false,
     });
+
     this.timeouts = [];
+    console.log(this.state.winNumbers[0]);
+
+
+
+
+
+
+
   };
 
-   render() {
+  render() {
     const { winBalls, redo, i_src } = this.state;
     return (
       <div>
@@ -93,18 +120,26 @@ class Random_result extends Component {
             {/* <img src={ machine } alt="machine" className="pan" /> */}
             <div className="bounce">open </div>
             <div className="box" onClick="ChangeImg()" >
-              <img id="imgId" src={ box1 } alt="box1" className="box1" />
+              <img id="imgId" src={box1} alt="box1" className="box1" />
             </div>
 
-            
+
           </div>
-            <div className="random_result">
-              {winBalls.map((v) => <Ball key={v} number={v} />)}
-            </div>
+          <div className="random_result">
+            {winBalls.map((v) => <Ball key={v} number={v} />)}
+            {this.state.menu ? this.state.menu : "랜덤으로 메뉴 선택중~!"}
+          </div>
           {redo && <button className="start_test" onClick={this.onClickRedo}>한 번 더!</button>}
+
+          <h2>
+            <button onClick={() => {
+              this.getRandomMenu();
+            }}>여기 누르면 메뉴가 랜덤으로 나옴</button>
+          </h2>
+
         </div>
 
-        
+
 
       </div>
 

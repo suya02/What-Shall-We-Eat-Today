@@ -78,6 +78,81 @@ app.get("/api", (req, res) => {
 
 
 
+app.post("/homemealapi", (req, res) => {
+
+  global.time = req.body.times;
+
+  console.log(req.body.time);
+
+});
+
+
+
+app.get("/homemealapi", (req, res) => {
+  let connection = mysql.createConnection({
+    host: "localhost",
+    user: "ict",
+    password: "ictproject",
+    database: "ICT_project",
+  });
+
+  connection.connect();
+
+  //변수에 쿼리를 저장한다음 그 변수를 쿼리안에 넣기
+  let query =
+    "SELECT foodname, supplies, recipes FROM recipe where time=? order by rand()";
+  //order by rand() 함수 사용해서 랜덤으로 튜플 섞이게 했음
+  connection.query(
+    query,
+    time,
+    function (error, results, fields) {
+      if (error) {
+        console.log(error);
+      }
+      console.log(results);
+      res.send(results);
+    }
+  );
+
+  connection.end();
+
+
+});
+
+
+
+app.get("/randomapi", (req, res) => {
+  let connection = mysql.createConnection({
+    host: "localhost",
+    user: "ict",
+    password: "ictproject",
+    database: "ICT_project",
+  });
+
+  connection.connect();
+
+  //변수에 쿼리를 저장한다음 그 변수를 쿼리안에 넣기
+  let query =
+    "SELECT foodname FROM delivery order by rand()";
+  //order by rand() 함수 사용해서 랜덤으로 튜플 섞이게 했음
+  connection.query(
+    query,
+    function (error, results, fields) {
+      if (error) {
+        console.log(error);
+      }
+      console.log(results);
+      res.send(results);
+    }
+  );
+
+  connection.end();
+
+
+});
+
+
+
 /*app.get('*', function (요청, 응답) {
     응답.sendFile(path.join(__dirname, '/project/build/index.html'));
 });

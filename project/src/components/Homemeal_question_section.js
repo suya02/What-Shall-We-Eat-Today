@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 import '/home/ubuntu/ict/project/src/custom.css';
 import clock from '/home/ubuntu/ict/project/src/images/clock.png'
 import redo from '/home/ubuntu/ict/project/src/images/redo.png'
+import axios from "axios";
+
+
+let time = "";
+
 
 class Homemeal_question_section extends Component {
+
+
 
     render() {
         return (
@@ -38,32 +45,90 @@ class Homemeal_question_section extends Component {
                     <table className="h_table">
                         <tr>
                             <td><img src={clock} className="clock" /></td>
-                            <td><div className="h_question"> 30분 이내 </div></td>
-                            
+                            <td><div className="h_question" onClick={() => {
+
+
+                                time = "30분";
+                                console.log(time);
+
+                                let post = async () => {
+                                    let res = await axios.post("http://3.35.17.24:5000/homemealapi", {
+                                        times: time
+                                    });
+                                    console.log(`전송 -> ${res}`);
+                                };
+
+                                post();
+                            }}> 30분 이내 </div></td>
+
                         </tr>
                         <tr>
                             <td><img src={clock} className="clock" /></td>
-                            <td><div className="h_question"> 1시간 30분 이내 </div></td>
-                            
+                            <td><div className="h_question" onClick={() => {
+
+                                time = "1시간";
+                                console.log(time);
+
+                                let post = async () => {
+                                    let res = await axios.post("http://3.35.17.24:5000/homemealapi", {
+                                        times: time
+                                    });
+                                    console.log(`전송 -> ${res}`);
+                                };
+
+                                post();
+
+                            }}> 1시간 이내 </div></td>
+
                         </tr>
                         <tr>
                             <td><img src={clock} className="clock" /></td>
-                            <td><div className="h_question"> 30분 이내 </div></td>
-                            
+                            <td><div className="h_question" onClick={() => {
+
+
+                                time = "1시간 30분";
+                                console.log(time);
+
+                                let post = async () => {
+                                    let res = await axios.post("http://3.35.17.24:5000/homemealapi", {
+                                        times: time
+                                    });
+                                    console.log(`전송 -> ${res}`);
+                                };
+
+                                post();
+
+                            }}> 1시간 30분 이내 </div></td>
+
                         </tr>
                         <tr>
                             <td><img src={clock} className="clock" /></td>
-                            <td><div className="h_question"> 30분 이내 </div></td>
-                            
+                            <td><div className="h_question" onClick={() => {
+
+
+                                time = "2시간 이상";
+                                console.log(time);
+
+                                let post = async () => {
+                                    let res = await axios.post("http://3.35.17.24:5000/homemealapi", {
+                                        times: time
+                                    });
+                                    console.log(`전송 -> ${res}`);
+                                };
+
+                                post();
+
+                            }}> 2시간 이내  </div></td>
+
                         </tr>
                     </table>
                 </div>
 
                 <div className="background">
-                    
-                        <button onClick={() =>{window.location.reload()}} className="again_test" >테스트 다시하기
+
+                    <button onClick={() => { window.location.reload() }} className="again_test" >테스트 다시하기
                             <img src={redo} className="again_icon" />
-                        </button>
+                    </button>
 
                     <Link to="/Homemeal_result">
                         <button href="" className="again_test" > 결과보기

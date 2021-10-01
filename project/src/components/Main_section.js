@@ -15,27 +15,27 @@ class Main_section extends Component {
             const { top } = elem.getBoundingClientRect();
             const { innerHeight } = window;
             return top > innerHeight + (triggerDiff || 0);
-          }
-          
-          function handleScroll() {
+        }
+
+        function handleScroll() {
             const elems = document.querySelectorAll('.up-on-scroll');
             elems.forEach(elem => {
-              if (isElementUnderBottom(elem, -20)) {
-                elem.style.opacity = "0";
-                elem.style.transform = 'translateY(100px)';
-              } else {
-                elem.style.opacity = "1";
-                elem.style.transform = 'translateY(0px)';
-              }
+                if (isElementUnderBottom(elem, -20)) {
+                    elem.style.opacity = "0";
+                    elem.style.transform = 'translateY(100px)';
+                } else {
+                    elem.style.opacity = "1";
+                    elem.style.transform = 'translateY(0px)';
+                }
             })
-          }
-          window.addEventListener('scroll', handleScroll); 
-         
-      }
+        }
+        window.addEventListener('scroll', handleScroll);
+
+    }
 
     render() {
         return (
-            
+
             <div>
                 <div className="Main_section">
                     <div className="card1">
@@ -86,16 +86,16 @@ class Main_section extends Component {
                         </Link>
                     </div>
                 </div>
-              
-              
+
+
                 <div className="section">
                     <div id="list" className="list">
                         <article className="up-on-scroll">
                             <div className="Main_section_text">
                                 <div className="card1-1">
                                     배달음식 뭐 먹지?
-                                </div>            
-                                
+                                </div>
+
                                 <div className="card2-1">
                                     집에서 뭐 해먹지?
                                 </div>
@@ -106,24 +106,24 @@ class Main_section extends Component {
                             </div>
 
                             <br />
-                    
+
                             <div className="Main_section_text">
                                 <div className="card1-2">
-                                    배달음식 뭐 먹지? 페이지 간단 설명
-                                </div>            
-                                
+                                    몇 가지 질문을 통해 주문해서 먹을 수 있는 배달음식을 추천해드립니다!
+                                </div>
+
                                 <div className="card2-2">
-                                    집에서 뭐 해먹지? 페이지 간단 설명
+                                    원하는 조리시간을 고르면 집에서 해먹을 수 있는 메뉴와 레시피를 추천해드립니다!
                                 </div>
 
                                 <div className="card3-2">
-                                    1초안에 알려줘! 페이지 간단 설명
+                                    랜덤으로 메뉴를 추천해드립니다!
                                 </div>
                             </div>
                         </article>
                     </div>
                 </div>
-                
+
             </div>
         );
     }

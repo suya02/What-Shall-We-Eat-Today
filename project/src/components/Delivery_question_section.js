@@ -5,7 +5,7 @@ import bar from "/home/ubuntu/ict/project/src/images/baricon.png";
 import pan from "/home/ubuntu/ict/project/src/images/pan2.png";
 import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import axios from "axios";
-import { ProgressBar } from 'react-bootstrap';
+import ProgressBar from "/home/ubuntu/ict/project/src/components/Progress.js";
 
 // export var ProgressBar = ({ width, percent }) => {
 
@@ -73,6 +73,10 @@ function postResults() {
 }
 
 */
+const now = 90;
+const testData = [
+  { bgcolor: "orange", completed: now },
+];
 
 class Delivery_question_section extends Component {
 
@@ -104,22 +108,16 @@ class Delivery_question_section extends Component {
   updateProgress = (field, val) => {
     this.setState({ [field]: val });
   };
-
+  
   render() {
     return (
       <div>
         <div className="bar_out">
           (바 좌측에 "뒤로" /// 우측엔 질문 진행율) ex) 1 / 10
           <div>
-          {/* <ProgressBar striped variant="success" now={40} /> */}
-          <ProgressBar width={400} percent={this.state.percent} />
-          <button
-            // onClick={() =>
-            //   this.updateProgress("percent", this.state.percent + 0.1)
-            // }
-          >
-            Add 10%
-          </button>
+          {testData.map((item, idx) => (
+        <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+      ))}
 
           </div>
         </div>

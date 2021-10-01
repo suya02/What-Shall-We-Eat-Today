@@ -17,20 +17,20 @@ class Nav extends Component {
                 </div>
 
                 <br />
-                <img src={ email } className="navicon" />&nbsp; 
-                E-mail : ~~@naver.com
+                <img src={email} className="navicon" />&nbsp;
+                E-mail : lch92458@gmail.com
                 <br /><br />
 
-                <img src={ call } className="navicon" />&nbsp; 
-                010 0000 0000
+                <img src={call} className="navicon" />&nbsp;
+                010 3949 9245
                 <br /><br />
-                
-                <img src={ git } className="navicon" />&nbsp; 
-                <a href="https://github.com/Paydaypermanently/What-Shall-We-Eat-Today" target="_blank"> Github </a> 
 
-               
+                <img src={git} className="navicon" />&nbsp;
+                <a href="https://github.com/Paydaypermanently/What-Shall-We-Eat-Today" target="_blank"> Github </a>
+
+
                 <br /><br /><br />
-                copyright(c) 2021. code your choice. All rights reserved.
+                copyright(c) 2021. code your choice (이춘호, 류수현, 오태양, 김이현). All rights reserved.
             </div>
 
 
