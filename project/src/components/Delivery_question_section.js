@@ -73,19 +73,23 @@ function postResults() {
 }
 
 */
-const now = 90;
-const testData = [
-  { bgcolor: "orange", completed: now },
+var percont = 0
+var testData = [
+  { bgcolor: "orange", completed: percont },
 ];
 
 class Delivery_question_section extends Component {
-
 
   constructor(probs) {
     //state 클래스버전으로 사용
     super(probs);
     this.state = {
       count: 0,
+      percent: 0
+    };
+
+    this.updateProgress = (field, val) => {
+      this.setState({ percent: this.state.percent + 10 });
     };
   }
 
@@ -102,23 +106,16 @@ class Delivery_question_section extends Component {
     console.log(res);
   };
   
-  state = {
-    percent: 0
-  };
-  updateProgress = (field, val) => {
-    this.setState({ [field]: val });
-  };
-  
   render() {
     return (
       <div>
-        <div className="bar_out">
-          (바 좌측에 "뒤로" /// 우측엔 질문 진행율) ex) 1 / 10
-          <div>
-          {testData.map((item, idx) => (
-        <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
-      ))}
-
+        <div className="background">
+          <div className="bar_out">
+            <div className="bar_in">
+            {testData.map((item, idx) => (
+              <ProgressBar key={idx} bgcolor={item.bgcolor} completed={[this.state.percent]} />
+            ))}
+            </div>
           </div>
         </div>
         
@@ -129,6 +126,7 @@ class Delivery_question_section extends Component {
             className="question_1"
             onClick={() => {
               // 왼쪽 질문 클릭 시
+              this.updateProgress("percent", this.state.percent + 10)
               console.log(this.state.count); //테스트용
               q1_check = q1_check + 1;
 
@@ -165,21 +163,29 @@ class Delivery_question_section extends Component {
                   this.createCourse();
                   //result배열에 있는 국가별 음식 중 하나가 배열의 맨 앞부분과 뒷부분에 겹치므로 앞부분의 음식 종류(한식,일식,양식,아시안)는 제거해야 함
                   //제거 한 뒤에는 pop으로 맨 뒤에있는 원소(한식,양식,아시안,중식)중 하나를 뽑아낸다음 배열의 맨 앞에 다시 삽입
-                  //데이터베이스 스키마 순서대로 post하기 위함
+                  //데이터베이스 스키마 순서대로 post하기 위함                
                 }
               }
             }}
           >
             {" "}
-            <h2>{q1[this.state.count]} </h2>
+            <h2>{q1[this.state.count]}</h2>
           </div>
 
-          <div className="vs"> <h2> {vs} </h2></div>
+          <div className="vs" onClick={() => {
+            if (vs=="결과보기") {
+            //결과보기 클릭 시 결과 페이지(Delivery_result)로 이동 
+
+            }
+          }}> 
+            <h2> {vs} </h2>
+          </div>
 
           <div
             className="question_2"
             onClick={() => {
               //위와 동일한 알고리즘
+              this.updateProgress("percent", this.state.percent )
               console.log(this.state.count);
               q2_check = q2_check + 1;
 
@@ -223,10 +229,11 @@ class Delivery_question_section extends Component {
         <div className="background">
           
             <button onClick={() =>{window.location.reload()}} className="again_test">
-              <p>테스트 다시하기</p>
+              테스트 다시하기
               <img src={redo} className="again_icon" />
             </button>
 
+          {/* 결과 라우터 설정하면 버튼 제거 */}
           <Link to="/Delivery_result">
             <button href="" className="again_test">
               {" "}
@@ -235,19 +242,6 @@ class Delivery_question_section extends Component {
             </button>
           </Link>
         </div>
-
-        {/* <div className="startButton">
-
-                    <ul>
-                        <li className="button1">
-                            배달음식 추천 시작
-    </li>
-
-                        <li className="button2">
-                            집밥 추천 시작
-    </li>
-                    </ul>
-                </div> */}
       </div>
     );
   }
