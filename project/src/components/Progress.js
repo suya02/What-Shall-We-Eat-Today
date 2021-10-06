@@ -2,7 +2,7 @@ import React from "react";
 
 // 스타일드 컴포넌트를 이용해 프로그레스바 스타일 지정
 const ProgressBar = (props) => {
-    const { bgcolor, completed } = props;
+    const { bgcolor, completed, progress } = props;
   
     //  퍼센트 배경 (회색)
     const containerStyles = {
@@ -10,8 +10,6 @@ const ProgressBar = (props) => {
       width: '40vw',
       backgroundColor: "#e0e0de",
       borderRadius: 50,
-
-      
     }
   
     // 퍼센트 차는 부분 (오렌지색)
@@ -20,7 +18,6 @@ const ProgressBar = (props) => {
       width: `${completed}%`,
       backgroundColor: bgcolor,
       borderRadius: 'inherit',
-   
     }
   
     // 퍼센트 표시 부분
@@ -31,12 +28,10 @@ const ProgressBar = (props) => {
       textAlign: 'right'
     }
 
-
-  
     return (
       <div>
         <span style={labelStyles}>
-          {`${completed} %`}
+          {`${progress} / 9`}
         </span>
 
         <div style={containerStyles}>

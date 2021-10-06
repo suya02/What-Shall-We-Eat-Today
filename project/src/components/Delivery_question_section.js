@@ -7,15 +7,6 @@ import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import axios from "axios";
 import ProgressBar from "/home/ubuntu/ict/project/src/components/Progress.js";
 
-// export var ProgressBar = ({ width, percent }) => {
-
-//    state = {
-//     percent: 0
-//   };
-//   updateProgress = (field, val) => {
-//     this.setState({ [field]: val });
-//   };
-
 let vs = "vs"; //질문이 모두 끝나면 vs가 요리중 이라는 문자열로 바뀌게 구현
 let q1 = [
   "한식",
@@ -73,9 +64,10 @@ function postResults() {
 }
 
 */
-var percont = 0
+var percent = 0
+var gauge= 0
 var testData = [
-  { bgcolor: "orange", completed: percont },
+  { bgcolor: "orange", completed: percent, progress: gauge},
 ];
 
 class Delivery_question_section extends Component {
@@ -85,12 +77,14 @@ class Delivery_question_section extends Component {
     super(probs);
     this.state = {
       count: 0,
-      percent: 0
+      percent: 0,
+      gauge: 0
     };
 
-    this.updateProgress = (field, val) => {
-      this.setState({ percent: this.state.percent + 10 });
-    };
+    // this.updateProgress = (field, val) => {
+    //   this.setState({ percent: this.state.percent + 11 });
+    // };
+
   }
 
   createCourse = async () => {
@@ -113,7 +107,7 @@ class Delivery_question_section extends Component {
           <div className="bar_out">
             <div className="bar_in">
             {testData.map((item, idx) => (
-              <ProgressBar key={idx} bgcolor={item.bgcolor} completed={[this.state.percent]} />
+              <ProgressBar key={idx} bgcolor={item.bgcolor} completed={[this.state.percent]} progress={[this.state.gauge]} />
             ))}
             </div>
           </div>
@@ -126,7 +120,8 @@ class Delivery_question_section extends Component {
             className="question_1"
             onClick={() => {
               // 왼쪽 질문 클릭 시
-              this.updateProgress("percent", this.state.percent + 10)
+              this.setState({ percent: this.state.percent + 100/9 });
+              this.setState({ gauge: this.state.gauge + 1 });
               console.log(this.state.count); //테스트용
               q1_check = q1_check + 1;
 
@@ -163,7 +158,7 @@ class Delivery_question_section extends Component {
                   this.createCourse();
                   //result배열에 있는 국가별 음식 중 하나가 배열의 맨 앞부분과 뒷부분에 겹치므로 앞부분의 음식 종류(한식,일식,양식,아시안)는 제거해야 함
                   //제거 한 뒤에는 pop으로 맨 뒤에있는 원소(한식,양식,아시안,중식)중 하나를 뽑아낸다음 배열의 맨 앞에 다시 삽입
-                  //데이터베이스 스키마 순서대로 post하기 위함                
+                  //데이터베이스 스키마 순서대로 post하기 위함 
                 }
               }
             }}
@@ -185,7 +180,8 @@ class Delivery_question_section extends Component {
             className="question_2"
             onClick={() => {
               //위와 동일한 알고리즘
-              this.updateProgress("percent", this.state.percent )
+              this.setState({ percent: this.state.percent + 100/9 });
+              this.setState({ gauge: this.state.gauge + 1 });
               console.log(this.state.count);
               q2_check = q2_check + 1;
 

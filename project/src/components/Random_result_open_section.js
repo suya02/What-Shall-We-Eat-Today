@@ -21,6 +21,11 @@ class Random_result_open_section extends Component {
     console.log(typeof data);
     if (data[0]) { this.setState({ menu: data[0].foodname }) };
   };
+  // boxopen = () => {
+  //   setTimeout(() => {
+  //     this.getRandomMenu;
+  //   }, 2000);
+  // }
 
   render() {
     const menu = this.state;
