@@ -918,6 +918,20 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+.h_question:hover{
+  background-color: yellow;
+  flex-direction: row;
+  position: relative;
+  float: left;
+  color: orange;
+  font-family: 'Gamja Flower', cursive;
+  font-size: 3vw;
+  padding-left: 2vw;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+ }
+
 .h_table{
   background-color: whitesmoke;
   border: 0;
@@ -939,16 +953,3 @@ input[type="checkbox"] {
 .h_table > td {
   padding-right: 4vw;
 }
-
-/* .progress-div {
-  background-color: gray;
-  border-radius: .5rem;
-}
-
-.progress {
-  background-color: orange;
-  height: 10px;
-  border-radius: 1rem;
-  transition: 1s ease;
-  transition-delay: 0.5s;
-}  */

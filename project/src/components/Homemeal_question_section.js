@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from "react";
 import { Link } from 'react-router-dom';
 import '/home/ubuntu/ict/project/src/custom.css';
 import clock from '/home/ubuntu/ict/project/src/images/clock.png'
@@ -11,10 +11,18 @@ let time = "";
 
 class Homemeal_question_section extends Component {
 
-
+    state = {
+        letter1: "30분 이내",
+        letter2: "30분~1시간",
+        letter3: "1시간~1시간 30분",
+        letter4: "1시간 30분 이상"
+    };
 
     render() {
         return (
+
+
+
 
             <div>
                 <div className="result_text">
@@ -46,6 +54,12 @@ class Homemeal_question_section extends Component {
                         <tr>
                             <td><img src={clock} className="clock" /></td>
                             <td><div className="h_question" onClick={() => {
+                                this.setState({
+                                    letter1: "결과보기 Click!",
+                                    letter2: " ",
+                                    letter3: " ",
+                                    letter4: " "
+                                })
 
 
                                 time = "30분";
@@ -59,13 +73,18 @@ class Homemeal_question_section extends Component {
                                 };
 
                                 post();
-                            }}> 30분 이내 </div></td>
+                            }}> {this.state.letter1} </div></td>
 
                         </tr>
                         <tr>
                             <td><img src={clock} className="clock" /></td>
                             <td><div className="h_question" onClick={() => {
-
+                                this.setState({
+                                    letter1: " ",
+                                    letter2: "결과보기 Click!",
+                                    letter3: " ",
+                                    letter4: " "
+                                })
                                 time = "1시간";
                                 console.log(time);
 
@@ -78,13 +97,18 @@ class Homemeal_question_section extends Component {
 
                                 post();
 
-                            }}> 1시간 이내 </div></td>
+                            }}> {this.state.letter2} </div></td>
 
                         </tr>
                         <tr>
                             <td><img src={clock} className="clock" /></td>
                             <td><div className="h_question" onClick={() => {
-
+                                this.setState({
+                                    letter1: " ",
+                                    letter2: " ",
+                                    letter3: "결과보기 Click!",
+                                    letter4: " "
+                                })
 
                                 time = "1시간 30분";
                                 console.log(time);
@@ -98,14 +122,19 @@ class Homemeal_question_section extends Component {
 
                                 post();
 
-                            }}> 1시간 30분 이내 </div></td>
+                            }}> {this.state.letter3} </div></td>
 
                         </tr>
                         <tr>
                             <td><img src={clock} className="clock" /></td>
                             <td><div className="h_question" onClick={() => {
 
-
+                                this.setState({
+                                    letter1: " ",
+                                    letter2: " ",
+                                    letter3: " ",
+                                    letter4: "결과보기 Click!"
+                                })
                                 time = "2시간 이상";
                                 console.log(time);
 
@@ -118,7 +147,7 @@ class Homemeal_question_section extends Component {
 
                                 post();
 
-                            }}> 2시간 이내  </div></td>
+                            }}> {this.state.letter4}  </div></td>
 
                         </tr>
                     </table>

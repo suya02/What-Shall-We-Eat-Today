@@ -7,7 +7,7 @@ const { tmpdir } = require("os");
 const port = 5000;
 const router = express.Router();
 const mysql = require("mysql");
-
+global.check = false;
 //cors이슈 해결하기 위해 서버 접근 권한 허용
 app.use(
   cors({
@@ -46,6 +46,8 @@ app.get("/api", (req, res) => {
   //db 연결한 후 쿼리문 돌려서 메뉴 하나 출력한 다음 json 형태로 res.send
   //질문에 대한 답변들은 DB 스키마 순서대로 result1 ~ result7까지임
 
+
+
   let connection = mysql.createConnection({
     host: "localhost",
     user: "ict",
@@ -56,22 +58,59 @@ app.get("/api", (req, res) => {
   connection.connect();
 
   //변수에 쿼리를 저장한다음 그 변수를 쿼리안에 넣기
-  let query =
-    "SELECT foodname FROM delivery where classify=? AND price=? AND spicy=? AND calorie=? AND amount=? AND soup=? AND drink=? order by rand()";
+  let query1 =
+    "SELECT foodname, ment FROM delivery where classify=? AND price=? AND spicy=? AND calorie=? AND amount=? AND soup=? AND drink=? order by rand()";
+
+
+  let query2 =
+    "SELECT foodname, ment FROM delivery where classify=? AND price=? AND spicy=? AND calorie=? AND soup=?  order by rand()";
+
+
   //order by rand() 함수 사용해서 랜덤으로 튜플 섞이게 했음
   connection.query(
-    query,
+    query1,
     [result1, result2, result3, result4, result5, result6, result7],
     function (error, results, fields) {
       if (error) {
         console.log(error);
       }
-      console.log(results);
-      res.send(results);
+      console.log(`첫 번째 쿼리문 결과: ${results}`);
+      if (results[0]) {
+        check = true;
+        res.send(results);
+        console.log(check);
+      }
+
+      console.log(check);
     }
   );
 
+
+
+
+
+
+
+
+  if (check == false) {
+    console.log(`두 번째 쿼리문 실행`);
+
+    connection.query(
+      query2,
+      [result1, result2, result3, result4, result6],
+      function (error2, results2, fields) {
+        if (error2) {
+          console.log(error2);
+        }
+        console.log(`두 번째 쿼리문 결과: ${results2}`);
+        res.send(results2);
+
+      }
+    )
+  };
+
   connection.end();
+
 
   // 반환하는 JSON은 { "result":"menu"}형식이어야 함
 });
@@ -133,7 +172,7 @@ app.get("/randomapi", (req, res) => {
 
   //변수에 쿼리를 저장한다음 그 변수를 쿼리안에 넣기
   let query =
-    "SELECT foodname FROM delivery order by rand()";
+    "SELECT foodname, ment FROM delivery order by rand()";
   //order by rand() 함수 사용해서 랜덤으로 튜플 섞이게 했음
   connection.query(
     query,
