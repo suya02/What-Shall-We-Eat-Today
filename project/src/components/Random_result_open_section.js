@@ -42,7 +42,7 @@ class Random_result_open_section extends Component {
           </div>
 
           <h2>
-            <button onClick={() => {
+            <button className="again_test" onClick={() => {
               this.getRandomMenu();
             }}>Click!!</button>
           </h2>

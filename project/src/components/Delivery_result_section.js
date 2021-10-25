@@ -32,14 +32,22 @@ class Delibery_result_section extends Component {
         return (
             <div className="background">
                 <div className="result_text"> 내가 오늘 먹을 음식은 ?</div>
-                <div>
-                    {this.state.menu ? this.state.menu : "요리중"}<br />
-                    {this.state.ment ? this.state.ment : "멘트 준비 중"}{" "}
-                    {/*마운트가 되서 menu에 데이터가 들어오면 menu를 출력 그렇지 아니면 로딩중이라는 문구를 출력*/}
-                    <img src={pan} className="result_pan" />
-                    {this.state.menu == "현재 충족되는 배달음식이 없습니다. 무작위로 추천받아보시겠어요?" ? <Link to="/random"><div>무작위 추천받기!</div></Link> : ""
-                    }
+                <div className="question_section">
+                    <img src={pan} alt="pan" className="pan" />
+                    <div className="question">
+                        <div className="question_text">
+                            <h2>{this.state.menu ? this.state.menu : "요리중"}<br /></h2>
+                            <h2>{this.state.ment ? this.state.ment : "멘트 준비 중"}{" "}</h2>
+                        </div>
+                     
+                    </div>
+
+                      {/*마운트가 되서 menu에 데이터가 들어오면 menu를 출력 그렇지 아니면 로딩중이라는 문구를 출력*/}
+                    
                 </div>
+                {this.state.menu == "현재 충족되는 배달음식이 없습니다. 무작위로 추천받아보시겠어요?" ? <Link to="/random"><div>무작위 추천받기!</div></Link> : ""}
+
+
             </div>
         );
     }

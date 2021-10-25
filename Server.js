@@ -7,7 +7,7 @@ const { tmpdir } = require("os");
 const port = 5000;
 const router = express.Router();
 const mysql = require("mysql");
-global.check = false;
+
 //cors이슈 해결하기 위해 서버 접근 권한 허용
 app.use(
   cors({
@@ -68,21 +68,18 @@ app.get("/api", (req, res) => {
 
   //order by rand() 함수 사용해서 랜덤으로 튜플 섞이게 했음
   connection.query(
-    query1,
-    [result1, result2, result3, result4, result5, result6, result7],
+    query2,
+    [result1, result2, result3, result4, result6],
     function (error, results, fields) {
       if (error) {
         console.log(error);
       }
-      console.log(`첫 번째 쿼리문 결과: ${results}`);
-      if (results[0]) {
-        check = true;
-        res.send(results);
-        console.log(check);
-      }
 
-      console.log(check);
+      res.send(results);
+      connection.end();
     }
+
+
   );
 
 
@@ -92,24 +89,7 @@ app.get("/api", (req, res) => {
 
 
 
-  if (check == false) {
-    console.log(`두 번째 쿼리문 실행`);
 
-    connection.query(
-      query2,
-      [result1, result2, result3, result4, result6],
-      function (error2, results2, fields) {
-        if (error2) {
-          console.log(error2);
-        }
-        console.log(`두 번째 쿼리문 결과: ${results2}`);
-        res.send(results2);
-
-      }
-    )
-  };
-
-  connection.end();
 
 
   // 반환하는 JSON은 { "result":"menu"}형식이어야 함
