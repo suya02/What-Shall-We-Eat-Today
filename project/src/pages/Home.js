@@ -4,6 +4,7 @@ import Main_section from '/home/ubuntu/ict/project/src/components/Main_section.j
 import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
 import HeaderVideo from '/home/ubuntu/ict/project/src/videos/header.mp4'
 import $ from "jquery";
+import Navbar from '/home/ubuntu/ict/project/src/components/Navbar';
 
 class Home extends Component {
   componentDidMount() {
@@ -31,7 +32,7 @@ class Home extends Component {
       return (
         <div>
             <div className="index2">
-            <Main_header />
+            <Navbar />
             </div>
 
             <div className="index1">
