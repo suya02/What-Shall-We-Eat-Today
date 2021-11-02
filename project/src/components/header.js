@@ -63,7 +63,7 @@ class Header extends Component {
                 </ul>
              
                 <div className="navbar__toogleBtn">
-                <img src={nav} alt="logo" className="nav_img" /> 
+                <img src={nav} className="nav_img" /> 
                 </div>
             </nav>
             </div>

@@ -36,9 +36,7 @@ class Random_result_section extends Component {
   render() {
     return (
       <div className="background">
-
         <div className="result_text">오늘은 뭐 먹지?</div>
-
         <div className="random_section" >
           <h2>
             <div className="bounce" id="hide1">

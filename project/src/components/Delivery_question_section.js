@@ -169,30 +169,19 @@ class Delivery_question_section extends Component {
                 this.setState({ percent: this.state.percent + 100 / 9 });
                 this.setState({ gauge: this.state.gauge + 1 });
 
-
                 console.log(this.state.count);
-
 
                 if (this.state.count < q2.length) {
 
-
-
                   if (this.state.count == 0) {
-
                     results.push(q2[this.state.count]);
                     this.setState({ count: this.state.count + 1 });
                     console.log(`q1:${q1}`);
                     console.log(`q2:${q2}`);
                     console.log(`results:${results}`);
-
                   }
 
-
-
                   else if (this.state.count == 1) {
-
-
-
                     results.push(q2[this.state.count]);
                     this.setState({ count: this.state.count + 1 });
                     tmp1 = results.pop();
@@ -207,27 +196,15 @@ class Delivery_question_section extends Component {
                     console.log(`q1:${q1}`);
                     console.log(`q2:${q2}`);
                     console.log(`results:${results}`);
-
-
                   }
 
-
-
                   else {
-
                     results.push(q2[this.state.count]);
                     this.setState({ count: this.state.count + 1 });
                     console.log(`q1:${q1}`);
                     console.log(`q2:${q2}`);
                     console.log(`results:${results}`);
                   }
-
-
-
-
-
-
-
                 }
 
                 if (this.state.count == q2.length - 1) {
@@ -240,9 +217,6 @@ class Delivery_question_section extends Component {
                   console.log(results);
                   this.createCourse();
                 }
-
-
-
               }}
             >
               {" "}
@@ -253,20 +227,23 @@ class Delivery_question_section extends Component {
 
 
         <div className="background">
+        
+          <Link to="/Delivery_result">
+            <button href="" className="again_test">
+              {" "}
+              결과보기
+              <img src={redo} className="again_icon" />
+            </button>
+          </Link>
 
+          <div>
           <button onClick={() => { window.location.reload() }} className="again_test">
             테스트 다시하기
               <img src={redo} className="again_icon" />
           </button>
+          </div>
 
-          {/* 결과 라우터 설정하면 버튼 제거 */}
-          <Link to="/Delivery_result">
-            <button href="" className="again_test">
-              {" "}
-              결과보기!
-              <img src={redo} className="again_icon" />
-            </button>
-          </Link>
+          
         </div>
       </div>
     );

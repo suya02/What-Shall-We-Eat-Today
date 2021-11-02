@@ -245,7 +245,7 @@ a:link {
   padding: 5vw;
   padding-left: 10vw;
   padding-right: 10vw;
-  height:40vh;
+  height:43vh;
   background-color: white;
 }
 
@@ -289,7 +289,7 @@ a:link {
 }
 
 .start_test {
-  font-size: 3vw;
+  font-size: 2vw;
   font-family: 'Gamja Flower', cursive;
   font-weight: bold;
   color:orange;
@@ -306,7 +306,7 @@ a:link {
   -moz-border-radius: 3vw;
   -webkit-border-radius: 3vw;
   
-  width: 17vw;
+  width: 13vw;
   text-align:center;
   vertical-align:middle;
   display:inline-block;
@@ -328,7 +328,7 @@ a:link {
 {
   z-index: 2;
   background-color: whitesmoke; 
-  height:60vh;
+  height:57vh;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -370,7 +370,7 @@ a:link {
   margin: 1.5vw;
   color: #424242;
   font-family: 'Gamja Flower', cursive;
-  font-size: 40px;
+  font-size: 2vw;
   cursor: pointer;
   vertical-align: center;
   flex-direction: column;
@@ -542,9 +542,8 @@ a:link {
 
 .again_test {
   font-weight: bold;
-  width: 17vw;
+  width: 18vw;
 	text-decoration:none;
-	font-family:Comic Sans MS;
 	box-shadow:#d6d6d6 1px 3px 2px;
 	-moz-box-shadow:#d6d6d6 1px 3px 2px;
 	-webkit-box-shadow:#d6d6d6 1px 3px 2px;
@@ -564,19 +563,19 @@ a:link {
 	border-style:solid;
   text-align: center;
   font-size: 2vw;
-  font-family: Comic Sans MS;
   font-family: 'Gamja Flower', cursive;
   vertical-align: center;
-  
+  background-color: white;
+  margin: 1vw;
 }
 
 .again_test:active {
 	box-shadow:orange 1px 0 2px;
-
 	-moz-box-shadow:#d6d6d6 1px 0 2px;
 	-webkit-box-shadow:#d6d6d6 1px 0 2px;
 	position:relative;
-	top:3px
+	top: 0.5vh;
+  background-color: white;
 }
 
 .again_test p{
@@ -771,10 +770,11 @@ video {
 
 .result_text{
   position: relative;
-  padding-top: 3vw;
+  padding-top: 2.5vw;
+  padding-bottom: 0.5vw;
   color: orange;
   font-family: 'Gamja Flower', cursive;
-  font-size: 4vw;
+  font-size: 3.5vw;
   text-align: center;
   background-color: whitesmoke;
 }
@@ -1050,6 +1050,7 @@ figure.snip.hover figcaption {
 
   .navbar__menu li{
     padding : 1vh 2vw; /*마우스 클릭영역확보*/   
+    color: white;  
   }
 
   .navbar__menu li:hover {
@@ -1226,9 +1227,36 @@ figure.snip.hover figcaption {
   font-size: 3vw;
 }
 
+figure.snip {
+  margin: 3vw;
+  min-width: 27vw;
+  max-width: 27vw;
+  line-height: 2.1em;
+}
+figure.snip h3 {
+  padding-right: 1.5vw;
+  font-size: 1.5em;
+}
+figure.snip h3:before {
+  border-width: 0 27vw 3vw 0;
+}
+figure.snip figcaption {
+  padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+}
+figure.snip figcaption:before {
+  border-width: 3vw 0 0 27vw;
+}
+figure.snip .icons {
+  margin-top: -30px;
+}
+figure.snip i {
+  padding: 1.5vw 0 0 1.5vw ;
+  font-size: 3vw;
+}
+
 .sections {
   width: 100vw;
-  height:47vh;
+  height:50vh;
   background-color: white;
   flex-direction: column;
   float: left;
@@ -1253,6 +1281,7 @@ figure.snip.hover figcaption {
   width:100vw;
   height: 25vh;
   background-color: #fffcbb;
+  background-image: linear-gradient(rgb(255, 253, 130), rgb(255, 255, 255));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1290,6 +1319,121 @@ figure.snip.hover figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bar_out {
+  padding-bottom: 5vw;
+}
+
+.question_section
+{
+  z-index: 2;
+  background-color: whitesmoke; 
+  height:50vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4.5vw;
+  position: relative;
+}
+
+.question_section img{
+  width: 75vw;
+}
+
+.question_1, .question_2, .vs
+{
+  font-size: 30px;
+}
+
+.again_test {
+  font-weight: normal;
+  width: 45vw;
+  font-size: 5vw;
+  margin: 1vw;
+}
+
+.question_section
+{
+  z-index: 2;
+  background-color: whitesmoke; 
+  height:47vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4.5vw;
+  position: relative;
+}
+
+.again_icon {
+  width: 5vw;
+  float: right;
+  vertical-align: center;
+}
+
+.result_text{
+  padding-top: 5vw;
+  font-size: 7vw;
+}
+
+.question_text
+{
+  margin: 3vw;
+  font-size: 5vw;
+}
+
+.h_question{
+  background-color: whitesmoke;
+  flex-direction: row;
+  position: relative;
+  float: left;
+  color: orange;
+  font-family: 'Gamja Flower', cursive;
+  font-size: 8vw;
+  padding-left: 2vw;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.h_question:hover{
+  background-color: yellow;
+  flex-direction: row;
+  position: relative;
+  float: left;
+  color: orange;
+  font-family: 'Gamja Flower', cursive;
+  font-size: 3vw;
+  padding-left: 2vw;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+ }
+
+.h_table{
+  background-color: whitesmoke;
+  border: 0;
+  border-collapse : collapse;
+  text-align: center;
+  margin-left: auto; margin-right: auto;
+  height: 40vw;
+  width: 70vw;
+  padding-top: 10vw;
+}
+
+.h_tr {
+  margin-left: auto; margin-right: auto;
+  text-align: center;
+  padding-top: 5vw;
+  margin-top: 3vw;
+}
+
+.h_table > td {
+  padding-right: 4vw;
 }
 
 }

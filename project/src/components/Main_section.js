@@ -130,10 +130,9 @@ class Main_section extends Component {
                 <div className="mo_ver">
                 <div className="Main_section">
                             <div className="card1">
+                            <Link to="/delivery">
                                 <figure className="snip">
-                                    <Link to="/delivery">
                                         <img src={delivery} />    
-                                    </Link>
                                     <h3>배달음식 뭐 먹지?</h3>
                                     <figcaption>
                                         <div class="icons"><i className="ion-social-reddit-outline"></i>
@@ -142,6 +141,7 @@ class Main_section extends Component {
                                         </div>
                                     </figcaption>
                                 </figure>
+                            </Link>
                             </div>
                             <div className="Main_section_text">
                                 <div className="section">
