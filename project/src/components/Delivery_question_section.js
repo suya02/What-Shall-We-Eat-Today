@@ -1,7 +1,6 @@
-import React, { Component, useState } from "react";
-import { Route, Link } from "react-router-dom";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "/home/ubuntu/ict/project/src/custom.css";
-import bar from "/home/ubuntu/ict/project/src/images/baricon.png";
 import pan from "/home/ubuntu/ict/project/src/images/pan2.png";
 import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import axios from "axios";

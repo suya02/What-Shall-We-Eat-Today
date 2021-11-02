@@ -92,10 +92,10 @@ a:link {
   
 .nav {
     background-color: #fffcbb;
-    height: 13vw;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
+    height: 16.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 1vw;
     padding-bottom: 1vw;
     text-align: center;
@@ -110,10 +110,14 @@ a:link {
   vertical-align: middle;
 }
 
-.contect {
+.contact {
   font-weight: bold;
-  font-size: xx-large;
+  font-size: 2em;
 }
+
+.contact_text {
+  font-size: 1em;
+} 
 
 .section {
   background-color: whitesmoke;
@@ -129,6 +133,7 @@ a:link {
   font-size: 2vw;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 .Main_section_text {
   /* border:1px solid purple; */
   background-color:transparent ;
@@ -136,6 +141,7 @@ a:link {
   flex-direction: row;
   justify-content: center;
   font-size: 2vw;
+  font-family: 'Jua', sans-serif;
 }
 
 .Main_section .card1, .Main_section .card2, .Main_section .card3
@@ -321,6 +327,7 @@ a:link {
 
 .question_section
 {
+  z-index: 2;
   background-color: whitesmoke; 
   height:60vh;
   text-align: center;
@@ -531,6 +538,7 @@ a:link {
 .background {
   background-color: whitesmoke;
   text-align: center;
+  z-index: 1;
 }
 
 .again_test {
@@ -647,9 +655,8 @@ video {
 }
 
 /* main_section의 card3개 */
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+/* @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 figure.snip {
-  font-family: 'Roboto', Arial, sans-serif;
   position: relative;
   overflow: hidden;
   margin: 10px;
@@ -678,7 +685,6 @@ figure.snip img {
   background-size: cover;
 }
 
-/* top 사각형 */
 figure.snip h3 {
   position: absolute;
   top: 0%;
@@ -696,7 +702,6 @@ figure.snip h3 {
   transform: translateY(-200%);
 }
 
-/* top 삼각형 */
 figure.snip h3:before {
   position: absolute;
   content: '';
@@ -709,7 +714,6 @@ figure.snip h3:before {
   border-color: transparent red transparent transparent;
 }
 
-/* bottom 사각형 */
 figure.snip figcaption {
   padding: 5px 25px 15px;
   position: absolute;
@@ -720,7 +724,7 @@ figure.snip figcaption {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
 }
-/* bottom 삼각형 */
+
 figure.snip figcaption:before {
   position: absolute;
   content: '';
@@ -734,7 +738,6 @@ figure.snip figcaption:before {
   border-color: transparent transparent transparent #ffd400;
 }
 
-/* card_icon */
 figure.snip .icons {
   margin-top: -20px;
 }
@@ -752,20 +755,19 @@ figure.snip i:hover {
   transition: all 0.35s ease;
 }
 
-/* card_mouseover_top */
 figure.snip:hover h3,
 figure.snip.hover h3 {
   -webkit-transform: translateY(0%);
   transform: translateY(0%);
   width: 18vw;
 }
-/* card_mouseover_bottom */
+
 figure.snip:hover figcaption,
 figure.snip.hover figcaption {
   -webkit-transform: translateY(0%);
   transform: translateY(0%);
   width: 18vw;
-}
+} */
 
 .Main_header {
   position:fixed;
@@ -787,24 +789,29 @@ figure.snip.hover figcaption {
   font-family: "Lato", sans-serif;
   color:black;
 }
+ /*새로 만들어보는 헤더 css*/
 .MainHeader {
-  position:fixed;
-  width:100%;
-  /* background-color: #ffffff;
-  background-color: rgba( 255, 255, 255,  ); */
-  background-color:rgb(252, 181, 27);
-  -webkit-transition-duration:0.4s;
-  -webkit-transition-timing-function:ease;
-  transition-duration:0.4s;
-  transition-timing-function:ease;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: transparent;
+ padding: 0.5vh 1vw;
+}
+.Header_logo {
+  font-size: 24px;
+  color: white;
+}
+.Header_menu_ul {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5vw;
-  font-size: 1.25vw;
-  font-family: "Lato", sans-serif;
-  color:black;
+  list-style: none;
+  padding-left: 0;
+}
+.Header_menu_ul li {
+  padding: 0.5vh 1vw;
+}
+.Header_menu_ul li:hover {
+  background-color: yellow;
+  border-radius: 10px;
 }
 
 /* 스크롤 다운시 header 색상 변경 */
@@ -1009,10 +1016,257 @@ input[type="checkbox"] {
 .h_table > td {
   padding-right: 4vw;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 2vw;
+  min-width: 18vw;
+  max-width: 18vw;
+  width: 100%;
+  color: #ffffff;
+  line-height: 1.4em;
+}
+figure.snip * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+figure.snip img {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+figure.snip h3 {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  background-color: #ffd400;
+  z-index: 1;
+  text-align: right;
+  padding-right: 1vw;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1em;
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+}
+figure.snip h3:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 18vw 2vw 0;
+  border-color: transparent #ffd400 transparent transparent;
+}
+figure.snip figcaption {
+  padding: 1vw 1vw 1vw 1vw;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  bottom: 0%;
+  background-color: #ffd400;
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+}
+figure.snip figcaption:before {
+  position: absolute;
+  content: '';
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 2vw 0 0 18vw;
+  border-color: transparent transparent transparent #ffd400;
+}
+figure.snip .icons {
+  margin-top: -20px;
+}
+figure.snip i {
+  padding: 1vw 0 0 1vw ;
+  display: inline-block;
+  font-size: 2vw;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.7;
+}
+figure.snip i:hover {
+  opacity: 1;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+figure.snip:hover h3,
+figure.snip.hover h3 {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+figure.snip:hover figcaption,
+figure.snip.hover figcaption {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.section2_text{
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .mo_ver{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .pc_ver {
+    display: none;
+  }
+
   /*모바일 css*/
   .index1 {
     display: none;
   }
+  .Main_header{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
   }
+  .header_menu_ul{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .header_menu_ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .header_logo {
+    justify-content: center;
+    width: 100%;
+  }
+  /* figure.snip img {
+    opacity: 1;
+    max-width: 18vw;
+    min-width: 18vw;
+    max-height: 20vh;
+    min-height: 20vh;
+    height: auto;
+    vertical-align: top;
+    background-size: cover;
+  } */
+
+  figure.snip img {
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0vw;
+    margin: 0vw;
+  }
+
+  figure.snip {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 1vh 0 1vh 0;
+    color: #ffffff;
+    line-height: 1.4em;
+  }
+
+.nav {
+  background-color: #fffcbb;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  text-align: center;
+  font-size: 0.9vw;
+  font-family: 'Open Sans', sans-serif;
+}
+  
+.contact {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.contact_text {
+  font-size: 2em;
+} 
+
+.Main_mo_section{
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.Main_card {
+  background-color: khaki;
+  width: 100%;
+  height: 25vh;
+}
+
+.section2_text {
+  display: "block";
+  padding-top: 1vh;;
+  width: 100%;
+  padding-bottom: 5vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+.main_text_big {
+  padding-left: 2vw;
+  font-family: 'Jua', sans-serif;
+  font-size: 7vw;
+}
+
+.main_text_small {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-family: 'Jua', sans-serif;
+  font-size: 3.5vw;
+}
+
+.Main_section{
+  padding: 5vh 0 5vh 0;
+}
+
+.section {
+  background-color: whitesmoke;
+  padding-top: 5vw;
+}
+
+.Main_section .card1, .Main_section .card2, .Main_section .card3
+{
+  border:1px solid white;
+  width: 30vw;
+  height: 32vw;
+  margin: 0vw;
+  padding: 0vw;
+  background-color: #ffd400;
+  display: flex;
+  font-size: 2vw;
+}
+
+.Main_section_text .card1-1, .Main_section_text .card2-1, .Main_section_text .card3-1
+{
+  width: 40vw;
+  font-size: 4vw;
+}
+
+.Main_section_text .card1-2, .Main_section_text .card2-2, .Main_section_text .card3-2
+{
+  width: 40vw;
+  font-size: 3vw;
+}
+
+}
 

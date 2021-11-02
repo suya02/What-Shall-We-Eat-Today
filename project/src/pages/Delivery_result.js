@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import "/home/ubuntu/ict/project/src/custom.css";
-import pan from "/home/ubuntu/ict/project/src/images/pan2.png";
 import Header from "/home/ubuntu/ict/project/src/components/header.js";
 import Delivery_result_section from "/home/ubuntu/ict/project/src/components/Delivery_result_section";
 import Share from "/home/ubuntu/ict/project/src/components/share.js";
 import Nav from "/home/ubuntu/ict/project/src/components/nav.js";
-import axios from "axios";
-import { Link } from 'react-router-dom';
+
 
 class Delivery_Result extends Component {
 
@@ -15,7 +13,7 @@ class Delivery_Result extends Component {
     return (
       <div>
         <Header />
-<Delivery_result_section />
+        <Delivery_result_section />
 
         <Share />
         <Nav />

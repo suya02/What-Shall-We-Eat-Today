@@ -12,25 +12,32 @@ class Nav extends Component {
         return (
 
             <div className="nav">
-                <div className="contect">
-                    Contects
+                <div className="contact">
+                    Contacts
                 </div>
+                <br/>
 
-                <br />
-                <img src={email} className="navicon" />&nbsp;
-                E-mail : lch92458@gmail.com
-                <br /><br />
+                <div className="contact_text">
+                    <div>
+                        <img src={email} className="navicon" />&nbsp;
+                        E-mail : lch92458@gmail.com
+                    </div>
 
-                <img src={call} className="navicon" />&nbsp;
-                010 3949 9245
-                <br /><br />
+                    <div>
+                        <img src={call} className="navicon" />&nbsp;
+                        010 3949 9245
+                    </div>
 
-                <img src={git} className="navicon" />&nbsp;
-                <a href="https://github.com/Paydaypermanently/What-Shall-We-Eat-Today" target="_blank"> Github </a>
+                    <div>
+                        <img src={git} className="navicon" />&nbsp;
+                        <a href="https://github.com/Paydaypermanently/What-Shall-We-Eat-Today" target="_blank"> Github </a>
+                    </div>
 
-
-                <br /><br /><br />
-                copyright(c) 2021. code your choice (이춘호, 류수현, 오태양, 김이현). All rights reserved.
+                    <br/>
+                    <div>
+                        copyright(c) 2021. code your choice (이춘호, 류수현, 오태양, 김이현). All rights reserved.
+                    </div>
+                </div>
             </div>
 
 

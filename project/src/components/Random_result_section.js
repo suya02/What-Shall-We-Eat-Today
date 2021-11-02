@@ -3,7 +3,6 @@ import box1 from '/home/ubuntu/ict/project/src/images/box1.png'
 import box2 from '/home/ubuntu/ict/project/src/images/box2.png'
 import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
-import { Link } from 'react-router-dom';
 import axios from "axios";
 import $ from "jquery";
 
@@ -25,28 +24,28 @@ class Random_result_section extends Component {
     console.log(data);
     console.log(typeof data);
     if (data[0]) { this.setState({ menu: data[0].foodname, ment: data[0].ment }) };
-    if($('#show').css('display') == 'none' && $('#show2').css('display') == 'none'){
+    if ($('#show').css('display') == 'none' && $('#show2').css('display') == 'none') {
       $('#show').show();
       $("#show2").show();
     }
     $('#hide').hide();
     $('#hide1').hide();
-    
+
   };
 
   render() {
     return (
       <div className="background">
-        
+
         <div className="result_text">오늘은 뭐 먹지?</div>
-        
+
         <div className="random_section" >
           <h2>
             <div className="bounce" id="hide1">
               Box Open
             </div>
           </h2>
-          <div className="question_section" id='show2' style={{display:'none'}}>
+          <div className="question_section" id='show2' style={{ display: 'none' }}>
             <img src={pan} alt="pan" className="pan3" />
             <div className="question">
               <div className="question_text">
@@ -55,22 +54,22 @@ class Random_result_section extends Component {
               </div>
             </div>
           </div>
-          
+
           <div className="box" onClick={() => {
-              this.getRandomMenu();
-            }}>
-            
-            <div class="imgswap" id="hide" > 
-              <img src={box1} className="bounce2"/> 
-              <img src={box2} className="box2" /> 
+            this.getRandomMenu();
+          }}>
+
+            <div className="imgswap" id="hide" >
+              <img src={box1} className="bounce2" />
+              <img src={box2} className="box2" />
             </div>
             <div>
-            <button onClick={() => {
-              this.getRandomMenu();
-            }} className="again_test" id="show"  style={{display:'none'}}>
-              테스트 다시하기
+              <button onClick={() => {
+                this.getRandomMenu();
+              }} className="again_test" id="show" style={{ display: 'none' }}>
+                테스트 다시하기
               <img src={redo} className="again_icon" />
-            </button>
+              </button>
             </div>
           </div>
 

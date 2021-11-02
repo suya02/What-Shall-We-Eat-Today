@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import '/home/ubuntu/ict/project/src/custom.css';
 import clock from '/home/ubuntu/ict/project/src/images/clock.png'
