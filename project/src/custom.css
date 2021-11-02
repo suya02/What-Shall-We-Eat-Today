@@ -245,8 +245,7 @@ a:link {
   padding: 5vw;
   padding-left: 10vw;
   padding-right: 10vw;
-  vertical-align:middle;
-  height:60vh;
+  height:40vh;
   background-color: white;
 }
 
@@ -290,31 +289,30 @@ a:link {
 }
 
 .start_test {
+  font-size: 3vw;
+  font-family: 'Gamja Flower', cursive;
   font-weight: bold;
-  width: 17vw;
-  text-decoration:none;
-  font-family:Comic Sans MS;
+  color:orange;
+  /* text-decoration:none; */
   box-shadow:#d6d6d6 1px 3px 2px;
   -moz-box-shadow:#d6d6d6 1px 3px 2px;
   -webkit-box-shadow:#d6d6d6 1px 3px 2px;
   text-indent:0px;
-  line-height:30px;
-  -moz-border-radius:25px;
-  -webkit-border-radius:25px;
-  border-radius:25px;
-  text-align:center;
-  vertical-align:middle;
-  display:inline-block;
-  font-size:20px;
-  color:orange;
-  padding:13px;
+  /* line-height:30px; */
   border-color:orange;
   border-width:2px;
   border-style:solid;
+  border-radius: 3vw;
+  -moz-border-radius: 3vw;
+  -webkit-border-radius: 3vw;
+  
+  width: 17vw;
+  text-align:center;
+  vertical-align:middle;
+  display:inline-block;
+  padding:0.5vw;
   text-align: center;
-  font-size: 2vw;
-  font-family: Comic Sans MS;
-  font-family: 'Gamja Flower', cursive;
+  background-color: white;
 }
 
 .start_test:active {
@@ -322,7 +320,8 @@ a:link {
   -moz-box-shadow:#d6d6d6 1px 0 2px;
   -webkit-box-shadow:#d6d6d6 1px 0 2px;
   position:relative;
-  top:3px
+  top: 0.5vw;
+  background-color: whitesmoke;
 }
 
 .question_section
@@ -1018,13 +1017,12 @@ figure.snip.hover figcaption {
   /*로고,메뉴바가 수직으로 나오도록*/
   .navbar {
     flex-direction: column;
-    align-items : flex-start; /*로고,메뉴바 모두 왼쪽 정렬*/
-    padding : 8px 24px; /*hover시 한줄 가득 색상표시 안되도록 */
+    align-items : flex-start;
     display : flex; 
-    justify-content: space-between; /*중심축 배치 (현재는 중심축이 수평축)*/
-    align-items: center; /*반대축(현재는 반대축이 수직축)의 속성값 활용 */
+    justify-content: space-between; 
+    align-items: center;
     background-color: orange;
-    padding : 0vh 1vw 2vh 1vw; /*위아래 8px, 양옆 12px*/
+    padding : 0vh 0vw 2vh 0vw;
   }
  
   .navbar__logo{
@@ -1080,7 +1078,7 @@ figure.snip.hover figcaption {
     display: none; /*현 사이즈에선 메뉴가 나타나지 않음*/
     flex-direction: column;
     align-items: center; /*메뉴바만 가운데 정렬 */
-    width : 100%; /*메뉴바의 가운데 정렬을 위해 너비를 늘림*/
+    width : 100vw; /*메뉴바의 가운데 정렬을 위해 너비를 늘림*/
     font-family: 'Gamja Flower', cursive;
     font-weight: bold;
   }
@@ -1226,6 +1224,72 @@ figure.snip.hover figcaption {
 {
   width: 40vw;
   font-size: 3vw;
+}
+
+.sections {
+  width: 100vw;
+  height:47vh;
+  background-color: white;
+  flex-direction: column;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.sections img {
+  width: 50vw;
+  padding-right: 2vw;
+}
+
+.pan
+{
+  text-align: center;
+  width: 10vw;
+  position: relative;
+  display : block;
+
+}
+.wid {
+  width:100vw;
+  height: 25vh;
+  background-color: #fffcbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.section_text {
+  margin-left: 0vw;
+}
+
+.section_text_big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7vw;
+}
+
+.section_text_small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+}
+
+.start_test {
+  font-size: 5vw;
+  width: 20vw;
+  padding:1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 }
