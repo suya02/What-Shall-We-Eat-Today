@@ -84,10 +84,10 @@ a:link {
 }
 
 .header_menu_ul li:hover {
-    transition: 0.25s;
-    font-size:1.6vw;
-    text-decoration: none;
-    color: black;
+  transition: 0.25s;
+  font-size:1.6vw;
+  text-decoration: none;
+  color: black;
 }
   
 .nav {
@@ -654,121 +654,6 @@ video {
   color: #ffffff; 
 }
 
-/* main_section의 card3개 */
-/* @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-figure.snip {
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-  min-width: 20vw;
-  max-width: 25vw;
-  width: 100%;
-  color: #ffffff;
-  line-height: 1.4em;
-  object-fit: cover;
-}
-figure.snip * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-figure.snip img {
-  opacity: 1;
-  max-width: 18vw;
-  min-width: 18vw;
-  max-height: 35vh;
-  min-height: 35vh;
-  height: auto;
-  vertical-align: top;
-  background-size: cover;
-}
-
-figure.snip h3 {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  background-color: #ffd400;
-  z-index: 1;
-  text-align: right;
-  padding: 2.5vh 10vw 0px 0px;
-  margin: 0;
-  font-weight: 300;
-  font-size: 0.7em;
-  font-weight: bold;
-  font-family: "Lato", sans-serif;
-  -webkit-transform: translateY(-200%);
-  transform: translateY(-200%);
-}
-
-figure.snip h3:before {
-  position: absolute;
-  content: '';
-  top: 100%;
-  left: 0;
-  width: 10vw;
-  max-width: 18vw;
-  border-style: solid;
-  border-width: 0 30vw 5vh 0;
-  border-color: transparent red transparent transparent;
-}
-
-figure.snip figcaption {
-  padding: 5px 25px 15px;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-  bottom: 0%;
-  background-color: #ffd400;
-  -webkit-transform: translateY(200%);
-  transform: translateY(200%);
-}
-
-figure.snip figcaption:before {
-  position: absolute;
-  content: '';
-  bottom: 100%;
-  left: 0;
-  width: 18vw;
-  max-width: 18vw;
-  height: 0;
-  border-style: solid;
-  border-width: 55px 0 0 350px;
-  border-color: transparent transparent transparent #ffd400;
-}
-
-figure.snip .icons {
-  margin-top: -20px;
-}
-figure.snip i {
-  padding: 0px 8px;
-  display: inline-block;
-  font-size: 30px;
-  color: #ffffff;
-  text-align: center;
-  opacity: 0.7;
-}
-figure.snip i:hover {
-  opacity: 1;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-
-figure.snip:hover h3,
-figure.snip.hover h3 {
-  -webkit-transform: translateY(0%);
-  transform: translateY(0%);
-  width: 18vw;
-}
-
-figure.snip:hover figcaption,
-figure.snip.hover figcaption {
-  -webkit-transform: translateY(0%);
-  transform: translateY(0%);
-  width: 18vw;
-} */
-
 .Main_header {
   position:fixed;
   width:100%;
@@ -789,7 +674,7 @@ figure.snip.hover figcaption {
   font-family: "Lato", sans-serif;
   color:black;
 }
- /*새로 만들어보는 헤더 css*/
+ /* 새로 만들어보는 헤더 css
 .MainHeader {
  display: flex;
  justify-content: space-between;
@@ -812,7 +697,7 @@ figure.snip.hover figcaption {
 .Header_menu_ul li:hover {
   background-color: yellow;
   border-radius: 10px;
-}
+} */
 
 /* 스크롤 다운시 header 색상 변경 */
 .down {
@@ -1130,6 +1015,81 @@ figure.snip.hover figcaption {
     display: none;
   }
 
+  /*로고,메뉴바가 수직으로 나오도록*/
+  .navbar {
+    flex-direction: column;
+    align-items : flex-start; /*로고,메뉴바 모두 왼쪽 정렬*/
+    padding : 8px 24px; /*hover시 한줄 가득 색상표시 안되도록 */
+    display : flex; 
+    justify-content: space-between; /*중심축 배치 (현재는 중심축이 수평축)*/
+    align-items: center; /*반대축(현재는 반대축이 수직축)의 속성값 활용 */
+    background-color: orange;
+    padding : 0vh 1vw 2vh 1vw; /*위아래 8px, 양옆 12px*/
+  }
+ 
+  .navbar__logo{
+    font-family: 'Hi Melody', cursive;
+    font-weight: bold;
+    font-size: 24px;
+    color:white;
+  }
+
+  .eggLogo_mo
+  {
+    position: relative;
+    width: 8vw;
+    top:4.3vh;
+    right: 10vw;
+  }
+
+  .nav_img
+  {
+    position: relative;
+    width: 8vw;
+    top:4.3vh;
+    right: 2vw;
+  }
+
+  .navbar__menu li{
+    padding : 1vh 2vw; /*마우스 클릭영역확보*/   
+  }
+
+  .navbar__menu li:hover {
+    background-color: yellow;
+    border-radius: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color :black;
+  }
+  
+  .navbar__toogleBtn {
+    position: absolute;
+    right : 3vw; 
+    font-size: 24px;
+    color : black;
+    display: block;
+  }
+
+  .navbar__toogleBtn:hover {
+    cursor: pointer;
+  }
+
+  .navbar__menu{
+    display: none; /*현 사이즈에선 메뉴가 나타나지 않음*/
+    flex-direction: column;
+    align-items: center; /*메뉴바만 가운데 정렬 */
+    width : 100%; /*메뉴바의 가운데 정렬을 위해 너비를 늘림*/
+    font-family: 'Gamja Flower', cursive;
+    font-weight: bold;
+  }
+
+  .navbar__menu.active {
+      display :flex;
+  }
+
+
   /*모바일 css*/
   .index1 {
     display: none;
@@ -1269,4 +1229,3 @@ figure.snip.hover figcaption {
 }
 
 }
-
