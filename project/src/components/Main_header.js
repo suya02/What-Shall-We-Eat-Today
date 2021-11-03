@@ -8,16 +8,6 @@ import $ from "jquery";
 class Main_header extends Component {
 
     render() {
-        // window.onload = function(){ 
-        //     // 모바일버전 햄버거 메뉴 구현
-        //     const toggleBtn = document.querySelector('.navbar__toogleBtn');
-        //     const menu = document.querySelector('.navbar__menu');
-
-        //     toggleBtn.addEventListener('click', () => {
-        //     menu.classList.toggle('active'); // 클릭시 active없으면 active추가
-        //     });
-        // }
-
         $( document ).ready(function() {
             const toggleBtn = document.querySelector('.navbar__toogleBtn');
             const menu = document.querySelector('.navbar__menu');
@@ -26,6 +16,7 @@ class Main_header extends Component {
             menu.classList.toggle('active'); // 클릭시 active없으면 active추가
             });
         });
+        
         return (
             <>
             <div className="pc_ver">

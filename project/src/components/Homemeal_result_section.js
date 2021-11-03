@@ -43,7 +43,7 @@ class Homemeal_result_section extends Component {
                     <img src={pan} alt="pan" className="pan" />
                     <div className="question">
                         <div className="question_text">
-                            <h4>{this.state.menu ? this.state.menu : "메뉴 찾는 중"}{" "}</h4>
+                            <h3>{this.state.menu ? this.state.menu : "메뉴 찾는 중"}{" "}</h3>
                             <h4>{this.state.supplies ? this.state.supplies : "재료 구매 중"}{" "}</h4>
                             <h4>{this.state.recipe ? this.state.recipe : "레시피 뒤지는 중"}{" "}</h4>
                         </div>

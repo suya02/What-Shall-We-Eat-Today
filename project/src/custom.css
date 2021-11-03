@@ -328,7 +328,7 @@ a:link {
 {
   z-index: 2;
   background-color: whitesmoke; 
-  height:57vh;
+  height:60vh;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -420,8 +420,17 @@ a:link {
 }
 
 .random_section {
-  height: 35vw;
-  background-color: whitesmoke;
+  z-index: 2;
+  background-color: whitesmoke; 
+  height:57vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4.5vw;
+  position: relative;
+  padding-top: 8vh;
 }
 
 .result_food{
@@ -438,22 +447,17 @@ a:link {
 }
 
 .imgswap{
-
   text-align: center;
-  width: 30vw;
-  height: 30vw;
   margin: auto;
 }
 
 .bounce { 
   font-size: 2vw;
   width: 10vw;
-  padding-top: 2vw;
+  padding-top: 0vh;
   text-align: center;
   font-weight: bold;
   position:absolute;
-  left:45%;
-  top:50%;
   animation-fill-mode: forwards;
   position: relative;
   animation-name: bounce;
@@ -483,7 +487,6 @@ a:link {
   height: 30vw;
   padding-bottom: 5vw;
 }
-
 
 /* 박스 굴러들어오는 애니메이션 */
 @keyframes over {
@@ -1329,7 +1332,7 @@ figure.snip i {
 {
   z-index: 2;
   background-color: whitesmoke; 
-  height:50vh;
+  height:47vh;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -1350,23 +1353,9 @@ figure.snip i {
 
 .again_test {
   font-weight: normal;
-  width: 45vw;
+  width: 46vw;
   font-size: 5vw;
   margin: 1vw;
-}
-
-.question_section
-{
-  z-index: 2;
-  background-color: whitesmoke; 
-  height:47vh;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 4.5vw;
-  position: relative;
 }
 
 .again_icon {
@@ -1436,4 +1425,28 @@ figure.snip i {
   padding-right: 4vw;
 }
 
+.bounce { 
+  font-size: 4vw;
+  width: 20vw;
+  padding-top: 2vw;
+}
+
+.bounce2 { 
+  width: 45vw;
+  height: 45vw;
+}
+
+.box {
+  text-align: center;
+  height: 35vw;
+}
+
+.box2 {
+  width: 65vw;
+  height: 55vw;
+}
+
+.random_section {
+  padding-top: 0vh;
+}
 }

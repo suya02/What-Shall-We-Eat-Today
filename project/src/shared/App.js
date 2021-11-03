@@ -9,7 +9,6 @@ import Homemeal_result from '/home/ubuntu/ict/project/src/pages/Homemeal_result.
 
 import Random from '/home/ubuntu/ict/project/src/pages/Random.js';
 import Random_result from '/home/ubuntu/ict/project/src/pages/Random_result.js';
-import Random_result_open from '/home/ubuntu/ict/project/src/pages/Random_result_open.js';
 
 import ScrollIntoView from "../components/f_routertotop";
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -32,7 +31,7 @@ class App extends Component {
 
                         <Route path="/random" component={Random} exact />
                         <Route path="/random/result" component={Random_result} exact />
-                        <Route path="/random/result/open" component={Random_result_open} exact />
+                      
 
                     </ScrollIntoView>
                 </BrowserRouter>

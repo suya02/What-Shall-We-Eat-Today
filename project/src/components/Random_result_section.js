@@ -38,25 +38,26 @@ class Random_result_section extends Component {
       <div className="background">
         <div className="result_text">오늘은 뭐 먹지?</div>
         <div className="random_section" >
+
+          {/* text */}
           <h2>
             <div className="bounce" id="hide1">
               Box Open
             </div>
           </h2>
+
+          {/* 결과 */}
           <div className="question_section" id='show2' style={{ display: 'none' }}>
             <img src={pan} alt="pan" className="pan3" />
             <div className="question">
               <div className="question_text">
-                {this.state.menu ? this.state.menu : ""}<br />
-                {this.state.ment ? this.state.ment : ""}
+                <h2>{this.state.menu ? this.state.menu : ""}</h2>
+                <h3>{this.state.ment ? this.state.ment : ""}</h3>
               </div>
             </div>
           </div>
 
-          <div className="box" onClick={() => {
-            this.getRandomMenu();
-          }}>
-
+          <div className="box" onClick={() => { this.getRandomMenu() }}>
             <div className="imgswap" id="hide" >
               <img src={box1} className="bounce2" />
               <img src={box2} className="box2" />
@@ -65,7 +66,7 @@ class Random_result_section extends Component {
               <button onClick={() => {
                 this.getRandomMenu();
               }} className="again_test" id="show" style={{ display: 'none' }}>
-                테스트 다시하기
+                다른메뉴 추천받기
               <img src={redo} className="again_icon" />
               </button>
             </div>
