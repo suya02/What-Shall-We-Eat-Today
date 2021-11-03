@@ -5,6 +5,8 @@ import pan from "/home/ubuntu/ict/project/src/images/pan2.png";
 import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import axios from "axios";
 import ProgressBar from "/home/ubuntu/ict/project/src/components/Progress.js";
+import $ from "jquery";
+
 let result_tmp;
 let vs = "vs"; //질문이 모두 끝나면 vs가 요리중 이라는 문자열로 바뀌게 구현
 let q1 = [
@@ -69,7 +71,13 @@ class Delivery_question_section extends Component {
     console.log(res);
   };
 
+  
+
   render() {
+    $( document ).ready(function() {
+      vs="vs";
+
+    });
     return (
       <div>
         <div className="background">
