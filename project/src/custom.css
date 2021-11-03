@@ -1076,10 +1076,10 @@ figure.snip.hover figcaption {
   }
 
   .navbar__menu{
-    display: none; /*현 사이즈에선 메뉴가 나타나지 않음*/
+    display: none;
     flex-direction: column;
-    align-items: center; /*메뉴바만 가운데 정렬 */
-    width : 100vw; /*메뉴바의 가운데 정렬을 위해 너비를 늘림*/
+    align-items: center; 
+    width : 100vw;
     font-family: 'Gamja Flower', cursive;
     font-weight: bold;
   }

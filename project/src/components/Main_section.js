@@ -48,7 +48,7 @@ class Main_section extends Component {
                                 <img src={delivery} alt="sample30" />
                                 <h3>배달음식 뭐 먹지?</h3>
                                 <figcaption>
-                                    <div class="icons"><i className="ion-social-reddit-outline"></i>
+                                    <div className="icons"><i className="ion-social-reddit-outline"></i>
                                         <i className="ion-social-twitter-outline"></i>
                                         <i className="ion-social-vimeo-outline"></i>
                                     </div>
@@ -135,7 +135,7 @@ class Main_section extends Component {
                                         <img src={delivery} />    
                                     <h3>배달음식 뭐 먹지?</h3>
                                     <figcaption>
-                                        <div class="icons"><i className="ion-social-reddit-outline"></i>
+                                        <div className="icons"><i className="ion-social-reddit-outline"></i>
                                             <i className="ion-social-twitter-outline"></i>
                                             <i className="ion-social-vimeo-outline"></i>
                                         </div>

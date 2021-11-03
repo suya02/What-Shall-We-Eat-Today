@@ -3,19 +3,29 @@ import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
 import nav from '/home/ubuntu/ict/project/src/images/nav.png'
 import '/home/ubuntu/ict/project/src/custom.css';
 import { Link } from 'react-router-dom';
+import $ from "jquery";
 
 class Header extends Component {
 
     render() {
-        window.onload = function(){ 
-            // 모바일버전 햄버거 메뉴 구현
+        // window.onload = function(){ 
+        //     // 모바일버전 햄버거 메뉴 구현
+        //     const toggleBtn = document.querySelector('.navbar__toogleBtn');
+        //     const menu = document.querySelector('.navbar__menu');
+
+        //     toggleBtn.addEventListener('click', () => {
+        //     menu.classList.toggle('active'); // 클릭시 active없으면 active추가
+        //     });
+        // }
+
+        $( document ).ready(function() {
             const toggleBtn = document.querySelector('.navbar__toogleBtn');
             const menu = document.querySelector('.navbar__menu');
 
             toggleBtn.addEventListener('click', () => {
             menu.classList.toggle('active'); // 클릭시 active없으면 active추가
             });
-        }
+        });
         return (
             <>
             <div className="pc_ver">
@@ -25,7 +35,7 @@ class Header extends Component {
                     <Link to="/"> 
                         <img src={egg} alt="logo" className="eggLogo" /> 
                         <div className="link_font">
-                            오늘 뭐 먹지? 
+                            오늘 뭐 먹지?
                         </div>
                     </Link>
                 </div>
