@@ -8,7 +8,7 @@ import $ from "jquery";
 class Main_header extends Component {
 
     render() {
-        $( document ).ready(function() {
+        $(document).ready(function() {
             const toggleBtn = document.querySelector('.navbar__toogleBtn');
             const menu = document.querySelector('.navbar__menu');
 

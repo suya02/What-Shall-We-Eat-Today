@@ -13,7 +13,7 @@ class Header extends Component {
             const menu = document.querySelector('.navbar__menu');
 
             toggleBtn.addEventListener('click', () => {
-            menu.classList.toggle('active'); // 클릭시 active없으면 active추가
+                menu.classList.toggle('active');
             });
         });
         
@@ -63,7 +63,7 @@ class Header extends Component {
                     <li><Link to="/random"> 1초안에 알려줘!</Link></li>
                 </ul>
              
-                <div className="navbar__toogleBtn">
+                <div className="navbar__toogleBtn" id="navbar__toogleBtn" >
                 <img src={nav} className="nav_img" /> 
                 </div>
             </nav>
