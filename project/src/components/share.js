@@ -4,6 +4,7 @@ import link from '/home/ubuntu/ict/project/src/images/linkicon.png'
 import baemin from '/home/ubuntu/ict/project/src/images/baemin.png'
 import kakao from '/home/ubuntu/ict/project/src/images/kakao.png'
 import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const Share = () => {
   useEffect(() => {
@@ -48,6 +49,7 @@ const Share = () => {
       })
     }
   }
+  const currentUrl = window.location.href;
 
   return (
       <div className="share">
@@ -59,9 +61,11 @@ const Share = () => {
         <img src={kakao} className="share_icon" id="kakao-link-btn" />
         
         <img src={baemin} className="share_icon" />
-     
+        <CopyToClipboard text={currentUrl}>
+          <img src={link} className="share_icon" />
+        </CopyToClipboard>
 
-        <img src={link} className="share_icon" onClick="clip()" />
+
       </div>
   )
 }
