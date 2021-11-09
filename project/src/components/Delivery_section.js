@@ -10,28 +10,23 @@ class Delibery_section extends Component {
                     <div className="wid">
                         <img src={ pan } alt="pan" className="pan" />
                     </div>
-                    
-             
-                    <div className="section_text">
-                        <div className="section_text_big"> 
-                            배달음식 뭐 먹지? <br />
-                        </div>
-                        <div className="section_text_small"> 
-                            뭐 먹을지 고민 될 때! 1분 안에 메뉴 고르기!<br />
-                        </div>
+                  
+                    <div className="section_text_big"> 
+                        배달음식 뭐 먹지? <br />
+                    </div>
+                    <div className="section_text_small"> 
+                        뭐 먹을지 고민 될 때! 1분 안에 메뉴 고르기!<br />
+                    </div>
 
-                        <br />
+                    <br />
 
-                        
-                        <Link to="/delivery_question" >
-                            <div className="center">
-                                <button className="start_test">
-                                    Start
-                                </button> 
-                            </div>
-                             
-                        </Link>
-                    </div>           
+                    <Link to="/delivery_question" >
+                        <div className="center">
+                            <button className="start_test">
+                                Start
+                            </button> 
+                        </div> 
+                    </Link>
                 </div>
             </div>
         );

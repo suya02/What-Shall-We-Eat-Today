@@ -39,9 +39,6 @@ class Home extends Component {
             <video id="vid" muted autoPlay loop>
               <source src={HeaderVideo} type="video/mp4"></source>
             </video>
-            <div className="header_vedio_box_text">
-              <p></p>
-            </div>
           </div>
         </div>
 

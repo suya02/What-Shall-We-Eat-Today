@@ -22,14 +22,14 @@ class Header extends Component {
             <div className="pc_ver">
             <header className="header">
                 
-            <div className="header_logo">
-                    <Link to="/"> 
+                <Link to="/"> 
+                    <div className="header_logo">
                         <img src={egg} alt="logo" className="eggLogo" /> 
                         <div className="link_font">
-                            오늘 뭐 먹지?
+                            오늘 뭐 먹지? 
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
 
                 <ul className="header_menu_ul">
                     <li> 

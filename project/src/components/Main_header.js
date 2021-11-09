@@ -21,15 +21,16 @@ class Main_header extends Component {
             <>
             <div className="pc_ver">
             <header className="Main_header">
-            
-            <div className="header_logo">
-                    <Link to="/"> 
+                
+                <Link to="/"> 
+                    <div className="header_logo">
                         <img src={egg} alt="logo" className="eggLogo" /> 
                         <div className="link_font">
                             오늘 뭐 먹지? 
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
+               
 
                 <ul className="header_menu_ul">
                     <li> 
@@ -52,8 +53,9 @@ class Main_header extends Component {
 
             <div className="mo_ver">
             <nav className="navbar">
+                {/* <Link to="/">  */}
+                <img src={egg} alt="logo" className="eggLogo_mo" /> 
                 <Link to="/"> 
-                    <img src={egg} alt="logo" className="eggLogo_mo" /> 
                     <div className="navbar__logo">오늘 뭐 먹지?</div>
                 </Link>
     

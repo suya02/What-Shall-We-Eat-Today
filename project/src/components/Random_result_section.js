@@ -48,7 +48,7 @@ class Random_result_section extends Component {
 
           {/* 결과 */}
           <div className="question_section" id='show2' style={{ display: 'none' }}>
-            <img src={pan} alt="pan" className="pan3" />
+            <img src={pan} alt="pan" className="pan" />
             <div className="question">
               <div className="question_text">
                 <h2>{this.state.menu ? this.state.menu : ""}</h2>
@@ -59,7 +59,7 @@ class Random_result_section extends Component {
 
           <div className="box" onClick={() => { this.getRandomMenu() }}>
             <div className="imgswap" id="hide" >
-              <img src={box1} className="bounce2" />
+              <img src={box1} className="box1" />
               <img src={box2} className="box2" />
             </div>
             <div>
