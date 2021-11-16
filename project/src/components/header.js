@@ -52,10 +52,14 @@ class Header extends Component {
 
             <div className="mo_ver">
             <nav className="navbar">
+            <div className="row">
                 <Link to="/"> 
-                    <img src={egg} alt="logo" className="eggLogo_mo" /> 
-                    <div className="navbar__logo">오늘 뭐 먹지?</div>
+                    <div className="navbar__logo">
+                        <img src={egg} alt="logo" className="eggLogo_mo" /> 
+                        오늘 뭐 먹지?
+                    </div>
                 </Link>
+                </div>
     
                 <ul className="navbar__menu">
                     <li><Link to="/delivery"> 배달음식 뭐 먹지?</Link></li>

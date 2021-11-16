@@ -13,7 +13,7 @@ class Homemeal_section extends Component {
                         집에서 뭐 해먹지? <br />
                     </div>
                     <div className="section_text_small"> 
-                        테스트 유도 문구 (ex) 집에 있는 재료로 뭘 해먹지?)<br />
+                        조리시간으로 뭐 해먹을지 결정하기!<br />
                     </div>
                     
                     <br />

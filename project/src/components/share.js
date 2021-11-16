@@ -49,14 +49,25 @@ const Share = () => {
       })
     }
   }
+  // 링크복사
   const currentUrl = window.location.href;
+
+  // 딥링크
+  // const exeDeepLink = () => {
+  //   url = "yourapp://path/";
+  //   location.href = url;
+  // };
+   
 
   return (
       <div className="share">
-        <img src={egg} alt="logo" className="eggLogo" />
-        친구에게 공유하기
-        <img src={egg} alt="logo" className="eggLogo" />
-        <br /><br />
+        <div>
+          <img src={egg} alt="logo" className="eggLogo" />
+          친구에게 공유하기
+          <img src={egg} alt="logo" className="eggLogo" />
+        </div>
+        
+        <br />
 
         <img src={kakao} className="share_icon" id="kakao-link-btn" />
         
