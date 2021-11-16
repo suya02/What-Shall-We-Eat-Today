@@ -6,6 +6,11 @@ import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import axios from "axios";
 import ProgressBar from "/home/ubuntu/ict/project/src/components/Progress.js";
 import $ from "jquery";
+import PrivateProperty from '../privateProperty_client.js';
+
+const props = PrivateProperty();
+const IP = props.IP;
+
 
 let result_tmp;
 let vs = "vs"; //질문이 모두 끝나면 vs가 요리중 이라는 문자열로 바뀌게 구현
@@ -59,7 +64,7 @@ class Delivery_question_section extends Component {
   }
 
   createCourse = async () => {
-    let res = await axios.post("http://3.35.17.24:5000/api", {
+    let res = await axios.post(`http://${IP}:5000/api`, {
       result1: results[0],
       result2: results[1],
       result3: results[2],
@@ -71,11 +76,11 @@ class Delivery_question_section extends Component {
     console.log(res);
   };
 
-  
+
 
   render() {
-    $( document ).ready(function() {
-      vs="vs";
+    $(document).ready(function () {
+      vs = "vs";
 
     });
     return (
@@ -235,7 +240,7 @@ class Delivery_question_section extends Component {
 
 
         <div className="background">
-        
+
           <Link to="/Delivery_result">
             <button href="" className="again_test">
               {" "}
@@ -245,13 +250,13 @@ class Delivery_question_section extends Component {
           </Link>
 
           <div>
-          <button onClick={() => { window.location.reload() }} className="again_test">
-            테스트 다시하기
+            <button onClick={() => { window.location.reload() }} className="again_test">
+              테스트 다시하기
               <img src={redo} className="again_icon" />
-          </button>
+            </button>
           </div>
 
-          
+
         </div>
       </div>
     );

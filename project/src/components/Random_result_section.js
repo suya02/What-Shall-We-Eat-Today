@@ -5,6 +5,10 @@ import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
 import axios from "axios";
 import $ from "jquery";
+import PrivateProperty from '../privateProperty_client.js';
+
+const props = PrivateProperty();
+const IP = props.IP;
 
 class Random_result_section extends Component {
 
@@ -19,7 +23,7 @@ class Random_result_section extends Component {
     //api에서 get요청을 하는 함수
     //이부분에서 결과로 나온 메뉴를 설정해준다.
     let data = await axios
-      .get("http://3.35.17.24:5000/randomapi")
+      .get(`http://${IP}:5000/randomapi`)
       .then(({ data }) => data);
     console.log(data);
     console.log(typeof data);

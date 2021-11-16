@@ -4,6 +4,10 @@ import '/home/ubuntu/ict/project/src/custom.css';
 import clock from '/home/ubuntu/ict/project/src/images/clock.png'
 import redo from '/home/ubuntu/ict/project/src/images/redo.png'
 import axios from "axios";
+import PrivateProperty from '../privateProperty_client.js';
+
+const props = PrivateProperty();
+const IP = props.IP;
 
 
 let time = "";
@@ -42,7 +46,7 @@ class Homemeal_question_section extends Component {
                                 console.log(time);
 
                                 let post = async () => {
-                                    let res = await axios.post("http://3.35.17.24:5000/homemealapi", {
+                                    let res = await axios.post(`http://${IP}:5000/homemealapi`, {
                                         times: time
                                     });
                                     console.log(`전송 -> ${res}`);
@@ -65,7 +69,7 @@ class Homemeal_question_section extends Component {
                                 console.log(time);
 
                                 let post = async () => {
-                                    let res = await axios.post("http://3.35.17.24:5000/homemealapi", {
+                                    let res = await axios.post(`http://${IP}:5000/homemealapi`, {
                                         times: time
                                     });
                                     console.log(`전송 -> ${res}`);
@@ -90,7 +94,7 @@ class Homemeal_question_section extends Component {
                                 console.log(time);
 
                                 let post = async () => {
-                                    let res = await axios.post("http://3.35.17.24:5000/homemealapi", {
+                                    let res = await axios.post(`http://${IP}:5000/homemealapi`, {
                                         times: time
                                     });
                                     console.log(`전송 -> ${res}`);
@@ -115,7 +119,7 @@ class Homemeal_question_section extends Component {
                                 console.log(time);
 
                                 let post = async () => {
-                                    let res = await axios.post("http://3.35.17.24:5000/homemealapi", {
+                                    let res = await axios.post(`http://${IP}:5000/homemealapi`, {
                                         times: time
                                     });
                                     console.log(`전송 -> ${res}`);
@@ -140,7 +144,7 @@ class Homemeal_question_section extends Component {
                             <img src={redo} className="again_icon" />
                     </button>
 
-                    
+
                 </div>
             </div>
         );

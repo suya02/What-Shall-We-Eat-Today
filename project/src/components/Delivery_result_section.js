@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
 import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import axios from "axios";
+import PrivateProperty from '../privateProperty_client.js';
 
+const props = PrivateProperty();
+const IP = props.IP;
 
 class Delibery_result_section extends Component {
     //state 설정
@@ -17,7 +20,7 @@ class Delibery_result_section extends Component {
         //api에서 get요청을 하는 함수
         //이부분에서 결과로 나온 메뉴를 설정해준다.
         let data = await axios
-            .get("http://3.35.17.24:5000/api")
+            .get(`http://${IP}:5000/api`)
             .then(({ data }) => data);
         console.log(data);
         console.log(typeof data);
@@ -47,7 +50,7 @@ class Delibery_result_section extends Component {
 
                 </div>
 
-                {this.state.menu == "현재 충족되는 배달음식이 없습니다. 무작위로 추천받아보시겠어요?" ? 
+                {this.state.menu == "현재 충족되는 배달음식이 없습니다. 무작위로 추천받아보시겠어요?" ?
                     <Link to="/random">
                         <button href="" className="again_test">
                             무작위 추천받기!
@@ -55,14 +58,14 @@ class Delibery_result_section extends Component {
                     </Link> : ""}
                 <div>
 
-                <Link to="/Delivery_question">
-                <button className="again_test">
-                    테스트 다시하기
+                    <Link to="/Delivery_question">
+                        <button className="again_test">
+                            테스트 다시하기
                     <img src={redo} className="again_icon" />
-                </button>
-                </Link>
+                        </button>
+                    </Link>
 
-            </div>
+                </div>
 
             </div>
         );
