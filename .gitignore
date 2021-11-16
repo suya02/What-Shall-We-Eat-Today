@@ -23,5 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #project property
-privateProperty_client.js
-privateProperty.js
+/privateProperty_client.js
+/privateProperty.js
+
+/.prettierrc
