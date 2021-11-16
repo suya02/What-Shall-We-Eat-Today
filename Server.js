@@ -1,17 +1,19 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path");
 const app = express();
 const cors = require("cors");
-const { tmpdir } = require("os");
 const port = 5000;
-const router = express.Router();
 const mysql = require("mysql");
+const privateProperty = require('./privateProperty.js') //IP 가져오기
+const IP = privateProperty.getIP(); //IP 값 저장 
+
+
+
 
 //cors이슈 해결하기 위해 서버 접근 권한 허용
 app.use(
   cors({
-    origin: "http://3.35.17.24:3000",
+    origin: `http://${IP}:3000`,
   })
 );
 
