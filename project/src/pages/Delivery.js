@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from '/home/ubuntu/ict/project/src/components/header.js'
-import Delivery_section from '/home/ubuntu/ict/project/src/components/Delivery_section.js'
-import Share from '/home/ubuntu/ict/project/src/components/share.js'
-import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
+import Header from '/home/ubuntu/ict/project/src/components/Header.jsx'
+import DeliverySection from '/home/ubuntu/ict/project/src/components/DeliverySection.jsx'
+import Share from '/home/ubuntu/ict/project/src/components/Share.jsx'
+import Nav from '/home/ubuntu/ict/project/src/components/Nav.jsx'
 
 
 class Delivery extends Component {
@@ -11,7 +11,7 @@ class Delivery extends Component {
         return (
             <div>
                 <Header />
-                <Delivery_section />
+                <DeliverySection />
                 <Share />
                 <Nav />
             </div>

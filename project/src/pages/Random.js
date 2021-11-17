@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from '/home/ubuntu/ict/project/src/components/header.js'
-import Random_section from '/home/ubuntu/ict/project/src/components/Random_section.js'
-import Share from '/home/ubuntu/ict/project/src/components/share.js'
-import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
+import Header from '/home/ubuntu/ict/project/src/components/Header.jsx'
+import RandomSection from '/home/ubuntu/ict/project/src/components/RandomSection.jsx'
+import Share from '/home/ubuntu/ict/project/src/components/Share.jsx'
+import Nav from '/home/ubuntu/ict/project/src/components/Nav.jsx'
 
 class Random extends Component {
 
@@ -10,7 +10,7 @@ class Random extends Component {
         return (
             <div>
                 <Header />
-                <Random_section />
+                <RandomSection />
                 <Share />
                 <Nav />
             </div>

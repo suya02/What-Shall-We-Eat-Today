@@ -7,7 +7,7 @@ const props = PrivateProperty();
 const IP = props.IP;
 
 
-class Homemeal_result_section extends Component {
+class HomemealResultSection extends Component {
     state = {
         menu: "",
         image: "",
@@ -58,4 +58,4 @@ class Homemeal_result_section extends Component {
     }
 }
 
-export default Homemeal_result_section;
+export default HomemealResultSection;

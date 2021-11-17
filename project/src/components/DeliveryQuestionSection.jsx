@@ -4,7 +4,7 @@ import "/home/ubuntu/ict/project/src/custom.css";
 import pan from "/home/ubuntu/ict/project/src/images/pan2.png";
 import redo from "/home/ubuntu/ict/project/src/images/redo.png";
 import axios from "axios";
-import ProgressBar from "/home/ubuntu/ict/project/src/components/Progress.js";
+import ProgressBar from "/home/ubuntu/ict/project/src/components/Progress.jsx";
 import $ from "jquery";
 import PrivateProperty from '../privateProperty_client.js';
 
@@ -46,7 +46,7 @@ var testData = [
   { bgcolor: "orange", completed: percent, progress: gauge },
 ];
 
-class Delivery_question_section extends Component {
+class DeliveryQuestionSection extends Component {
 
   constructor(probs) {
     //state 클래스버전으로 사용
@@ -111,7 +111,7 @@ class Delivery_question_section extends Component {
                 if (this.state.count < q1.length) {
 
 
-                  if (this.state.count == 0) {
+                  if (this.state.count === 0) {
                     results.push(q1[this.state.count]);
                     this.setState({ count: this.state.count + 1 });
                     console.log(`q1:${q1}`);
@@ -119,7 +119,7 @@ class Delivery_question_section extends Component {
                     console.log(`results:${results}`);
                   }
 
-                  else if (this.state.count == 1) {
+                  else if (this.state.count === 1) {
 
                     results.push(q1[this.state.count]);
                     this.setState({ count: this.state.count + 1 });
@@ -146,7 +146,7 @@ class Delivery_question_section extends Component {
                     console.log(`results:${results}`);
                   }
                 }
-                if (this.state.count == q1.length - 1) {
+                if (this.state.count === q1.length - 1) {
                   result_tmp = results.pop();
                   results.splice(1, 0, result_tmp);
 
@@ -167,7 +167,7 @@ class Delivery_question_section extends Component {
             </div>
 
             <div className="vs" onClick={() => {
-              if (vs == "결과보기를 Click하세요!") {
+              if (vs === "결과보기를 Click하세요!") {
                 //결과보기 클릭 시 결과 페이지(Delivery_result)로 이동 
 
               }
@@ -186,7 +186,7 @@ class Delivery_question_section extends Component {
 
                 if (this.state.count < q2.length) {
 
-                  if (this.state.count == 0) {
+                  if (this.state.count === 0) {
                     results.push(q2[this.state.count]);
                     this.setState({ count: this.state.count + 1 });
                     console.log(`q1:${q1}`);
@@ -194,7 +194,7 @@ class Delivery_question_section extends Component {
                     console.log(`results:${results}`);
                   }
 
-                  else if (this.state.count == 1) {
+                  else if (this.state.count === 1) {
                     results.push(q2[this.state.count]);
                     this.setState({ count: this.state.count + 1 });
                     tmp1 = results.pop();
@@ -220,7 +220,7 @@ class Delivery_question_section extends Component {
                   }
                 }
 
-                if (this.state.count == q2.length - 1) {
+                if (this.state.count === q2.length - 1) {
                   result_tmp = results.pop();
                   results.splice(1, 0, result_tmp);
                   console.log(`q1:${q1}`);
@@ -245,14 +245,14 @@ class Delivery_question_section extends Component {
             <button href="" className="again_test">
               {" "}
               결과보기
-              <img src={redo} className="again_icon" />
+              <img src={redo} className="again_icon" alt="icon" />
             </button>
           </Link>
 
           <div>
             <button onClick={() => { window.location.reload() }} className="again_test">
               테스트 다시하기
-              <img src={redo} className="again_icon" />
+              <img src={redo} className="again_icon" alt="icon" />
             </button>
           </div>
 
@@ -263,7 +263,7 @@ class Delivery_question_section extends Component {
   }
 }
 
-export default Delivery_question_section;
+export default DeliveryQuestionSection;
 
 // 프라이팬 이미지 출처
 // https://www.pngwing.com/ko/free-png-sxezy/download

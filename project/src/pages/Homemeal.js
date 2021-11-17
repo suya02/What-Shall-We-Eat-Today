@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from '/home/ubuntu/ict/project/src/components/header.js'
-import Homemeal_section from '/home/ubuntu/ict/project/src/components/Homemeal_section'
-import Share from '/home/ubuntu/ict/project/src/components/share.js'
-import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
+import Header from '/home/ubuntu/ict/project/src/components/Header.jsx'
+import HomemealSection from '/home/ubuntu/ict/project/src/components/HomemealSection.jsx'
+import Share from '/home/ubuntu/ict/project/src/components/Share.jsx'
+import Nav from '/home/ubuntu/ict/project/src/components/Nav.jsx'
 
 class Homemeal extends Component {
 
@@ -10,7 +10,7 @@ class Homemeal extends Component {
         return (
             <div>
                 <Header />
-                <Homemeal_section />
+                <HomemealSection />
                 <Share />
                 <Nav />
             </div>

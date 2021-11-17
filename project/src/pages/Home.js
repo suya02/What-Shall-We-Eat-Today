@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Main_header from '/home/ubuntu/ict/project/src/components/Main_header.js'
-import Main_section from '/home/ubuntu/ict/project/src/components/Main_section.js'
-import Nav from '/home/ubuntu/ict/project/src/components/nav.js'
+import MainHeader from '/home/ubuntu/ict/project/src/components/MainHeader.jsx'
+import MainSection from '/home/ubuntu/ict/project/src/components/MainSection.jsx'
+import Nav from '/home/ubuntu/ict/project/src/components/Nav.jsx'
 import HeaderVideo from '/home/ubuntu/ict/project/src/videos/header.mp4'
 import $ from "jquery";
 
@@ -31,7 +31,7 @@ class Home extends Component {
     return (
       <div>
         <div className="index2">
-          <Main_header />
+          <MainHeader />
         </div>
 
         <div className="index1">
@@ -45,7 +45,7 @@ class Home extends Component {
         <section className="page-start">
         </section>
 
-        <Main_section />
+        <MainSection />
         <Nav />
 
       </div>

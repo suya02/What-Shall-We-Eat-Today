@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "/home/ubuntu/ict/project/src/custom.css";
-import Header from "/home/ubuntu/ict/project/src/components/header.js";
-import Delivery_result_section from "/home/ubuntu/ict/project/src/components/Delivery_result_section";
-import Share from "/home/ubuntu/ict/project/src/components/share.js";
-import Nav from "/home/ubuntu/ict/project/src/components/nav.js";
+import Header from "/home/ubuntu/ict/project/src/components/Header.jsx";
+import DeliveryResultSection from "/home/ubuntu/ict/project/src/components/DeliveryResultSection.jsx";
+import Share from "/home/ubuntu/ict/project/src/components/Share.jsx";
+import Nav from "/home/ubuntu/ict/project/src/components/Nav.jsx";
 
 
 class Delivery_Result extends Component {
@@ -13,8 +13,7 @@ class Delivery_Result extends Component {
     return (
       <div>
         <Header />
-        <Delivery_result_section />
-
+        <DeliveryResultSection />
         <Share />
         <Nav />
       </div>

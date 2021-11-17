@@ -57,27 +57,27 @@ const Share = () => {
   //   url = "yourapp://path/";
   //   location.href = url;
   // };
-   
+
 
   return (
-      <div className="share">
-        <div>
-          <img src={egg} alt="logo" className="eggLogo" />
+    <div className="share">
+      <div>
+        <img src={egg} alt="logo" className="eggLogo" />
           친구에게 공유하기
           <img src={egg} alt="logo" className="eggLogo" />
-        </div>
-        
-        <br />
-
-        <img src={kakao} className="share_icon" id="kakao-link-btn" />
-        
-        <img src={baemin} className="share_icon" />
-        <CopyToClipboard text={currentUrl}>
-          <img src={link} className="share_icon" />
-        </CopyToClipboard>
-
-
       </div>
+
+      <br />
+
+      <img src={kakao} className="share_icon" id="kakao-link-btn" alt="kakao_icon" />
+
+      <img src={baemin} className="share_icon" alt="share_icon" />
+      <CopyToClipboard text={currentUrl}>
+        <img src={link} className="share_icon" alt="share_icon" />
+      </CopyToClipboard>
+
+
+    </div>
   )
 }
 export default Share;

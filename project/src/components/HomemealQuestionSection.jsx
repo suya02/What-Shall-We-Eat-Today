@@ -13,7 +13,7 @@ const IP = props.IP;
 let time = "";
 
 
-class Homemeal_question_section extends Component {
+class HomemealQuestionSection extends Component {
 
     state = {
         letter1: "30분 이내",
@@ -32,7 +32,7 @@ class Homemeal_question_section extends Component {
                 <div className="background">
                     <table className="h_table">
                         <tr>
-                            <td><img src={clock} className="clock" /></td>
+                            <td><img src={clock} className="clock" alt="clock" /></td>
                             <td><div className="h_question" onClick={() => {
                                 this.setState({
                                     letter1: "결과보기 Click!",
@@ -57,7 +57,7 @@ class Homemeal_question_section extends Component {
 
                         </tr>
                         <tr>
-                            <td><img src={clock} className="clock" /></td>
+                            <td><img src={clock} className="clock" alt="clock" /></td>
                             <td><div className="h_question" onClick={() => {
                                 this.setState({
                                     letter1: " ",
@@ -81,7 +81,7 @@ class Homemeal_question_section extends Component {
 
                         </tr>
                         <tr>
-                            <td><img src={clock} className="clock" /></td>
+                            <td><img src={clock} className="clock" alt="clock" /></td>
                             <td><div className="h_question" onClick={() => {
                                 this.setState({
                                     letter1: " ",
@@ -106,7 +106,7 @@ class Homemeal_question_section extends Component {
 
                         </tr>
                         <tr>
-                            <td><img src={clock} className="clock" /></td>
+                            <td><img src={clock} className="clock" alt="clock" /></td>
                             <td><div className="h_question" onClick={() => {
 
                                 this.setState({
@@ -136,12 +136,12 @@ class Homemeal_question_section extends Component {
                 <div className="background">
                     <Link to="/Homemeal_result">
                         <button href="" className="again_test" > 결과보기
-                            <img src={redo} className="again_icon" />
+                            <img src={redo} className="again_icon" alt="icon" />
                         </button>
                     </Link>
 
                     <button onClick={() => { window.location.reload() }} className="again_test" >테스트 다시하기
-                            <img src={redo} className="again_icon" />
+                            <img src={redo} className="again_icon" alt="icon" />
                     </button>
 
 
@@ -151,4 +151,4 @@ class Homemeal_question_section extends Component {
     }
 }
 
-export default Homemeal_question_section;
+export default HomemealQuestionSection;

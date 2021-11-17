@@ -10,7 +10,7 @@ import PrivateProperty from '../privateProperty_client.js';
 const props = PrivateProperty();
 const IP = props.IP;
 
-class Random_result_section extends Component {
+class RandomResultSection extends Component {
 
   state = {
     menu: "",
@@ -28,7 +28,7 @@ class Random_result_section extends Component {
     console.log(data);
     console.log(typeof data);
     if (data[0]) { this.setState({ menu: data[0].foodname, ment: data[0].ment }) };
-    if ($('#show').css('display') == 'none' && $('#show2').css('display') == 'none') {
+    if ($('#show').css('display') === 'none' && $('#show2').css('display') === 'none') {
       $('#show').show();
       $("#show2").show();
     }
@@ -63,15 +63,15 @@ class Random_result_section extends Component {
 
           <div className="box" onClick={() => { this.getRandomMenu() }}>
             <div className="imgswap" id="hide" >
-              <img src={box1} className="box1" />
-              <img src={box2} className="box2" />
+              <img src={box1} className="box1" alt="box" />
+              <img src={box2} className="box2" alt="box" />
             </div>
             <div>
               <button onClick={() => {
                 this.getRandomMenu();
               }} className="again_test" id="show" style={{ display: 'none' }}>
                 다른메뉴 추천받기
-              <img src={redo} className="again_icon" />
+              <img src={redo} className="again_icon" alt="icon" />
               </button>
             </div>
           </div>
@@ -82,4 +82,4 @@ class Random_result_section extends Component {
   }
 }
 
-export default Random_result_section;
+export default RandomResultSection;

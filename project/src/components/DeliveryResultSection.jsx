@@ -8,7 +8,7 @@ import PrivateProperty from '../privateProperty_client.js';
 const props = PrivateProperty();
 const IP = props.IP;
 
-class Delibery_result_section extends Component {
+class DeliveryResultSection extends Component {
     //state 설정
     state = {
         menu: "현재 충족되는 배달음식이 없습니다. 무작위로 추천받아보시겠어요?",
@@ -50,7 +50,7 @@ class Delibery_result_section extends Component {
 
                 </div>
 
-                {this.state.menu == "현재 충족되는 배달음식이 없습니다. 무작위로 추천받아보시겠어요?" ?
+                {this.state.menu === "현재 충족되는 배달음식이 없습니다. 무작위로 추천받아보시겠어요?" ?
                     <Link to="/random">
                         <button href="" className="again_test">
                             무작위 추천받기!
@@ -61,7 +61,7 @@ class Delibery_result_section extends Component {
                     <Link to="/Delivery_question">
                         <button className="again_test">
                             테스트 다시하기
-                    <img src={redo} className="again_icon" />
+                    <img src={redo} className="again_icon" alt="icon" />
                         </button>
                     </Link>
 
@@ -72,4 +72,4 @@ class Delibery_result_section extends Component {
     }
 }
 
-export default Delibery_result_section;
+export default DeliveryResultSection;
