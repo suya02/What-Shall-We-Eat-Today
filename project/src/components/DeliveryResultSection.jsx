@@ -32,6 +32,8 @@ class DeliveryResultSection extends Component {
         this.getCourses();
     }
 
+
+
     render() {
         return (
             <div className="background">
