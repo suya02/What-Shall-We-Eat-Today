@@ -54,14 +54,14 @@ class DeliveryResultSection extends Component {
 
                 {this.state.menu === "현재 충족되는 배달음식이 없습니다. 무작위로 추천받아보시겠어요?" ?
                     <Link to="/random">
-                        <button href="" className="again_test">
+                        <button href="" className="again_test" style={{cursor:'pointer'}}>
                             무작위 추천받기!
                         </button>
                     </Link> : ""}
                 <div>
 
                     <Link to="/Delivery_question">
-                        <button className="again_test">
+                        <button className="again_test" style={{cursor:'pointer'}}>
                             테스트 다시하기
                     <img src={redo} className="again_icon" alt="icon" />
                         </button>

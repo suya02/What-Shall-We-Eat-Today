@@ -47,10 +47,5 @@ class Nav extends Component {
 export default Nav;
 
 //  아이콘 출처
-
-// email
-// https://www.pngwing.com/ko/free-png-dggjw
-
-// github
-// https://www.flaticon.com/kr/free-icon/github-logo_25231#
-// <div>아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
+// 아이콘몬스터
+// https://iconmonstr.com/

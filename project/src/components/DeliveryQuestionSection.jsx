@@ -242,7 +242,7 @@ class DeliveryQuestionSection extends Component {
         <div className="background">
 
           <Link to="/Delivery_result">
-            <button href="" className="again_test">
+            <button href="" className="again_test" style={{cursor:'pointer'}}>
               {" "}
               결과보기
               <img src={redo} className="again_icon" alt="icon" />
@@ -250,7 +250,7 @@ class DeliveryQuestionSection extends Component {
           </Link>
 
           <div>
-            <button onClick={() => { window.location.reload() }} className="again_test">
+            <button onClick={() => { window.location.reload() }} className="again_test" style={{cursor:'pointer'}}>
               테스트 다시하기
               <img src={redo} className="again_icon" alt="icon" />
             </button>

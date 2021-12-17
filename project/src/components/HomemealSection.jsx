@@ -18,11 +18,11 @@ class HomemealSection extends Component {
 
                 <br />
 
-                <Link to="/Homemeal_question" >
-                    <div className="center">
-                        <button className="start_test">
-                            Start
-                        </button>
+                <Link to="/Homemeal_question" >    
+                    <div className="center">              
+                    <button className="start_test" style={{cursor:'pointer'}}>
+                        Start
+                    </button>
                     </div>
                 </Link>
             </div>

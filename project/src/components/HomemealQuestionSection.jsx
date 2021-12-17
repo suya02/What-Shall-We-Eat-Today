@@ -30,6 +30,7 @@ class HomemealQuestionSection extends Component {
                 </div>
 
                 <div className="background">
+                <br />
                     <table className="h_table">
                         <tr>
                             <td><img src={clock} className="clock" alt="clock" /></td>
@@ -131,16 +132,18 @@ class HomemealQuestionSection extends Component {
 
                         </tr>
                     </table>
+                    <br />
                 </div>
 
                 <div className="background">
+                <br />
                     <Link to="/Homemeal_result">
-                        <button href="" className="again_test" > 결과보기
+                        <button href="" className="again_test" style={{cursor:'pointer'}} > 결과보기
                             <img src={redo} className="again_icon" alt="icon" />
                         </button>
-                    </Link>
+                    </Link>        
 
-                    <button onClick={() => { window.location.reload() }} className="again_test" >테스트 다시하기
+                    <button onClick={() => { window.location.reload() }} className="again_test" style={{cursor:'pointer'}}>테스트 다시하기
                             <img src={redo} className="again_icon" alt="icon" />
                     </button>
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
+import redo from '/home/ubuntu/ict/project/src/images/redo.png'
 import axios from "axios";
 import PrivateProperty from '../privateProperty_client.js';
 
@@ -53,6 +55,12 @@ class HomemealResultSection extends Component {
                         </div>
                     </div>
                 </div>
+
+                <Link to="/Homemeal_question">
+                        <button href="" className="again_test" style={{cursor:'pointer'}} > 테스트 다시하기
+                            <img src={redo} className="again_icon" alt="icon" />
+                        </button>
+                    </Link>   
             </div>
         );
     }

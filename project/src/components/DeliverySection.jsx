@@ -22,9 +22,9 @@ class DeliverySection extends Component {
 
                     <Link to="/delivery_question" >
                         <div className="center">
-                            <button className="start_test">
-                                Start
-                            </button>
+                        <button className="start_test" style={{cursor:'pointer'}}>
+                            Start
+                        </button>
                         </div>
                     </Link>
                 </div>

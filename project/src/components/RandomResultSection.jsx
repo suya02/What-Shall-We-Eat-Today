@@ -69,7 +69,7 @@ class RandomResultSection extends Component {
             <div>
               <button onClick={() => {
                 this.getRandomMenu();
-              }} className="again_test" id="show" style={{ display: 'none' }}>
+              }} className="again_test" id="show" style={{ display: 'none', cursor:'pointer'}}>
                 다른메뉴 추천받기
               <img src={redo} className="again_icon" alt="icon" />
               </button>

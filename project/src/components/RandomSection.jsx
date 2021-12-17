@@ -21,9 +21,9 @@ class RandomSection extends Component {
                     <br />
                     <Link to="/random/result">
                         <div className="center">
-                            <button className="start_test">
+                            <button className="start_test" style={{cursor:'pointer'}} >
                                 Start
-                        </button>
+                            </button>
                         </div>
                     </Link>
 

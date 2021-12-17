@@ -48,9 +48,7 @@ class MainSection extends Component {
                                     <img src={delivery} alt="sample30" />
                                     <h3>배달음식 뭐 먹지?</h3>
                                     <figcaption>
-                                        <div className="icons"><i className="ion-social-reddit-outline"></i>
-                                            <i className="ion-social-twitter-outline"></i>
-                                            <i className="ion-social-vimeo-outline"></i>
+                                        <div className="icons">
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -64,9 +62,7 @@ class MainSection extends Component {
                                     <img src={homefood} alt="sample30" />
                                     <h3>집에서 뭐 해먹지?</h3>
                                     <figcaption>
-                                        <div className="icons"><i className="ion-social-reddit-outline"></i>
-                                            <i className="ion-social-twitter-outline"></i>
-                                            <i className="ion-social-vimeo-outline"></i>
+                                        <div className="icons">
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -79,9 +75,7 @@ class MainSection extends Component {
                                     <img src={onesecond} alt="sample30" />
                                     <h3>1초안에 알려줘!</h3>
                                     <figcaption>
-                                        <div className="icons"><i className="ion-social-reddit-outline"></i>
-                                            <i className="ion-social-twitter-outline"></i>
-                                            <i className="ion-social-vimeo-outline"></i>
+                                        <div className="icons">
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -135,9 +129,7 @@ class MainSection extends Component {
                                     <img src={delivery} alt="delivery" />
                                     <h3>배달음식 뭐 먹지?</h3>
                                     <figcaption>
-                                        <div className="icons"><i className="ion-social-reddit-outline"></i>
-                                            <i className="ion-social-twitter-outline"></i>
-                                            <i className="ion-social-vimeo-outline"></i>
+                                        <div className="icons">
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -162,9 +154,7 @@ class MainSection extends Component {
                                     <img src={homefood} alt="homefood" />
                                     <h3>집에서 뭐 해먹지?</h3>
                                     <figcaption>
-                                        <div className="icons"><i className="ion-social-reddit-outline"></i>
-                                            <i className="ion-social-twitter-outline"></i>
-                                            <i className="ion-social-vimeo-outline"></i>
+                                        <div className="icons">
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -189,9 +179,7 @@ class MainSection extends Component {
                                     <img src={onesecond} alt="onesecond" />
                                     <h3>1초안에 알려줘!</h3>
                                     <figcaption>
-                                        <div className="icons"><i className="ion-social-reddit-outline"></i>
-                                            <i className="ion-social-twitter-outline"></i>
-                                            <i className="ion-social-vimeo-outline"></i>
+                                        <div className="icons">
                                         </div>
                                     </figcaption>
                                 </figure>
