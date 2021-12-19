@@ -9,4 +9,5 @@
 ![KakaoTalk_Photo_2021-08-15-22-42-11](https://user-images.githubusercontent.com/84308554/129480580-ddb330e1-d5ec-4ec7-b629-17d9fb09cc6e.png)
 
 
-![스크린샷 2021-08-11 오후 7 57 20](https://user-images.githubusercontent.com/84308554/129017917-efa52454-b765-4ea8-ac55-282bd226e48e.png)
+<img width="1433" alt="스크린샷 2021-12-19 오후 10 26 41" src="https://user-images.githubusercontent.com/84308554/146676521-d7333f9b-6a50-4cdb-b508-1a3adb2dd3d2.png">
+
