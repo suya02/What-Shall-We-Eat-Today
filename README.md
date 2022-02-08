@@ -41,6 +41,5 @@
 
 
 <img width="1433" alt="스크린샷 2021-12-19 오후 10 26 41" src="https://user-images.githubusercontent.com/84308554/146676521-d7333f9b-6a50-4cdb-b508-1a3adb2dd3d2.png">
-<br>
-![KakaoTalk_Photo_2021-10-14-09-31-09 002](https://user-images.githubusercontent.com/84308554/152988104-430727eb-80a8-4f65-8e11-e64d0118595c.png)
+![스크린샷 2021-11-16 오후 3 32 32](https://user-images.githubusercontent.com/84308554/152988225-3ae52005-fce5-41cc-8d94-2e78c44ec258.png)
 
