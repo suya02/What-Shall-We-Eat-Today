@@ -42,6 +42,6 @@
 
 <img width="1433" alt="스크린샷 2021-12-19 오후 10 26 41" src="https://user-images.githubusercontent.com/84308554/146676521-d7333f9b-6a50-4cdb-b508-1a3adb2dd3d2.png">
 
-<img width="1433" alt="스크린샷 2021-12-19 오후 10 26 41" src="https://user-images.githubusercontent.com/84308554/152988225-3ae52005-fce5-41cc-8d94-2e78c44ec258.png>
+<img width="1433" alt="스크린샷 2021-12-19 오후 10 26 41" src="https://user-images.githubusercontent.com/84308554/152988225-3ae52005-fce5-41cc-8d94-2e78c44ec258.png">
 
 
