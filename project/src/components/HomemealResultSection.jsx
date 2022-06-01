@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
-import redo from '/home/ubuntu/ict/project/src/images/redo.png'
+import pan from 'images/pan2.png'
+import redo from 'images/redo.png'
 import axios from "axios";
-import PrivateProperty from '../privateProperty_client.js';
+// import PrivateProperty from '../privateProperty_client.js';
 
-const props = PrivateProperty();
-const IP = props.IP;
+// const props = PrivateProperty();
+// const IP = "";
 
 
 class HomemealResultSection extends Component {
@@ -22,7 +22,7 @@ class HomemealResultSection extends Component {
         //api에서 get요청을 하는 함수
         //이부분에서 결과로 나온 메뉴를 설정해준다.
         let data = await axios
-            .get(`http://${IP}:5000/homemealapi`)
+            .get(`http://locallhost:3000/homemealapi`)
             .then(({ data }) => data);
         console.log(data);
         console.log(typeof data);

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import '/home/ubuntu/ict/project/src/custom.css';
-import Header from '/home/ubuntu/ict/project/src/components/Header.jsx'
-import HomemealResultSection from '/home/ubuntu/ict/project/src/components/HomemealResultSection.jsx'
-import Share from '/home/ubuntu/ict/project/src/components/Share.jsx'
-import Nav from '/home/ubuntu/ict/project/src/components/Nav.jsx'
+import 'custom.css';
+import Header from 'components/Header.jsx'
+import HomemealResultSection from 'components/HomemealResultSection.jsx'
+import Share from 'components/Share.jsx'
+import Nav from 'components/Nav.jsx'
 
 class Result extends Component {
 

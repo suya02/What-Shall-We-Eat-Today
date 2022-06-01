@@ -27,3 +27,6 @@ yarn-error.log*
 /project/src/privateProperty_client.js
 
 /project/.prettierrc
+
+
+.env

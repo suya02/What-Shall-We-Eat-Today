@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import '/home/ubuntu/ict/project/src/custom.css';
-import clock from '/home/ubuntu/ict/project/src/images/clock.png'
-import redo from '/home/ubuntu/ict/project/src/images/redo.png'
+import 'custom.css';
+import clock from 'images/clock.png'
+import redo from 'images/redo.png'
 import axios from "axios";
-import PrivateProperty from '../privateProperty_client.js';
+// import PrivateProperty from '../privateProperty_client.js';
 
-const props = PrivateProperty();
-const IP = props.IP;
+// const props = PrivateProperty();
+// const IP = "";
 
 
 let time = "";
@@ -47,7 +47,7 @@ class HomemealQuestionSection extends Component {
                                 console.log(time);
 
                                 let post = async () => {
-                                    let res = await axios.post(`http://${IP}:5000/homemealapi`, {
+                                    let res = await axios.post(`http://locallhost:3000/homemealapi`, {
                                         times: time
                                     });
                                     console.log(`전송 -> ${res}`);
@@ -70,7 +70,7 @@ class HomemealQuestionSection extends Component {
                                 console.log(time);
 
                                 let post = async () => {
-                                    let res = await axios.post(`http://${IP}:5000/homemealapi`, {
+                                    let res = await axios.post(`http://locallhost:3000/homemealapi`, {
                                         times: time
                                     });
                                     console.log(`전송 -> ${res}`);
@@ -95,7 +95,7 @@ class HomemealQuestionSection extends Component {
                                 console.log(time);
 
                                 let post = async () => {
-                                    let res = await axios.post(`http://${IP}:5000/homemealapi`, {
+                                    let res = await axios.post(`http://locallhost:3000/homemealapi`, {
                                         times: time
                                     });
                                     console.log(`전송 -> ${res}`);
@@ -120,7 +120,7 @@ class HomemealQuestionSection extends Component {
                                 console.log(time);
 
                                 let post = async () => {
-                                    let res = await axios.post(`http://${IP}:5000/homemealapi`, {
+                                    let res = await axios.post(`http://locallhost:3000/homemealapi`, {
                                         times: time
                                     });
                                     console.log(`전송 -> ${res}`);

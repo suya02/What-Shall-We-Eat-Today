@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '/home/ubuntu/ict/project/src/custom.css';
-import delivery from '/home/ubuntu/ict/project/src/images/delivery.png'
-import homefood from '/home/ubuntu/ict/project/src/images/homefood.png'
-import onesecond from '/home/ubuntu/ict/project/src/images/onesecond.png'
+import '../custom.css';
+import delivery from 'images/delivery.png'
+import homefood from 'images/homefood.png'
+import onesecond from 'images/onesecond.png'
 import { Link } from 'react-router-dom';
 import $ from "jquery";
 

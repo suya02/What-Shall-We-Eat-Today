@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import machine from '/home/ubuntu/ict/project/src/images/random.png'
-import '/home/ubuntu/ict/project/src/custom.css';
+import machine from 'images/random.png'
+import 'custom.css';
 
 class RandomSection extends Component {
     render() {

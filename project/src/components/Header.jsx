@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
-import nav from '/home/ubuntu/ict/project/src/images/nav.png'
-import '/home/ubuntu/ict/project/src/custom.css';
+import egg from 'images/egg2.png'
+import nav from 'images/nav.png'
+import 'custom.css';
 import { Link } from 'react-router-dom';
 import $ from "jquery";
 

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import box1 from '/home/ubuntu/ict/project/src/images/box1.png'
-import box2 from '/home/ubuntu/ict/project/src/images/box2.png'
-import redo from "/home/ubuntu/ict/project/src/images/redo.png";
-import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
+import box1 from 'images/box1.png'
+import box2 from 'images/box2.png'
+import redo from "images/redo.png";
+import pan from 'images/pan2.png'
 import axios from "axios";
 import $ from "jquery";
-import PrivateProperty from '../privateProperty_client.js';
+// import PrivateProperty from '../privateProperty_client.js';
 
-const props = PrivateProperty();
-const IP = props.IP;
+// const props = PrivateProperty();
+// const IP = "";
 
 class RandomResultSection extends Component {
 
@@ -23,7 +23,7 @@ class RandomResultSection extends Component {
     //api에서 get요청을 하는 함수
     //이부분에서 결과로 나온 메뉴를 설정해준다.
     let data = await axios
-      .get(`http://${IP}:5000/randomapi`)
+      .get(`http://locallhost:3000/randomapi`)
       .then(({ data }) => data);
     console.log(data);
     console.log(typeof data);

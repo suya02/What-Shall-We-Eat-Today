@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "/home/ubuntu/ict/project/src/custom.css";
-import pan from "/home/ubuntu/ict/project/src/images/pan2.png";
-import redo from "/home/ubuntu/ict/project/src/images/redo.png";
+import "../custom.css";
+import pan from "images/pan2.png";
+import redo from "images/redo.png";
 import axios from "axios";
-import ProgressBar from "/home/ubuntu/ict/project/src/components/Progress.jsx";
+import ProgressBar from "components/Progress.jsx";
 import $ from "jquery";
-import PrivateProperty from '../privateProperty_client.js';
+// import PrivateProperty from '../privateProperty_client.js';
 
-const props = PrivateProperty();
-const IP = props.IP;
+// const props = PrivateProperty();
+// const IP = "";
 
 
 let result_tmp;
@@ -64,7 +64,7 @@ class DeliveryQuestionSection extends Component {
   }
 
   createCourse = async () => {
-    let res = await axios.post(`http://${IP}:5000/api`, {
+    let res = await axios.post(`http://locallhost:3000/api`, {
       result1: results[0],
       result2: results[1],
       result3: results[2],

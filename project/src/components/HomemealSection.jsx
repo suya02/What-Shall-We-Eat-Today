@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import pan from '/home/ubuntu/ict/project/src/images/pan.png'
+import pan from 'images/pan.png'
 
 class HomemealSection extends Component {
     render() {

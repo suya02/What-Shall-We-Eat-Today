@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Home from '/home/ubuntu/ict/project/src/pages/Home.js';
-import Delivery from '/home/ubuntu/ict/project/src/pages/Delivery.js';
-import Delivery_question from '/home/ubuntu/ict/project/src/pages/Delivery_question.js';
-import Delivery_result from '/home/ubuntu/ict/project/src/pages/Delivery_result.js';
-import Homemeal from '/home/ubuntu/ict/project/src/pages/Homemeal.js';
-import Homemeal_question from '/home/ubuntu/ict/project/src/pages/Homemeal_question.js';
-import Homemeal_result from '/home/ubuntu/ict/project/src/pages/Homemeal_result.js';
+import Home from '../pages/Home.js';
+import Delivery from '../pages/Delivery.js';
+import Delivery_question from '../pages/Delivery_question.js';
+import Delivery_result from '../pages/Delivery_result.js';
+import Homemeal from '../pages/Homemeal.js';
+import Homemeal_question from '../pages/Homemeal_question.js';
+import Homemeal_result from '../pages/Homemeal_result.js';
 
-import Random from '/home/ubuntu/ict/project/src/pages/Random.js';
-import Random_result from '/home/ubuntu/ict/project/src/pages/Random_result.js';
+import Random from '../pages/Random.js';
+import Random_result from '../pages/Random_result.js';
 
 import ScrollIntoView from "../components/f_routertotop";
 import { BrowserRouter, Route } from 'react-router-dom';

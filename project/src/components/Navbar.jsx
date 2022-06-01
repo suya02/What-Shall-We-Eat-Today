@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '/home/ubuntu/ict/project/src/custom.css';
-import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
+import 'custom.css';
+import egg from 'images/egg2.png'
 
 class MainHeader extends Component {
     render() {

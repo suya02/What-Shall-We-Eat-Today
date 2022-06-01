@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import '/home/ubuntu/ict/project/src/custom.css';
-import link from '/home/ubuntu/ict/project/src/images/linkicon.png'
-import baemin from '/home/ubuntu/ict/project/src/images/baemin.png'
-import kakao from '/home/ubuntu/ict/project/src/images/kakao.png'
-import egg from '/home/ubuntu/ict/project/src/images/egg2.png'
+import 'custom.css';
+import link from 'images/linkicon.png'
+// import baemin from 'images/baemin.png'
+import kakao from 'images/kakao.png'
+import egg from 'images/egg2.png'
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const Share = () => {

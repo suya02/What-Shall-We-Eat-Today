@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '/home/ubuntu/ict/project/src/custom.css';
-import git from '/home/ubuntu/ict/project/src/images/githubicon.png'
-import email from '/home/ubuntu/ict/project/src/images/emailicon.png'
-import call from '/home/ubuntu/ict/project/src/images/callicon.png'
+import '../custom.css';
+import git from 'images/githubicon.png'
+import email from 'images/emailicon.png'
+import call from 'images/callicon.png'
 
 class Nav extends Component {
 

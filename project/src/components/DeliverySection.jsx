@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import pan from '/home/ubuntu/ict/project/src/images/pan2.png'
+import pan from 'images/pan2.png'
 
 class DeliverySection extends Component {
     render() {

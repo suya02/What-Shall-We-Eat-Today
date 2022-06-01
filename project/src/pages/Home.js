@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import MainHeader from '/home/ubuntu/ict/project/src/components/MainHeader.jsx'
-import MainSection from '/home/ubuntu/ict/project/src/components/MainSection.jsx'
-import Nav from '/home/ubuntu/ict/project/src/components/Nav.jsx'
-import HeaderVideo from '/home/ubuntu/ict/project/src/videos/header.mp4'
+import MainHeader from 'components/MainHeader.jsx'
+import MainSection from 'components/MainSection.jsx'
+import Nav from 'components/Nav.jsx'
+import HeaderVideo from 'videos/header.mp4'
 import $ from "jquery";
 
 class Home extends Component {

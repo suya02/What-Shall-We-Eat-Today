@@ -4,15 +4,17 @@ const app = express();
 const cors = require("cors");
 const port = 5000;
 const mysql = require("mysql");
-const privateProperty = require('./privateProperty.js') //IP 가져오기
-const IP = privateProperty.getIP(); //IP 값 저장 
-const password = privateProperty.getDBPassword(); //IP 값 저장 
+const dotenv = require('dotenv');
+dotenv.config();
+// const privateProperty = require('./privateProperty.js') //IP 가져오기
+const IP = ""; //IP 값 저장 
+const password = ""; //IP 값 저장 
 
 let connection = mysql.createConnection({
   host: "localhost",
-  user: "ict",
-  password: `${password}`,
-  database: "ICT_project",
+  user: "root",
+  password: process.env.DATABASE_PASSWORD,
+  database: process.env.DATABASE_NAME,
 });
 
 connection.connect();
@@ -21,7 +23,7 @@ connection.connect();
 //cors이슈 해결하기 위해 서버 접근 권한 허용
 app.use(
   cors({
-    origin: `http://${IP}:3000`,
+    origin: `http://locallhost:3000`,
   })
 );
 
