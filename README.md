@@ -24,8 +24,6 @@
     "http-proxy-middleware": "^2.0.1",
     "jquery": "^3.6.0",
     "mysql": "^2.18.1",
-    "react-bootstrap": "^2.0.0-rc.0",
-    "react-copy-to-clipboard": "^5.0.4",
     "Router": "^2.1.0"
     "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.11.4",
@@ -37,6 +35,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-copy-to-clipboard": "^5.0.4",
     "web-vitals": "^1.0.1"
 
 
